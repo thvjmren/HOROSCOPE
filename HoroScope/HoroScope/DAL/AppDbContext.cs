@@ -15,5 +15,7 @@ namespace HoroScope.DAL
         public DbSet<Zodiac> Zodiacs { get; set; }
         public DbSet<ZodiacElement> ZodiacElements { get; set; }
         public DbSet<New> News { get; set; }
+        public DbSet<Partner> Partners { get; set; }
+        public DbSet<Expert> Experts { get; set; }
     }
 }

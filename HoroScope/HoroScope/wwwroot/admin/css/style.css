@@ -22650,17 +22650,17 @@ dl li {
   -ms-transition: background 0.25s ease;
 }
 
-.navbar .navbar-brand-wrapper {
-  background: #ffffff;
-  border-bottom: 1px solid #e3e3e3;
-  transition: width 0.25s ease, background 0.25s ease;
-  -webkit-transition: width 0.25s ease, background 0.25s ease;
-  -moz-transition: width 0.25s ease, background 0.25s ease;
-  -ms-transition: width 0.25s ease, background 0.25s ease;
-  width: 257px;
-  height: 60px;
-  border-right: 1px solid #e3e3e3;
-}
+    .navbar .navbar-brand-wrapper {
+        background: #212529;
+        border-bottom: 1px solid #e3e3e3;
+        transition: width 0.25s ease, background 0.25s ease;
+        -webkit-transition: width 0.25s ease, background 0.25s ease;
+        -moz-transition: width 0.25s ease, background 0.25s ease;
+        -ms-transition: width 0.25s ease, background 0.25s ease;
+        width: 257px;
+        height: 60px;
+        border-right: 1px solid #e3e3e3;
+    }
 
 .navbar .navbar-brand-wrapper .navbar-brand-inner-wrapper {
   margin-left: 1.375rem;

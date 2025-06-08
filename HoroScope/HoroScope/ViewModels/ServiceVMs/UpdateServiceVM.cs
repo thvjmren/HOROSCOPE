@@ -1,7 +1,7 @@
 ﻿using HoroScope.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace HoroScope.ViewModels.ServiceVMs
+namespace HoroScope.ViewModels
 {
     public class UpdateServiceVM
     {
@@ -9,8 +9,8 @@ namespace HoroScope.ViewModels.ServiceVMs
         [MaxLength(100)]
         public string Name { get; set; }
         public string Icon { get; set; }
+        public string NewIcon { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedAt { get; set; }
         public int CategoryId { get; set; }
         public List<ServiceCategory>? ServiceCategories { get; set; }
     }

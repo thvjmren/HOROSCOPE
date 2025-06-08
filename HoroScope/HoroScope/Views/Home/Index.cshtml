@@ -149,7 +149,7 @@
                 </div>
             </div>
         </div>
-        <div class="hs_sign_center_wrapper visible-xs visible-sm">
+        @*  <div class="hs_sign_center_wrapper visible-xs visible-sm">
             <div class="hs_cycle_main_wrapper">
                 <div class="hs_cycle_img">
                     <img src="~/assets/images/content/cycle.jpg" alt="circle_img">
@@ -173,30 +173,36 @@
                 </div>
 
             </div>
-        </div>
+        </div> *@
         <div class="hs_sign_left_wrapper">
             <div class="row">
-
+                @{
+                    int index = 1;
+                }
                 @foreach (Zodiac zodiac in Model.Zodiacs.Take(6))
                 {
+                    var wrapperClass = index == 1
+                    ? "hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper" + index
+                    : "hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper" + index;
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
+                        <div class="@wrapperClass">
                             <div class="hs_slider_tabs_icon_wrapper">
                                 <i class="@zodiac.Icon"></i>
                             </div>
                             <div class="hs_slider_tabs_icon_cont_wrapper">
                                 <ul>
                                     <li><a href="#" class="hs_tabs_btn">@zodiac.Name</a></li>
-                                    <li>@zodiac.StartDate - @zodiac.EndDate</li>
+                                    <li>@zodiac.StartDate.ToString("dd MMMM") - @zodiac.EndDate.ToString("dd MMMM")</li>
                                 </ul>
                             </div>
                             <span></span>
                         </div>
                     </div>
+                    index++;
                 }
-
             </div>
         </div>
+
         <div class="hs_sign_right_wrapper visible-xs">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -220,10 +226,10 @@
         <div class="hs_sign_center_wrapper hidden-sm hidden-xs">
             <div class="hs_cycle_main_wrapper">
                 <div class="hs_cycle_img">
-                    <img src="images/content/cycle.jpg" alt="circle_img">
+                    <img src="~/assets/images/content/cycle.jpg" alt="circle_img">
                     <span class="pulse"></span>
 
-                    @foreach (Zodiac item in Model.Zodiacs)
+                    @foreach (Zodiac zodiac in Model.Zodiacs)
                     {
                         count++;
                         <div class="hs_tab_shap@(count)">
@@ -232,8 +238,8 @@
                                      width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
 							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
-                            </svg>
-                                <p><i class="@item.Icon"></i></p>
+                                </svg>
+                                <p><i class="@zodiac.Icon"></i></p>
                             </a>
                         </div>
                     }
@@ -244,26 +250,30 @@
         </div>
         <div class="hs_sign_right_wrapper hidden-xs">
             <div class="row">
-
+                @{
+                    int index2 = 1;
+                }
                 @foreach (Zodiac zodiac in Model.Zodiacs.Skip(6).Take(6))
                 {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
-                            <div class="hs_slider_tabs_icon_wrapper">
-                                <i class="@zodiac.Icon"></i>
-                            </div>
+                        <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper@(index2)">
+                            <span></span>
                             <div class="hs_slider_tabs_icon_cont_wrapper">
                                 <ul>
                                     <li><a href="#" class="hs_tabs_btn">@zodiac.Name</a></li>
-                                    <li>@zodiac.StartDate - @zodiac.EndDate</li>
+                                    <li>@zodiac.StartDate.ToString("dd MMMM") - @zodiac.EndDate.ToString("dd MMMM")</li>
                                 </ul>
                             </div>
-                            <span></span>
+                            <div class="hs_slider_tabs_icon_wrapper">
+                                <i class="@zodiac.Icon"></i>
+                            </div>
                         </div>
                     </div>
+                    index2++;
                 }
             </div>
         </div>
+
     </div>
 </div>
 <!-- hs sign wrapper End -->
@@ -325,63 +335,7 @@
     </div>
 </div>
 <!-- hs service wrapper End -->
-<!-- hs news slider wrapper Start -->
-<div class="hs_news_slider_main_wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="hs_news_slider_bg_wrapper">
-                    <div class="hs_news_slider_bg_overlay"></div>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_news_slider_wrapper">
-                                <div class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="hs_news_slider_cont_wrapper">
-                                            <h2>Today Horoscope</h2>
-                                            <h3>Believe in things that can fortunately<br> change your life</h3>
-                                            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem<br> quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                            <div class="hs_effect_btn hs_news_slider_btn_wrapper">
-                                                <ul>
-                                                    <li><a href="#" class="hs_btn_hover">Read more</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="hs_news_slider_cont_wrapper">
-                                            <h2>Today Horoscope</h2>
-                                            <h3>Believe in things that can fortunately<br> change your life</h3>
-                                            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem<br> quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                            <div class="hs_effect_btn hs_news_slider_btn_wrapper">
-                                                <ul>
-                                                    <li><a href="#" class="hs_btn_hover">Read more</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="hs_news_slider_cont_wrapper">
-                                            <h2>Today Horoscope</h2>
-                                            <h3>Believe in things that can fortunately<br> change your life</h3>
-                                            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem<br> quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                            <div class="hs_effect_btn hs_news_slider_btn_wrapper">
-                                                <ul>
-                                                    <li><a href="#" class="hs_btn_hover">Read more</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- hs news slider wrapper End -->
+
 <!-- hs latest news wrapper Start -->
 <div class="hs_latest_news_main_wrapper">
     <div class="hs_news_slider_bg_overlay"></div>
@@ -649,52 +603,23 @@
     </div>
 </div>
 <!-- hs testi slider wrapper End -->
-<!-- hs advert wrapper Start -->
-<div class="hs_advert_main_wrapper">
-    <div class="hs_advert_img_overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="hs_advert_cont_wrapper">
-                    <h1>STOP SELF-SABOTAGE: USING<br> THE ZODIAC TO GET YOUR LIFE BACK ON TRACK</h1>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec<br> sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-                    <div class="hs_effect_btn hs_advert_btn_wrapper">
-                        <ul>
-                            <li><a href="#" class="hs_btn_hover">Read more</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- hs advert wrapper End -->
+
 <!-- hs client slider wrapper Start -->
 <div class="hs_client_slider_main_wrapper">
     <div class="container">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_client_slider_wrapper">
                 <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="hs_client_img_wrapper">
-                            <img src="~/assets/images/content/logo01.png" alt="client_img" />
+ 
+                    @foreach (Partner partner in Model.Partners)
+                    {
+                        <div class="item">
+                            <div class="hs_client_img_wrapper">
+                                <img src="~/assets/images/content/@partner.Image" alt="client_img" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="hs_client_img_wrapper">
-                            <img src="~/assets/images/content/logo02.png" alt="client_img" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="hs_client_img_wrapper">
-                            <img src="~/assets/images/content/logo03.png" alt="client_img" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="hs_client_img_wrapper">
-                            <img src="~/assets/images/content/logo04.png" alt="client_img" />
-                        </div>
-                    </div>
+                    }
+
                 </div>
             </div>
         </div>
@@ -708,36 +633,23 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="hs_online_slider_left_cont">
                     <h2>speak to <span>our expert !</span></h2>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+                    <p>Need personalized insights? Our experienced astrology experts are here to guide you through your life's most important questions — from love and career to health and purpose. Connect now and get clarity like never before!</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="hs_online_slider_wrapper">
                     <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <div class="hs_online_img_wrapper">
-                                <img src="~/assets/images/content/online1.jpg" alt="online_img" class="img-responsive" />
-                                <span class="offline"></span>
+
+                        @foreach (Expert expert in Model.Experts)
+                        {
+                            <div class="item">
+                                <div class="hs_online_img_wrapper">
+                                    <img src="~/assets/images/content/@expert.Image" alt="online_img" class="img-responsive" />
+                                    <span class="offline"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="hs_online_img_wrapper">
-                                <img src="~/assets/images/content/online2.jpg" alt="online_img" class="img-responsive" />
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="hs_online_img_wrapper">
-                                <img src="~/assets/images/content/online3.jpg" alt="online_img" class="img-responsive" />
-                                <span class="offline"></span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="hs_online_img_wrapper">
-                                <img src="~/assets/images/content/online4.jpg" alt="online_img" class="img-responsive" />
-                                <span></span>
-                            </div>
-                        </div>
+                        }
+
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 ﻿using HoroScope.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace HoroScope.ViewModels.ServiceVMs
+namespace HoroScope.ViewModels
 {
     public class CreateServiceVM
     {

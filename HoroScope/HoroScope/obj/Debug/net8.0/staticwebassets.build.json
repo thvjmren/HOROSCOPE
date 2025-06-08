@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RDP85MYq5nkyDPSbwOAY9oDoImCv/08K6C5aP29Jyto=",
+  "Hash": "7PBdfIkBQScDLbZpUe0faZaZMKWoq5vMRU00jV+H5cs=",
   "Source": "HoroScope",
   "BasePath": "_content/HoroScope",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vasl2dtrzw",
-      "Integrity": "eVdKeyjdAcjDzYi1pWf4xcmPfq7NkSKmFpqEznAJE20=",
+      "Fingerprint": "0mjcycychp",
+      "Integrity": "uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\css\\style.css"
@@ -6569,6 +6569,51 @@
       ]
     },
     {
+      "Route": "admin/css/style.0mjcycychp.css",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "531598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 20:14:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0mjcycychp"
+        },
+        {
+          "Name": "label",
+          "Value": "admin/css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo="
+        }
+      ]
+    },
+    {
       "Route": "admin/css/style.css",
       "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\css\\style.css",
       "Selectors": [],
@@ -6579,7 +6624,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "531536"
+          "Value": "531598"
         },
         {
           "Name": "Content-Type",
@@ -6587,11 +6632,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eVdKeyjdAcjDzYi1pWf4xcmPfq7NkSKmFpqEznAJE20=\""
+          "Value": "\"uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 07 Jun 2025 17:10:02 GMT"
+          "Value": "Sun, 08 Jun 2025 20:14:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6601,52 +6646,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eVdKeyjdAcjDzYi1pWf4xcmPfq7NkSKmFpqEznAJE20="
-        }
-      ]
-    },
-    {
-      "Route": "admin/css/style.vasl2dtrzw.css",
-      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\css\\style.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "531536"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"eVdKeyjdAcjDzYi1pWf4xcmPfq7NkSKmFpqEznAJE20=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 07 Jun 2025 17:10:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vasl2dtrzw"
-        },
-        {
-          "Name": "label",
-          "Value": "admin/css/style.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-eVdKeyjdAcjDzYi1pWf4xcmPfq7NkSKmFpqEznAJE20="
+          "Value": "sha256-uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo="
         }
       ]
     },

@@ -12,17 +12,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qsv2bzueab"},{"Name":"integrity","Value":"sha256-hjvO1HwilmHG85iBPH6rvy5OY5CeW0x2teGQ2tCapDo="},{"Name":"label","Value":"_content/HoroScope/admin/css/maps/style.css.map"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1022576"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022hjvO1HwilmHG85iBPH6rvy5OY5CeW0x2teGQ2tCapDo=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 03:02:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HoroScope/admin/css/style.0mjcycychp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin\css\style.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0mjcycychp"},{"Name":"integrity","Value":"sha256-uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo="},{"Name":"label","Value":"_content/HoroScope/admin/css/style.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"531598"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 20:14:04 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/admin/css/style.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin\css\style.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-eVdKeyjdAcjDzYi1pWf4xcmPfq7NkSKmFpqEznAJE20="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"531536"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eVdKeyjdAcjDzYi1pWf4xcmPfq7NkSKmFpqEznAJE20=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 17:10:02 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HoroScope/admin/css/style.vasl2dtrzw.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin\css\style.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vasl2dtrzw"},{"Name":"integrity","Value":"sha256-eVdKeyjdAcjDzYi1pWf4xcmPfq7NkSKmFpqEznAJE20="},{"Name":"label","Value":"_content/HoroScope/admin/css/style.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"531536"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eVdKeyjdAcjDzYi1pWf4xcmPfq7NkSKmFpqEznAJE20=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 17:10:02 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"531598"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 20:14:04 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/admin/images/auth/lockscreen-bg.ajafm44ot2.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin\images\auth\lockscreen-bg.jpg'))</AssetFile>

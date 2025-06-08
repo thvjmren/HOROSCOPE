@@ -1,4 +1,4 @@
-﻿@model List<GetServiceCategoryVM>
+﻿@model List<GetServiceVM>
 
 @{
     int count = 0;
@@ -7,7 +7,7 @@
 <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Services</h4>
+            <h4 class="card-title">Service Categories</h4>
             <a asp-action="Create" class="btn btn-info">Create</a>
 
             <div class="table-responsive">
@@ -16,21 +16,27 @@
                         <tr>
                             <th>No</th>
                             <th>Name</th>
+                            <th>Icon</th>
+                            <th>Description</th>
+                            <th>Category</th>
                             <th>Created Time</th>
                             <th>Setting</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (GetServiceCategoryVM serviceCategoryVM in Model)
+                        @foreach (GetServiceVM serviceVM in Model)
                         {
                             count++;
                             <tr>
                                 <td>@count</td>
-                                <td>@serviceCategoryVM.Name</td>
-                                <td>@serviceCategoryVM.CreatedAt.ToString("d MMMM yyy HH:mm")</td>
+                                <td>@serviceVM.Name</td>
+                                <td>@serviceVM.Icon</td>
+                                <td>@serviceVM.Description</td>
+                                <td>@serviceVM.CategoryName</td>
+                                <td>@serviceVM.CreatedAt.ToString("d MMMM yyy HH:mm")</td>
                                 <td>
-                                    <a asp-action="Update" asp-route-id="@serviceCategoryVM.Id" class="btn btn-primary"><i class="mdi mdi-pencil-box"></i></a>
-                                    <a asp-action="Delete" asp-route-id="@serviceCategoryVM.Id" class="btn btn-danger"><i class="mdi mdi-delete-forever"></i></a>
+                                    <a asp-action="Update" asp-route-id="@serviceVM.Id" class="btn btn-primary mb-2"><i class="mdi mdi-pencil-box"></i></a>
+                                    <a asp-action="Delete" asp-route-id="@serviceVM.Id" class="btn btn-danger"><i class="mdi mdi-delete-forever"></i></a>
                                 </td>
                             </tr>
                         }

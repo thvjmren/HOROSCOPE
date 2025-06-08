@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\viewmodels\\servicevms\\updateservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\viewmodels\\servicevms\\updateservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\viewmodels\\servicevms\\createservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\viewmodels\\servicevms\\createservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\areas\\admin\\views\\servicecategory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\areas\\admin\\views\\servicecategory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\areas\\admin\\views\\servicecategory\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\areas\\admin\\views\\servicecategory\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\areas\\admin\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\areas\\admin\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\viewmodels\\servicevms\\getservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\viewmodels\\servicevms\\getservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\areas\\admin\\controllers\\servicecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\areas\\admin\\controllers\\servicecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\areas\\admin\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\areas\\admin\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\viewmodels\\servicevms\\createservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\viewmodels\\servicevms\\createservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\viewmodels\\servicevms\\updateservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\viewmodels\\servicevms\\updateservicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|c:\\users\\rana\\desktop\\777\\horoscope\\horoscope\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C576F24C-0C7D-43DC-A534-E7397692DE2B}|HoroScope\\HoroScope.csproj|solutionrelative:horoscope\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,67 +59,138 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "HoroScope\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Views\\Home\\Index.cshtml*",
-              "RelativeToolTip": "HoroScope\\Views\\Home\\Index.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "HoroScope\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml*",
+              "RelativeToolTip": "HoroScope\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml*",
+              "ViewState": "AgIAAI8AAAAAAAAAAAD4v50AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-08T11:18:32.572Z",
+              "WhenOpened": "2025-06-08T20:01:59.78Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateServiceVM.cs",
-              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\UpdateServiceVM.cs",
-              "RelativeDocumentMoniker": "HoroScope\\ViewModels\\ServiceVMs\\UpdateServiceVM.cs",
-              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\UpdateServiceVM.cs",
-              "RelativeToolTip": "HoroScope\\ViewModels\\ServiceVMs\\UpdateServiceVM.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:01:02.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateServiceVM.cs",
-              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\CreateServiceVM.cs",
-              "RelativeDocumentMoniker": "HoroScope\\ViewModels\\ServiceVMs\\CreateServiceVM.cs",
-              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\CreateServiceVM.cs",
-              "RelativeToolTip": "HoroScope\\ViewModels\\ServiceVMs\\CreateServiceVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:00:47.807Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "HoroScope\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "HoroScope\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T20:01:52.811Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GetServiceVM.cs",
-              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\GetServiceVM.cs",
-              "RelativeDocumentMoniker": "HoroScope\\ViewModels\\ServiceVMs\\GetServiceVM.cs",
-              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\GetServiceVM.cs",
-              "RelativeToolTip": "HoroScope\\ViewModels\\ServiceVMs\\GetServiceVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T10:52:29.13Z",
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\ServiceCategory\\Update.cshtml",
+              "RelativeDocumentMoniker": "HoroScope\\Areas\\Admin\\Views\\ServiceCategory\\Update.cshtml",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\ServiceCategory\\Update.cshtml",
+              "RelativeToolTip": "HoroScope\\Areas\\Admin\\Views\\ServiceCategory\\Update.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T20:00:17.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\ServiceCategory\\Index.cshtml",
+              "RelativeDocumentMoniker": "HoroScope\\Areas\\Admin\\Views\\ServiceCategory\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\ServiceCategory\\Index.cshtml",
+              "RelativeToolTip": "HoroScope\\Areas\\Admin\\Views\\ServiceCategory\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T20:00:10.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceCategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Controllers\\ServiceCategoryController.cs",
+              "RelativeDocumentMoniker": "HoroScope\\Areas\\Admin\\Controllers\\ServiceCategoryController.cs",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Controllers\\ServiceCategoryController.cs",
+              "RelativeToolTip": "HoroScope\\Areas\\Admin\\Controllers\\ServiceCategoryController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T19:51:49.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ServiceController.cs",
               "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Controllers\\ServiceController.cs",
               "RelativeDocumentMoniker": "HoroScope\\Areas\\Admin\\Controllers\\ServiceController.cs",
               "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Controllers\\ServiceController.cs",
               "RelativeToolTip": "HoroScope\\Areas\\Admin\\Controllers\\ServiceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T10:50:09.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T19:51:37.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetServiceVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\GetServiceVM.cs",
+              "RelativeDocumentMoniker": "HoroScope\\ViewModels\\ServiceVMs\\GetServiceVM.cs",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\GetServiceVM.cs",
+              "RelativeToolTip": "HoroScope\\ViewModels\\ServiceVMs\\GetServiceVM.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T19:47:40.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "RelativeDocumentMoniker": "HoroScope\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "RelativeToolTip": "HoroScope\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T19:45:30.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateServiceVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\CreateServiceVM.cs",
+              "RelativeDocumentMoniker": "HoroScope\\ViewModels\\ServiceVMs\\CreateServiceVM.cs",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\CreateServiceVM.cs",
+              "RelativeToolTip": "HoroScope\\ViewModels\\ServiceVMs\\CreateServiceVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T11:00:47.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdateServiceVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\UpdateServiceVM.cs",
+              "RelativeDocumentMoniker": "HoroScope\\ViewModels\\ServiceVMs\\UpdateServiceVM.cs",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\ViewModels\\ServiceVMs\\UpdateServiceVM.cs",
+              "RelativeToolTip": "HoroScope\\ViewModels\\ServiceVMs\\UpdateServiceVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T11:01:02.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\DAL\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "HoroScope\\DAL\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\DAL\\AppDbContext.cs",
+              "RelativeToolTip": "HoroScope\\DAL\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:57:27.224Z"
             }
           ]
         }
