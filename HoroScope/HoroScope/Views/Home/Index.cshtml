@@ -1,4 +1,8 @@
 ﻿@model HomeVM
+@{
+    int count = 0;
+}
+
 
 <!-- hs Slider Start -->
 <div class="hs_slider_main_wrapper">
@@ -153,7 +157,8 @@
 
                     @foreach (Zodiac zodiac in Model.Zodiacs)
                     {
-                        <div class="hs_tab_shap1">
+                        count++;
+                        <div class="hs_tab_shap@(count)">
                             <a href="#">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
@@ -215,22 +220,26 @@
         <div class="hs_sign_center_wrapper hidden-sm hidden-xs">
             <div class="hs_cycle_main_wrapper">
                 <div class="hs_cycle_img">
-                    <img src="~/assets/images/content/cycle.jpg" alt="circle_img">
+                    <img src="images/content/cycle.jpg" alt="circle_img">
                     <span class="pulse"></span>
-                    @foreach (Zodiac zodiac in Model.Zodiacs)
+
+                    @foreach (Zodiac item in Model.Zodiacs)
                     {
-                        <div class="hs_tab_shap1">
+                        count++;
+                        <div class="hs_tab_shap@(count)">
                             <a href="#">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg version="1.1" id="Layer_13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
 							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
-                                    </svg>
-                                <p><i class="@zodiac.Icon"></i></p>
+                            </svg>
+                                <p><i class="@item.Icon"></i></p>
                             </a>
                         </div>
                     }
+
                 </div>
+
             </div>
         </div>
         <div class="hs_sign_right_wrapper hidden-xs">
