@@ -1,0 +1,349 @@
+﻿@model DetailsVM
+
+@section links {
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css" />
+}
+
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>@Model.Product.Name</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    <ul style="display: flex; flex-wrap: wrap; gap: 5px;">
+                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li>&gt;</li>
+                        <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
+                        <li>&gt;</li>
+                        <li>@Model.Product.Name</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- hs About Title End -->
+<!-- hs shop single prod slider Start -->
+<div class="hs_shop_single_prod_slider_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="video_img_section_wrapper">
+                    <div class="cc_ps_top_slider_section">
+                        <div class="owl-carousel owl-theme">
+
+                            @foreach (var image in Model.Product.ProductImages)
+                            {
+                                <div class="item" data-hash="zero">
+
+                                    <img class="small img-responsive" src="~/assets/images/content/shop/@image.Image" alt="small_img" />
+
+                                </div>
+                            }
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="video_nav_img">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 cc_ps_tabs">
+                                            <a class="button secondary url owl_nav" href="#zero"><img src="~/assets/images/content/shop/smp1.jpg" class="img-responsive" alt="nav_img"></a>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 cc_ps_tabs">
+                                            <a class="button secondary url owl_nav" href="#one"><img src="~/assets/images/content/shop/smp1.jpg" class="img-responsive" alt="nav_img"></a>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 cc_ps_tabs">
+                                            <a class="button secondary url owl_nav" href="#two"><img src="~/assets/images/content/shop/smp1.jpg" class="img-responsive" alt="nav_img"></a>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 cc_ps_tabs">
+                                            <a class="button secondary url owl_nav" href="#three"><img src="~/assets/images/content/shop/smp1.jpg" class="img-responsive" alt="nav_img"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="hs_shop_single_cart_wrapper">
+                    <h2>@Model.Product.Name</h2>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i> &nbsp;&nbsp;
+                    <span>5,331 Ratings & 1,151 Reviews</span>
+                    @if (Model.Product.Discount > 0)
+                    {
+                        var discountedPrice = Model.Product.Price - (Model.Product.Price * Model.Product.Discount / 100);
+                        <h3>
+                            $@discountedPrice.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) &nbsp;
+                            <del>$@Model.Product.Price.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)</del> &nbsp;
+                            <span>(@Model.Product.Discount.ToString("F0")% off)</span>
+                        </h3>
+                    }
+                    else
+                    {
+                        <h3>
+                            $@Model.Product.Price.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                        </h3>
+                    }
+                </div>
+                <div class="hs_shop_single_cart_icon_wrapper">
+                    <div class="hs_shop_single_cart_icon_left">
+                        <i class="fa fa-cart-arrow-down"></i>
+                    </div>
+                    <div class="hs_shop_single_cart_icon_cont_left">
+                        <p>Ships in 4 - 5 Days ( FREE Shipping in India )</p>
+                    </div>
+                </div>
+                <div class="hs_shop_single_cart_icon_wrapper">
+                    <div class="hs_shop_single_cart_icon_left">
+                        <i class="fa fa-money"></i>
+                    </div>
+                    <div class="hs_shop_single_cart_icon_cont_left">
+                        <p>Check for COD availability</p>
+                    </div>
+                </div>
+                <div class="hs_shop_single_co_wrapper">
+                    <input type="text" placeholder="Enter Pin Code">
+                    <button type="submit">CHECK OUT</button>
+                    <p>30 Days Refund/Exchange</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12">
+                        <div class="btc_shop_prod_quanty_bar">
+                            <div class="cc_ps_quantily_info">
+                                <div class="select_number">
+                                    <button onclick="changeQty(1); return false;" class="increase">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                    <input type="text" name="quantity" value="1" size="2" id="input-quantity" class="form-control" />
+                                    <button onclick="changeQty(0); return false;" class="decrease">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="hidden" name="product_id" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 col-sm-8 col-xs-12">
+                        <div class="hs_shop_single_cart_btn">
+                            <ul>
+                                <li><a href="#">BUY NOW</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs shop single prod slider End -->
+<!-- btc shop single tabs Wrapper Start -->
+<div class="btc_shop_single_tabs_main_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="btc_shop_single_tabs_wrapper">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a data-toggle="pill" href="#home">Description</a></li>
+                        <li><a data-toggle="pill" href="#menu1">Specification</a></li>
+                        <li><a data-toggle="pill" href="#menu2">Reviews</a></li>
+                        <li><a data-toggle="pill" href="#menu3"> Faq</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="btc_shop_single_tabs_content_main_wrapper">
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <div class="btc_shop_single_tabs_img_wrapper">
+                                <img src="~/assets/images/content/shop/sp_tabs_img.jpg" alt="tab_img" class="img-responsive" />
+                            </div>
+                            <div class="btc_shop_single_tabs_img_content_wrapper">
+                                <p>
+                                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velittor aliquet. Aenean sollicitudin, lorem quis endum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                    vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.<br><br>Class aptent taciti sociosqu ad
+                                    litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat stoamet. This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+                                    auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                </p>
+                            </div>
+                            <div class="btc_shop_single_tabs_img_content_bottom_wrapper">
+                                <p>
+                                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velittor aliquet. Aenean sollicitudin, lorem quis endum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                    vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                                </p>
+                                <ul>
+                                    <li><i class="fa fa-long-arrow-right"></i> Material : Crystal</li>
+                                    <li><i class="fa fa-long-arrow-right"></i> Product color : Green</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <div class="btc_shop_single_tabs_img_wrapper">
+                                <img src="~/assets/images/content/shop/sp_tabs_img.jpg" alt="tab_img" class="img-responsive" />
+                            </div>
+                            <div class="btc_shop_single_tabs_img_content_wrapper">
+                                <p>
+                                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velittor aliquet. Aenean sollicitudin, lorem quis endum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                    vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.<br><br>Class aptent taciti sociosqu ad
+                                    litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat stoamet. This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+                                    auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                </p>
+                            </div>
+                            <div class="btc_shop_single_tabs_img_content_bottom_wrapper">
+                                <p>
+                                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velittor aliquet. Aenean sollicitudin, lorem quis endum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                    vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                                </p>
+                                <ul>
+                                    <li><i class="fa fa-long-arrow-right"></i> Material : Crystal</li>
+                                    <li><i class="fa fa-long-arrow-right"></i> Product color : Green</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <div class="btc_shop_single_tabs_img_wrapper">
+                                <img src="~/assets/images/content/shop/sp_tabs_img.jpg" alt="tab_img" class="img-responsive" />
+                            </div>
+                            <div class="btc_shop_single_tabs_img_content_wrapper">
+                                <p>
+                                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velittor aliquet. Aenean sollicitudin, lorem quis endum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                    vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.<br><br>Class aptent taciti sociosqu ad
+                                    litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat stoamet. This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+                                    auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                </p>
+                            </div>
+                            <div class="btc_shop_single_tabs_img_content_bottom_wrapper">
+                                <p>
+                                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velittor aliquet. Aenean sollicitudin, lorem quis endum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                    vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                                </p>
+                                <ul>
+                                    <li><i class="fa fa-long-arrow-right"></i> Material : Crystal</li>
+                                    <li><i class="fa fa-long-arrow-right"></i> Product color : Green</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="menu3" class="tab-pane fade">
+                            <div class="btc_shop_single_tabs_img_wrapper">
+                                <img src="~/assets/images/content/shop/sp_tabs_img.jpg" alt="tab_img" class="img-responsive" />
+                            </div>
+                            <div class="btc_shop_single_tabs_img_content_wrapper">
+                                <p>
+                                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velittor aliquet. Aenean sollicitudin, lorem quis endum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                    vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.<br><br>Class aptent taciti sociosqu ad
+                                    litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat stoamet. This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+                                    auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                </p>
+                            </div>
+                            <div class="btc_shop_single_tabs_img_content_bottom_wrapper">
+                                <p>
+                                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velittor aliquet. Aenean sollicitudin, lorem quis endum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                    vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                                </p>
+                                <ul>
+                                    <li><i class="fa fa-long-arrow-right"></i> Material : Crystal</li>
+                                    <li><i class="fa fa-long-arrow-right"></i> Product color : Green</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- btc shop single tabs Wrapper End -->
+<!-- hs popular prodt wrapper Start -->
+<div class="hs_shop_pp_main_wrapper">
+    <div class="hs_shop_pp_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>Popular <span> Product</span></h2>
+                        <h4><span></span></h4>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_shop_pp_main_box_wrapper">
+                    <div class="hs_shop_pp_img_main_wrapper">
+                        <img src="~/assets/images/content/shop/pp1.jpg" alt="product_img" />
+                        <a href="#">Add to Cart</a>
+                    </div>
+                    <div class="hs_shop_prodt_img_cont_wrapper hs_shop_pp_img_cont_main_wrapper">
+                        <h2><a href="#">Ek Mukhi Rudraksh</a></h2>
+                        <h3>$20 &nbsp;<del>$80</del>&nbsp; <span>(60% off)</span></h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <h4>Offers <span>Special Price</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_shop_pp_main_box_wrapper">
+                    <div class="hs_shop_pp_img_main_wrapper">
+                        <img src="~/assets/images/content/shop/pp2.jpg" alt="product_img" />
+                        <a href="#">Add to Cart</a>
+                    </div>
+                    <div class="hs_shop_prodt_img_cont_wrapper hs_shop_pp_img_cont_main_wrapper">
+                        <h2><a href="#">Panchdhatu Shankh</a></h2>
+                        <h3>$20 &nbsp;<del>$80</del>&nbsp; <span>(60% off)</span></h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <h4>Offers <span>Special Price</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_shop_pp_main_box_wrapper">
+                    <div class="hs_shop_pp_img_main_wrapper">
+                        <img src="~/assets/images/content/shop/pp3.jpg" alt="product_img" />
+                        <a href="#">Add to Cart</a>
+                    </div>
+                    <div class="hs_shop_prodt_img_cont_wrapper hs_shop_pp_img_cont_main_wrapper">
+                        <h2><a href="#">Raksha Pendal</a></h2>
+                        <h3>$20 &nbsp;<del>$80</del>&nbsp; <span>(60% off)</span></h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <h4>Offers <span>Special Price</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_pp_bottom_btn_wrapper">
+                    <div class="hs_pp_bottom_btn">
+                        <ul>
+                            <li><a href="#">View All</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs popular prodt wrapper End -->

@@ -118,7 +118,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="hs_title_box_main_wrapper">
                         <div class="hs_title_img_wrapper">
-                            <img src="~/assets/images/content/shop/@product.Image">
+                            <img src="~/assets/images/content/shop/@product.ProductImages?.FirstOrDefault(pi=>pi.IsPrimary==true)?.Image">
                             <ul>
                                 <li>$@product.Price </li>
                             </ul>

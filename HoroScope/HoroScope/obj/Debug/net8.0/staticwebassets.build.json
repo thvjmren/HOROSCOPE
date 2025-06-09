@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7PBdfIkBQScDLbZpUe0faZaZMKWoq5vMRU00jV+H5cs=",
+  "Hash": "tpB9TDV3RckG+XBshjb2ioggyYb7dHzIHY22VQRcySA=",
   "Source": "HoroScope",
   "BasePath": "_content/HoroScope",
   "Mode": "Default",
@@ -4112,6 +4112,69 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\content\\pr_play.png"
     },
     {
+      "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Amethyst.jpg",
+      "SourceId": "HoroScope",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\",
+      "BasePath": "_content/HoroScope",
+      "RelativePath": "assets/images/content/shop/Amethyst#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s0icuc549t",
+      "Integrity": "xDsFt9/CxhyuaWp+UWC5k85FJ4n+3H7JoXekBarokDA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\content\\shop\\Amethyst.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\AstrologyBook.png",
+      "SourceId": "HoroScope",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\",
+      "BasePath": "_content/HoroScope",
+      "RelativePath": "assets/images/content/shop/AstrologyBook#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e5ule8655b",
+      "Integrity": "HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\content\\shop\\AstrologyBook.png"
+    },
+    {
+      "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Citrine.jpg",
+      "SourceId": "HoroScope",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\",
+      "BasePath": "_content/HoroScope",
+      "RelativePath": "assets/images/content/shop/Citrine#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8z440wwrzr",
+      "Integrity": "zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\content\\shop\\Citrine.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal.jpg",
       "SourceId": "HoroScope",
       "SourceType": "Discovered",
@@ -4131,6 +4194,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\content\\shop\\Opal.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal1.jpg",
+      "SourceId": "HoroScope",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\",
+      "BasePath": "_content/HoroScope",
+      "RelativePath": "assets/images/content/shop/Opal1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ccyf98vppg",
+      "Integrity": "nFQXlbGGYdVxhWtvthNTp8zZxGPpqu+oqYinGB8y9y0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\content\\shop\\Opal1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal2.jpg",
+      "SourceId": "HoroScope",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\",
+      "BasePath": "_content/HoroScope",
+      "RelativePath": "assets/images/content/shop/Opal2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v66l5yj5hn",
+      "Integrity": "aZBk6da8RHK++XGkuvpamZ4ZPVLpRgG83bhCHrhCIxU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\content\\shop\\Opal2.jpg"
     },
     {
       "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\pp1.jpg",
@@ -4446,6 +4551,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\content\\shop\\sp9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Tanzanite.jpg",
+      "SourceId": "HoroScope",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\",
+      "BasePath": "_content/HoroScope",
+      "RelativePath": "assets/images/content/shop/Tanzanite#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kc103h6etg",
+      "Integrity": "LFJfVWfa4HmqaEr0FCJD5rcY+dKRU5t/Q68YVjQmWr4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\content\\shop\\Tanzanite.jpg"
     },
     {
       "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\earth.png",
@@ -22313,6 +22439,252 @@
       ]
     },
     {
+      "Route": "assets/images/content/shop/Amethyst.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Amethyst.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "421509"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xDsFt9/CxhyuaWp+UWC5k85FJ4n+3H7JoXekBarokDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 17:39:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xDsFt9/CxhyuaWp+UWC5k85FJ4n+3H7JoXekBarokDA="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/Amethyst.s0icuc549t.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Amethyst.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "421509"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xDsFt9/CxhyuaWp+UWC5k85FJ4n+3H7JoXekBarokDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 17:39:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s0icuc549t"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/content/shop/Amethyst.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xDsFt9/CxhyuaWp+UWC5k85FJ4n+3H7JoXekBarokDA="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/AstrologyBook.e5ule8655b.png",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\AstrologyBook.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1105508"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 17:53:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e5ule8655b"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/content/shop/AstrologyBook.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/AstrologyBook.png",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\AstrologyBook.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1105508"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 17:53:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/Citrine.8z440wwrzr.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Citrine.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "653036"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 17:43:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8z440wwrzr"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/content/shop/Citrine.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/Citrine.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Citrine.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "653036"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 17:43:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/content/shop/Opal.jpg",
       "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal.jpg",
       "Selectors": [],
@@ -22391,6 +22763,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Q2y1UfzNoqPZe66DyQcK9t4dyN6s3Yu0LM4rkqgKGMI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/Opal1.ccyf98vppg.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "497209"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nFQXlbGGYdVxhWtvthNTp8zZxGPpqu+oqYinGB8y9y0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 19:43:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ccyf98vppg"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/content/shop/Opal1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nFQXlbGGYdVxhWtvthNTp8zZxGPpqu+oqYinGB8y9y0="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/Opal1.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "497209"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nFQXlbGGYdVxhWtvthNTp8zZxGPpqu+oqYinGB8y9y0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 19:43:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nFQXlbGGYdVxhWtvthNTp8zZxGPpqu+oqYinGB8y9y0="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/Opal2.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aZBk6da8RHK++XGkuvpamZ4ZPVLpRgG83bhCHrhCIxU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 19:44:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aZBk6da8RHK++XGkuvpamZ4ZPVLpRgG83bhCHrhCIxU="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/Opal2.v66l5yj5hn.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aZBk6da8RHK++XGkuvpamZ4ZPVLpRgG83bhCHrhCIxU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 19:44:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v66l5yj5hn"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/content/shop/Opal2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aZBk6da8RHK++XGkuvpamZ4ZPVLpRgG83bhCHrhCIxU="
         }
       ]
     },
@@ -23621,6 +24157,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-OUPvEj4365TxV+pW0mhcIrcdYSWD3+HcJF0NkOSh+Pc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/Tanzanite.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Tanzanite.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168991"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LFJfVWfa4HmqaEr0FCJD5rcY+dKRU5t/Q68YVjQmWr4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 17:44:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LFJfVWfa4HmqaEr0FCJD5rcY+dKRU5t/Q68YVjQmWr4="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/shop/Tanzanite.kc103h6etg.jpg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Tanzanite.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168991"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LFJfVWfa4HmqaEr0FCJD5rcY+dKRU5t/Q68YVjQmWr4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 17:44:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kc103h6etg"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/content/shop/Tanzanite.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LFJfVWfa4HmqaEr0FCJD5rcY+dKRU5t/Q68YVjQmWr4="
         }
       ]
     },

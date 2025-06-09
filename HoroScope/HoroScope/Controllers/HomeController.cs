@@ -21,7 +21,7 @@ public class HomeController : Controller
             Services = await _context.Services.Where(s => !s.IsDeleted).ToListAsync(),
             ServiceCategories = await _context.ServiceCategories.Where(sc => !sc.IsDeleted).ToListAsync(),
             AboutUs = await _context.AboutUs.Where(a => !a.IsDeleted).ToListAsync(),
-            Products = await _context.Products.Where(p => !p.IsDeleted).ToListAsync(),
+            Products = await _context.Products.Where(p => !p.IsDeleted).Include(p => p.ProductImages).Take(3).ToListAsync(),
             ProductCategories = await _context.ProductCategories.Where(pc => !pc.IsDeleted).ToListAsync(),
             Zodiacs = await _context.Zodiacs.Where(z => !z.IsDeleted).ToListAsync(),
             ZodiacElements = await _context.ZodiacElements.Where(ze => !ze.IsDeleted).ToListAsync(),

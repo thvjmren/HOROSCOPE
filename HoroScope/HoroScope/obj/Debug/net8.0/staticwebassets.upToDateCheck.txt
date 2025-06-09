@@ -191,7 +191,12 @@ wwwroot\assets\images\content\online2.jpg
 wwwroot\assets\images\content\online3.jpg
 wwwroot\assets\images\content\online4.jpg
 wwwroot\assets\images\content\pr_play.png
+wwwroot\assets\images\content\shop\Amethyst.jpg
+wwwroot\assets\images\content\shop\AstrologyBook.png
+wwwroot\assets\images\content\shop\Citrine.jpg
 wwwroot\assets\images\content\shop\Opal.jpg
+wwwroot\assets\images\content\shop\Opal1.jpg
+wwwroot\assets\images\content\shop\Opal2.jpg
 wwwroot\assets\images\content\shop\pp1.jpg
 wwwroot\assets\images\content\shop\pp2.jpg
 wwwroot\assets\images\content\shop\pp3.jpg
@@ -207,6 +212,7 @@ wwwroot\assets\images\content\shop\sp6.jpg
 wwwroot\assets\images\content\shop\sp7.jpg
 wwwroot\assets\images\content\shop\sp8.jpg
 wwwroot\assets\images\content\shop\sp9.jpg
+wwwroot\assets\images\content\shop\Tanzanite.jpg
 wwwroot\assets\images\content\solar\earth.png
 wwwroot\assets\images\content\solar\jupiter.png
 wwwroot\assets\images\content\solar\mars.png
