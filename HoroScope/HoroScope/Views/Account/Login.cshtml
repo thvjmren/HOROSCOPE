@@ -1,0 +1,45 @@
+﻿@model LoginVM
+@section links {
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css" />
+}
+
+<div class="hs_contact_indx_form_main_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2><span>Login</span></h2>
+                        <h4><span></span></h4>
+                    </div>
+                </div>
+            </div>
+            <form method="post">
+
+                <div asp-validation-summary="ModelOnly"></div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label asp-for="UsernameOrEmail">Username Or Email</label>
+                        <input asp-for="UsernameOrEmail" class="require" placeholder="Username Or Email">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label asp-for="Password">Password</label>
+                        <input asp-for="Password" class="require" placeholder="Password">
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="hs_contact_indx_form_btn">
+                        <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN UP</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

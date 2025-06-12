@@ -1,0 +1,52 @@
+﻿
+@section links {
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css" />
+}
+
+
+<div class="hs_contact_indx_form_main_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2><span>Register</span></h2>
+                        <h4><span></span></h4>
+                    </div>
+                </div>
+            </div>
+            <form>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label>Name</label>
+                        <input type="text" class="require" name="first_name">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label>Email</label>
+                        <input type="email" class="require" name="email" data-valid="email" data-error="Email should be valid.">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label>Message</label>
+                        <textarea rows="6" class="require" name="message"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="response"></div>
+                    <div class="hs_contact_indx_form_btn">
+                        <ul>
+                            <li>
+                                <input type="hidden" name="form_type" value="contact">
+                                <button type="button" class="hs_btn_hover submitForm">Send a Message</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

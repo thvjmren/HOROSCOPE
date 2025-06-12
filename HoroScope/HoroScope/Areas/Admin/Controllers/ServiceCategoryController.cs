@@ -64,7 +64,7 @@ namespace HoroScope.Areas.Admin.Controllers
         {
             if (id is null) return BadRequest();
 
-            ServiceCategory category = await _context.ServiceCategories.Where(c => c.IsDeleted == false).FirstOrDefaultAsync(sc => sc.Id == id);
+            ServiceCategory? category = await _context.ServiceCategories.Where(c => c.IsDeleted == false).FirstOrDefaultAsync(sc => sc.Id == id);
             if (category is null) return NotFound();
 
             _context.ServiceCategories.Remove(category);
@@ -77,7 +77,7 @@ namespace HoroScope.Areas.Admin.Controllers
         {
             if (id is null || id <= 0) return BadRequest();
 
-            ServiceCategory category = await _context.ServiceCategories.FirstOrDefaultAsync(sc => sc.Id == id);
+            ServiceCategory? category = await _context.ServiceCategories.FirstOrDefaultAsync(sc => sc.Id == id);
 
             if (category is null) return NotFound();
 

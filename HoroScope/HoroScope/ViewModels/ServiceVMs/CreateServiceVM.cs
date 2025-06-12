@@ -10,7 +10,6 @@ namespace HoroScope.ViewModels
         public string Name { get; set; }
         public string Icon { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedAt { get; set; }
         public int CategoryId { get; set; }
         public List<ServiceCategory>? ServiceCategories { get; set; }
     }

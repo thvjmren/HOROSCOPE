@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using HoroScope.Services.Implementations
+@inject LayoutService service;
+@{
+    Dictionary<string, string> settings = await service.GetSettingsAsync();
+}
+
+<!DOCTYPE html>
 <!--
 Template Name: Horoscope
 Version: 1.0.0
@@ -54,8 +60,8 @@ Purchase:
                 <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
                     <div class="hs_left_side_warpper">
                         <div class="hs_top_contect">
-                            <p><i class="fa fa-phone"></i> &nbsp;+105152110</p>
-                            <p class=""><i class="fa fa-envelope"></i> &nbsp;<a href="#">Renosh@gmail.com</a></p>
+                            <p><i class="fa fa-phone"></i>@settings["Phone"]</p>
+                            <p class=""><i class="fa fa-envelope"></i> &nbsp;<a href="#">@settings["Email"]</a></p>
                         </div>
                     </div>
                 </div>
@@ -67,25 +73,51 @@ Purchase:
                                     <div class="hs_top_socialicon">
                                         <ul>
                                             <li class="hidden-sm">Connect with Horoscope :</li>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            <li>
+                                                <a href="@settings["fbLink"]" target="_blank">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@settings["xLink"]" target="_blank">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@settings["igLink"]" target="_blank">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@settings["linkedinLink"]" target="_blank">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
                                         </ul>
+
                                     </div>
                                 </li>
                                 <li>
-                            <div class="dropdown-wrapper menu-button">
-                                                    <div class="hs_top_donet_btn">
-                                                        <ul>
-                                                            <li><a href="#">Account</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="drop-menu hs_mega_menu">
-                                                        <a class="menu-button" href="aries.html">Login</a>
-                                                        <a class="menu-button" href="chinese.html">Register</a>
-                                                    </div>
-                                                </div>
+                                    <div class="dropdown-wrapper menu-button">
+                                        <div class="hs_top_donet_btn">
+                                            <ul>
+                                                <li><a href="#">Account</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="drop-menu hs_mega_menu">
+                                            @if (User.Identity.IsAuthenticated)
+                                            {
+                                                <a class="menu-button">@User.Identity.Name</a>
+                                                <a class="menu-button2" asp-controller="account" asp-action="logout">Log Out</a>
+
+                                            }
+                                            else
+                                            {
+                                                <a class="menu-button" asp-controller="Account" asp-action="Register">Register</a>
+                                                <a class="menu-button" asp-controller="Account" asp-action="Login">Login</a>
+                                            }
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -102,7 +134,7 @@ Purchase:
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hidden-xs">
                     <div class="hs_logo_wrapper">
-                        <a asp-controller="Home" asp-action="Index"><img src="~/assets/images/content/top_logo.png" alt="logo"></a>
+                        <a asp-controller="Home" asp-action="Index"><img src="~/assets/images/content/@settings["Logo"]" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
@@ -133,7 +165,7 @@ Purchase:
                             </div>
                         </div>
                     </div>
-                  
+
                     <nav class="hs_main_menu hidden-xs">
                         <ul>
                             <li>
@@ -142,7 +174,7 @@ Purchase:
                             <li>
                                 <a asp-controller="AboutUs" asp-action="Index" class="menu-button2">About Us</a>
                             </li>
-@*                             <li>
+                            @*                             <li>
                                 <div class="dropdown-wrapper menu-button">
                                     <a class="menu-button" href="#">Pages</a>
                                     <div class="drop-menu hs_mega_menu">
@@ -391,18 +423,36 @@ Purchase:
             <div class="row">
                 <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
                     <div class="hs_footer_logo_wrapper">
-                        <a href="index.html"><img src="~/assets/images/content/footer_logo.png" alt="footer_logo" class="img-responsive" /></a>
+                        <a asp-action="Index"><img src="~/assets/images/content/@settings["Logo"]" alt="footer_logo" class="img-responsive" /></a>
                         <p>
                             Guided by the cosmos, inspired by intuition.
                             HoroScope is more than just an astrology platform — it's a space to reconnect with your soul, decode celestial messages, and step confidently into your destiny. We’re here to light your path with the wisdom of the stars.
                         </p>
                         <h4><a asp-controller="AboutUs" asp-action="Index">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="hidden-sm">Connect with Horoscope :</li>
+                            <li>
+                                <a href="@settings["fbLink"]" target="_blank">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@settings["xLink"]" target="_blank">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@settings["igLink"]" target="_blank">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@settings["linkedinLink"]" target="_blank">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
                         </ul>
+
                     </div>
                 </div>
 
@@ -410,12 +460,17 @@ Purchase:
                     <div class="hs_footer_contact_wrapper">
                         <h2>Contact <span>Us Today</span></h2>
                         <p>
-                            Call Us <span>666 777 888</span> OR <span>111 222 333</span> Send an Email on <a href="#">contact@example.com</a> Visit Us 123 Fake Street- London 12358
-                            <br>United Kingdom
+                            Call Us <span>@settings["Phone"]</span>
+                            Send an Email: <a href="mailto:@settings["Email"]">@settings["Email"]</a><br>
+                            Visit Us @settings["Adress"] <br>
                         </p>
-                        <div class="hs_footer_contact_input_wrapper">
-                            <input type="text" placeholder="Email Address..."><i class="fa fa-envelope"></i>
-                        </div>
+                        <form method="post" action="/subscribe">
+                            <div class="hs_footer_contact_input_wrapper">
+                                <input type="email" name="email" placeholder="Email Address..." required>
+                                <button type="submit"><i class="fa fa-envelope"></i></button>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
