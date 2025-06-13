@@ -1,52 +1,114 @@
-﻿
+﻿@model RegisterVM           
+
 @section links {
     <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css" />
-}
+    <style>
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #aaa;
+        }
 
+        .position-relative {
+            position: relative;
+        }
+    </style>
+}
 
 <div class="hs_contact_indx_form_main_wrapper">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
                 <div class="hs_about_heading_main_wrapper">
                     <div class="hs_about_heading_wrapper">
                         <h2><span>Register</span></h2>
-                        <h4><span></span></h4>
                     </div>
+
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label asp-for="Name">Name</label>
+                                <input asp-for="Name" class="form-control" placeholder="Name" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label asp-for="Surname">Surname</label>
+                                <input asp-for="Surname" class="form-control" placeholder="Surname" />
+                                <span asp-validation-for="Surname" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label asp-for="Email">Email</label>
+                                <input asp-for="Email" class="form-control" placeholder="Email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label asp-for="UserName">Username</label>
+                                <input asp-for="UserName" class="form-control" placeholder="Username" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="hs_kd_six_sec_input_wrapper position-relative">
+                                <label asp-for="Password">Password</label>
+                                <input asp-for="Password" type="password" class="form-control" id="passwordInput" placeholder="Password" />
+                                <i class="fa fa-eye password-toggle" id="togglePassword"></i>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="hs_kd_six_sec_input_wrapper position-relative">
+                                <label asp-for="ConfirmPassword">Confirm Password</label>
+                                <input asp-for="ConfirmPassword" type="password" class="form-control" id="passwordInput" placeholder="Confirm Password" />
+                                <i class="fa fa-eye password-toggle" id="togglePassword"></i>
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="rememberMe" name="RememberMe" />
+                            <label class="form-check-label" for="rememberMe">Remember Me</label>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_contact_indx_form_btn">
+                                <button type="submit" class="btn btn-outline-dark">Register</button>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
             </div>
-            <form>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="hs_kd_six_sec_input_wrapper">
-                        <label>Name</label>
-                        <input type="text" class="require" name="first_name">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="hs_kd_six_sec_input_wrapper">
-                        <label>Email</label>
-                        <input type="email" class="require" name="email" data-valid="email" data-error="Email should be valid.">
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="hs_kd_six_sec_input_wrapper">
-                        <label>Message</label>
-                        <textarea rows="6" class="require" name="message"></textarea>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="response"></div>
-                    <div class="hs_contact_indx_form_btn">
-                        <ul>
-                            <li>
-                                <input type="hidden" name="form_type" value="contact">
-                                <button type="button" class="hs_btn_hover submitForm">Send a Message</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
-</div>
+
+    @section Scripts {
+        <script>
+            const togglePassword = document.getElementById("togglePassword");
+            const passwordInput = document.getElementById("passwordInput");
+
+            togglePassword.addEventListener("click", function () {
+                const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                passwordInput.setAttribute("type", type);
+                this.classList.toggle("fa-eye");
+                this.classList.toggle("fa-eye-slash");
+            });
+        </script>
+    }

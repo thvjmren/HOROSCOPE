@@ -1,45 +1,85 @@
 ﻿@model LoginVM
+
 @section links {
     <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css" />
+    <style>
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .position-relative {
+            position: relative;
+        }
+    </style>
 }
 
 <div class="hs_contact_indx_form_main_wrapper">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
                 <div class="hs_about_heading_main_wrapper">
                     <div class="hs_about_heading_wrapper">
                         <h2><span>Login</span></h2>
-                        <h4><span></span></h4>
                     </div>
+
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label asp-for="UsernameOrEmail">Username or Email</label>
+                                <input asp-for="UsernameOrEmail" class="form-control" placeholder="Username or Email" />
+                                <span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="hs_kd_six_sec_input_wrapper position-relative">
+                                <label asp-for="Password">Password</label>
+                                <input asp-for="Password" type="password" class="form-control" id="passwordInput" placeholder="Password" />
+                                <i class="fa fa-eye password-toggle" id="togglePassword"></i>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="rememberMe" name="RememberMe" />
+                            <label class="form-check-label" for="rememberMe">Remember Me</label>
+                        </div>
+
+                        <div class="mb-3 text-end">
+                            <a href="/Account/ForgotPassword">Forgot Password?</a>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_contact_indx_form_btn">
+                                <button type="submit" class="btn btn-outline-dark">Login</button>
+                        </div>
+                        </div>
+                    </form>
+
                 </div>
             </div>
-            <form method="post">
-
-                <div asp-validation-summary="ModelOnly"></div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div class="hs_kd_six_sec_input_wrapper">
-                        <label asp-for="UsernameOrEmail">Username Or Email</label>
-                        <input asp-for="UsernameOrEmail" class="require" placeholder="Username Or Email">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div class="hs_kd_six_sec_input_wrapper">
-                        <label asp-for="Password">Password</label>
-                        <input asp-for="Password" class="require" placeholder="Password">
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div class="hs_contact_indx_form_btn">
-                        <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN UP</button>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
-</div>
+
+    @section Scripts {
+        <script>
+            const togglePassword = document.getElementById("togglePassword");
+            const passwordInput = document.getElementById("passwordInput");
+
+            togglePassword.addEventListener("click", function () {
+                const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                passwordInput.setAttribute("type", type);
+                this.classList.toggle("fa-eye");
+                this.classList.toggle("fa-eye-slash");
+            });
+        </script>
+    }

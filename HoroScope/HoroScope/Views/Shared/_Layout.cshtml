@@ -460,7 +460,7 @@ Purchase:
                     <div class="hs_footer_contact_wrapper">
                         <h2>Contact <span>Us Today</span></h2>
                         <p>
-                            Call Us <span>@settings["Phone"]</span>
+                            Call Us <span>@settings["Phone"]</span><br>
                             Send an Email: <a href="mailto:@settings["Email"]">@settings["Email"]</a><br>
                             Visit Us @settings["Adress"] <br>
                         </p>
@@ -504,6 +504,8 @@ Purchase:
     <script src="~/assets/js/jquery.magnific-popup.js"></script>
     <script src="~/assets/js/custom.js"></script>
     <!--main js file end-->
+    @RenderSection("Scripts", required: false)
+
 </body>
 
 
