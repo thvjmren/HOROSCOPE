@@ -13,16 +13,22 @@ namespace HoroScope.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? categoryId)
         {
+            var services = categoryId == null
+                ? await _context.Services.Where(s => !s.IsDeleted).ToListAsync()
+                : await _context.Services.Where(s => s.ServiceCategoryId == categoryId && !s.IsDeleted).ToListAsync();
 
             AboutUsVM vm = new()
             {
-                Services = await _context.Services.Where(s => !s.IsDeleted).ToListAsync(),
+                Services = services,
                 ServiceCategories = await _context.ServiceCategories.Where(s => !s.IsDeleted).ToListAsync(),
                 AboutUs = await _context.AboutUs.Where(s => !s.IsDeleted).ToListAsync(),
                 Partners = await _context.Partners.Where(s => !s.IsDeleted).ToListAsync(),
                 Experts = await _context.Experts.Where(e => !e.IsDeleted).ToListAsync(),
+                ContactNumber = _context.Settings.Where(s => s.Key == "Phone")
+                                         .Select(s => s.Value)
+                                         .FirstOrDefault()
             };
 
             return View(vm);

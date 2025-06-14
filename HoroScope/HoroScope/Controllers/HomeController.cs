@@ -14,11 +14,15 @@ public class HomeController : Controller
         _context = context;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(int? categoryId)
     {
+        var services = categoryId == null
+        ? await _context.Services.Where(s => !s.IsDeleted).ToListAsync()
+        : await _context.Services.Where(s => s.ServiceCategoryId == categoryId && !s.IsDeleted).ToListAsync();
+
         HomeVM vm = new()
         {
-            Services = await _context.Services.Where(s => !s.IsDeleted).ToListAsync(),
+            Services = services,
             ServiceCategories = await _context.ServiceCategories.Where(sc => !sc.IsDeleted).ToListAsync(),
             AboutUs = await _context.AboutUs.Where(a => !a.IsDeleted).ToListAsync(),
             Products = await _context.Products.Where(p => !p.IsDeleted).Include(p => p.ProductImages).Take(3).ToListAsync(),

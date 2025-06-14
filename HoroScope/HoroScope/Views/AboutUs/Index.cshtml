@@ -50,7 +50,7 @@
                             @aboutUs.Description
                         </p>
                         <h3>Contact Us</h3>
-                        <h1>+105152110</h1>
+                        <h1>@Model.ContactNumber</h1>
                         <div class="hs_effect_btn hs_about_btn">
                             <ul>
                                 <li><a href="#" class="hs_btn_hover">Read more</a></li>
@@ -146,13 +146,23 @@
             <div class="portfolio-area ptb-100">
                 <div class="container">
                     <div class="portfolio-filter clearfix text-center">
+
                         <ul id="filter">
-                            <li><a class="active" data-group="all">All</a></li>
-                            @foreach (ServiceCategory serviceCategory in Model.ServiceCategories)
+                            <li>
+                                <a asp-controller="AboutUs" asp-action="Index">
+                                    All
+                                </a>
+                            </li>
+                            @foreach (var serviceCategory in Model.ServiceCategories)
                             {
-                                <li><a data-group="website">@serviceCategory.Name</a></li>
+                                <li>
+                                    <a asp-controller="AboutUs" asp-action="Index" asp-route-categoryId="@serviceCategory.Id">
+                                        @serviceCategory.Name
+                                    </a>
+                                </li>
                             }
                         </ul>
+
                     </div>
                     <div class="row">
                         <div id="gridWrapper" class="clearfix">
@@ -163,7 +173,7 @@
                                     <div class="hs_service_main_box_wrapper">
                                         <div class="hs_service_icon_main_wrapper">
                                             <div class="hs_service_icon_wrapper">
-                                                <i class="flaticon-success"></i>
+                                                <i class="@service.Icon"></i>
                                                 <div class="btc_step_overlay"></div>
                                             </div>
                                         </div>

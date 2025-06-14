@@ -9,5 +9,6 @@ namespace HoroScope.ViewModels
         public List<AboutUs>? AboutUs { get; set; }
         public List<Partner>? Partners { get; set; }
         public List<Expert>? Experts { get; set; }
+        public string? ContactNumber { get; set; }
     }
 }
