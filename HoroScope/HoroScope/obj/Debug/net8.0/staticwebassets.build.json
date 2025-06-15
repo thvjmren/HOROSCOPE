@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tpB9TDV3RckG+XBshjb2ioggyYb7dHzIHY22VQRcySA=",
+  "Hash": "FJX9r4A9k9Vh2HLFmjB19qMbiaAh8OChw5mncqT0aAo=",
   "Source": "HoroScope",
   "BasePath": "_content/HoroScope",
   "Mode": "Default",
@@ -1648,8 +1648,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4nenn2lp0j",
-      "Integrity": "4Ph/iJOhBeh9gECzWBlponr/dLPNkMUiPTCuC5TOjbI=",
+      "Fingerprint": "17u4r6c6v8",
+      "Integrity": "I3vvOQbTP8zQXI843UKXTkRfncq9Lj+aIriGhxCOvFQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\style2.css"
@@ -2640,6 +2640,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\content\\blog\\inta9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\planets.jpeg",
+      "SourceId": "HoroScope",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\",
+      "BasePath": "_content/HoroScope",
+      "RelativePath": "assets/images/content/blog/planets#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3kvj2jfeec",
+      "Integrity": "gwQDJkYatXx64NjTq/vFdFLIYQ+DTFYp5Y+OpzuF3VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\content\\blog\\planets.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\zodiacs.jpeg",
+      "SourceId": "HoroScope",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\",
+      "BasePath": "_content/HoroScope",
+      "RelativePath": "assets/images/content/blog/zodiacs#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5w1i6lxopn",
+      "Integrity": "FSRyPrmoc2BU6+C3XdiTngAp4xAWJpG4WB233attbMQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\content\\blog\\zodiacs.jpeg"
     },
     {
       "Identity": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\cart_img.jpg",
@@ -12763,7 +12805,7 @@
       ]
     },
     {
-      "Route": "assets/css/style2.4nenn2lp0j.css",
+      "Route": "assets/css/style2.17u4r6c6v8.css",
       "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\style2.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -12773,7 +12815,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "168021"
+          "Value": "168083"
         },
         {
           "Name": "Content-Type",
@@ -12781,11 +12823,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4Ph/iJOhBeh9gECzWBlponr/dLPNkMUiPTCuC5TOjbI=\""
+          "Value": "\"I3vvOQbTP8zQXI843UKXTkRfncq9Lj+aIriGhxCOvFQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 07 Jun 2025 11:50:17 GMT"
+          "Value": "Sun, 15 Jun 2025 19:32:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12795,7 +12837,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4nenn2lp0j"
+          "Value": "17u4r6c6v8"
         },
         {
           "Name": "label",
@@ -12803,7 +12845,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4Ph/iJOhBeh9gECzWBlponr/dLPNkMUiPTCuC5TOjbI="
+          "Value": "sha256-I3vvOQbTP8zQXI843UKXTkRfncq9Lj+aIriGhxCOvFQ="
         }
       ]
     },
@@ -12818,7 +12860,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "168021"
+          "Value": "168083"
         },
         {
           "Name": "Content-Type",
@@ -12826,11 +12868,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4Ph/iJOhBeh9gECzWBlponr/dLPNkMUiPTCuC5TOjbI=\""
+          "Value": "\"I3vvOQbTP8zQXI843UKXTkRfncq9Lj+aIriGhxCOvFQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 07 Jun 2025 11:50:17 GMT"
+          "Value": "Sun, 15 Jun 2025 19:32:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12840,7 +12882,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4Ph/iJOhBeh9gECzWBlponr/dLPNkMUiPTCuC5TOjbI="
+          "Value": "sha256-I3vvOQbTP8zQXI843UKXTkRfncq9Lj+aIriGhxCOvFQ="
         }
       ]
     },
@@ -16695,6 +16737,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-vjGVN9EqsWDqXkIN2N79q7FId4+YlrfkOMTclbCm9Zk="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/blog/planets.3kvj2jfeec.jpeg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\planets.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53348"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gwQDJkYatXx64NjTq/vFdFLIYQ+DTFYp5Y+OpzuF3VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 18:28:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3kvj2jfeec"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/content/blog/planets.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gwQDJkYatXx64NjTq/vFdFLIYQ+DTFYp5Y+OpzuF3VI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/blog/planets.jpeg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\planets.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53348"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gwQDJkYatXx64NjTq/vFdFLIYQ+DTFYp5Y+OpzuF3VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 18:28:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gwQDJkYatXx64NjTq/vFdFLIYQ+DTFYp5Y+OpzuF3VI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/blog/zodiacs.5w1i6lxopn.jpeg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\zodiacs.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FSRyPrmoc2BU6+C3XdiTngAp4xAWJpG4WB233attbMQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 18:28:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5w1i6lxopn"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/content/blog/zodiacs.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FSRyPrmoc2BU6+C3XdiTngAp4xAWJpG4WB233attbMQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/content/blog/zodiacs.jpeg",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\zodiacs.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FSRyPrmoc2BU6+C3XdiTngAp4xAWJpG4WB233attbMQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Jun 2025 18:28:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FSRyPrmoc2BU6+C3XdiTngAp4xAWJpG4WB233attbMQ="
         }
       ]
     },

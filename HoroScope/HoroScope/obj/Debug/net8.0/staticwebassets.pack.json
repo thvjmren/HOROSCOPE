@@ -497,6 +497,14 @@
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta9.jpg"
     },
     {
+      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\planets.jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\planets.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\zodiacs.jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\zodiacs.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\cart_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\cart_img.jpg"
     },

@@ -121,6 +121,8 @@ wwwroot\assets\images\content\blog\inta6.jpg
 wwwroot\assets\images\content\blog\inta7.jpg
 wwwroot\assets\images\content\blog\inta8.jpg
 wwwroot\assets\images\content\blog\inta9.jpg
+wwwroot\assets\images\content\blog\planets.jpeg
+wwwroot\assets\images\content\blog\zodiacs.jpeg
 wwwroot\assets\images\content\cart_img.jpg
 wwwroot\assets\images\content\cycle.jpg
 wwwroot\assets\images\content\footer_logo.png

@@ -4,6 +4,7 @@ using HoroScope.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HoroScope.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250615181108_BlogAndblogCategoriesTablesWasCreated")]
+    partial class BlogAndblogCategoriesTablesWasCreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -183,37 +186,6 @@ namespace HoroScope.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("BlogCategories");
-                });
-
-            modelBuilder.Entity("HoroScope.Models.BlogImages", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BlogId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsPrimary")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlogId");
-
-                    b.ToTable("BlogImages");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Expert", b =>
@@ -678,17 +650,6 @@ namespace HoroScope.Migrations
                     b.Navigation("BlogCategory");
                 });
 
-            modelBuilder.Entity("HoroScope.Models.BlogImages", b =>
-                {
-                    b.HasOne("HoroScope.Models.Blog", "Blog")
-                        .WithMany("BlogImages")
-                        .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Blog");
-                });
-
             modelBuilder.Entity("HoroScope.Models.Product", b =>
                 {
                     b.HasOne("HoroScope.Models.ProductCategory", "ProductCategory")
@@ -778,11 +739,6 @@ namespace HoroScope.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("HoroScope.Models.Blog", b =>
-                {
-                    b.Navigation("BlogImages");
                 });
 
             modelBuilder.Entity("HoroScope.Models.BlogCategory", b =>

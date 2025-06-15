@@ -3,6 +3,8 @@
     <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css" />
 }
 
+@model ContactVM
+
 
 <!-- hs About Title Start -->
 <div class="hs_indx_title_main_wrapper">
@@ -33,7 +35,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="hs_about_heading_main_wrapper">
                     <div class="hs_about_heading_wrapper">
-                        <h2>Need Help? <span>Contact Us Right Now!</span></h2>
+                        <h2><span>Contact Us Right Now!</span></h2>
                         <h4><span></span></h4>
                         <p>
                             Have questions about your horoscope, our services, or your order? Our friendly support team is here to assist you. Whether you're looking for guidance from an expert or need help navigating the site, don’t hesitate to reach out.
@@ -50,7 +52,7 @@
                             <div class="btc_step_overlay"></div>
                         </div>
                     </div>
-                    <p>+105152110</p>
+                    <p>@Model.Phone</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -63,7 +65,7 @@
                     </div>
                     <p>
                         <a href="#">
-                            Renosh@gmail.com
+                            @Model.Email
                         </a>
                     </p>
                 </div>
@@ -77,7 +79,7 @@
                         </div>
                     </div>
                     <p>
-                        Code Academy
+                        @Model.Address
                     </p>
                 </div>
             </div>
@@ -97,7 +99,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="hs_about_heading_main_wrapper">
                     <div class="hs_about_heading_wrapper">
-                        <h2>Have a Question? <span>Fill Out the Enquiry Form Below!</span></h2>
+                        <h2><span>Fill Out the Enquiry Form Below!</span></h2>
                         <h4><span></span></h4>
                         <p>
                             We’d love to hear from you. Whether you're curious about your zodiac sign, want to book a consultation, or simply have a general question — just fill out the form and our team will get back to you shortly.
