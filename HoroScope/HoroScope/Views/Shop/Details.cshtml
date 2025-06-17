@@ -54,18 +54,17 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="video_nav_img">
                                     <div class="row">
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 cc_ps_tabs">
-                                            <a class="button secondary url owl_nav" href="#zero"><img src="~/assets/images/content/shop/smp1.jpg" class="img-responsive" alt="nav_img"></a>
-                                        </div>
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 cc_ps_tabs">
-                                            <a class="button secondary url owl_nav" href="#one"><img src="~/assets/images/content/shop/smp1.jpg" class="img-responsive" alt="nav_img"></a>
-                                        </div>
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 cc_ps_tabs">
-                                            <a class="button secondary url owl_nav" href="#two"><img src="~/assets/images/content/shop/smp1.jpg" class="img-responsive" alt="nav_img"></a>
-                                        </div>
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 cc_ps_tabs">
-                                            <a class="button secondary url owl_nav" href="#three"><img src="~/assets/images/content/shop/smp1.jpg" class="img-responsive" alt="nav_img"></a>
-                                        </div>
+                                        @foreach (var image in Model.Product.ProductImages)
+                                        {
+                                            <div class="item" data-hash="zero">
+
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 cc_ps_tabs">
+                                                    <a class="button secondary url owl_nav" href="#zero"><img src="~/assets/images/content/shop/@image.Image" class="img-responsive" alt="nav_img"></a>
+                                                </div>
+                                            </div>
+                                        }
+                                        
+
                                     </div>
                                 </div>
                             </div>

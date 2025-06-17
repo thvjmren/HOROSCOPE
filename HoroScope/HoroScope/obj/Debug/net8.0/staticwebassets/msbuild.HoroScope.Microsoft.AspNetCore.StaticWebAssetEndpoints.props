@@ -900,17 +900,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rzqtogzcw9"},{"Name":"integrity","Value":"sha256-57W0Qom\u002BLoJRJtYDBHitCV9K0ywZ9km2pe7Sq\u002BpFwlQ="},{"Name":"label","Value":"_content/HoroScope/assets/css/style.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"163460"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u002257W0Qom\u002BLoJRJtYDBHitCV9K0ywZ9km2pe7Sq\u002BpFwlQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 08:12:09 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/css/style2.17u4r6c6v8.css">
+    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/css/style2.291440zkc6.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style2.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"17u4r6c6v8"},{"Name":"integrity","Value":"sha256-I3vvOQbTP8zQXI843UKXTkRfncq9Lj\u002BaIriGhxCOvFQ="},{"Name":"label","Value":"_content/HoroScope/assets/css/style2.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"168083"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022I3vvOQbTP8zQXI843UKXTkRfncq9Lj\u002BaIriGhxCOvFQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Jun 2025 19:32:37 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"291440zkc6"},{"Name":"integrity","Value":"sha256-VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g="},{"Name":"label","Value":"_content/HoroScope/assets/css/style2.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"168023"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Jun 2025 19:32:59 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/css/style2.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style2.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-I3vvOQbTP8zQXI843UKXTkRfncq9Lj\u002BaIriGhxCOvFQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"168083"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022I3vvOQbTP8zQXI843UKXTkRfncq9Lj\u002BaIriGhxCOvFQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Jun 2025 19:32:37 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"168023"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Jun 2025 19:32:59 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/fonts/Flaticon.5v7k59aqsv.ttf">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\fonts\Flaticon.ttf'))</AssetFile>
@@ -1535,6 +1535,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qii76xdvur"},{"Name":"integrity","Value":"sha256-gtOlKzlMJC0x4eXbzazrSnzB3gjVkyr5\u002BxrfJdzAVPs="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/footer_logo.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"19533"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022gtOlKzlMJC0x4eXbzazrSnzB3gjVkyr5\u002BxrfJdzAVPs=\u0022"},{"Name":"Last-Modified","Value":"Thu, 26 Dec 2024 14:38:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/galaxyImg.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\galaxyImg.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xyxDLTRI3wi4JD3SyPvrlhrJOrc2C6fcsPvNRm1AwbA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"745705"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xyxDLTRI3wi4JD3SyPvrlhrJOrc2C6fcsPvNRm1AwbA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 16 Jun 2025 10:59:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/galaxyImg.pocod40z57.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\galaxyImg.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pocod40z57"},{"Name":"integrity","Value":"sha256-xyxDLTRI3wi4JD3SyPvrlhrJOrc2C6fcsPvNRm1AwbA="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/galaxyImg.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"745705"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xyxDLTRI3wi4JD3SyPvrlhrJOrc2C6fcsPvNRm1AwbA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 16 Jun 2025 10:59:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/kundali/aries_img.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\kundali\aries_img.jpg'))</AssetFile>
@@ -2343,50 +2355,50 @@
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Amethyst.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Amethyst.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xDsFt9/CxhyuaWp\u002BUWC5k85FJ4n\u002B3H7JoXekBarokDA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"421509"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xDsFt9/CxhyuaWp\u002BUWC5k85FJ4n\u002B3H7JoXekBarokDA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 17:39:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-CSdzkItRKRb7ORqfSGx1vVg/aUtHh\u002BlRT8h/PWTwnDU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"358320"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022CSdzkItRKRb7ORqfSGx1vVg/aUtHh\u002BlRT8h/PWTwnDU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:14:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Amethyst.s0icuc549t.jpg">
+    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Amethyst.rr1cpfzbg6.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Amethyst.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"s0icuc549t"},{"Name":"integrity","Value":"sha256-xDsFt9/CxhyuaWp\u002BUWC5k85FJ4n\u002B3H7JoXekBarokDA="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Amethyst.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"421509"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xDsFt9/CxhyuaWp\u002BUWC5k85FJ4n\u002B3H7JoXekBarokDA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 17:39:21 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/AstrologyBook.e5ule8655b.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\AstrologyBook.png'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e5ule8655b"},{"Name":"integrity","Value":"sha256-HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/AstrologyBook.png"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1105508"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 17:53:58 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rr1cpfzbg6"},{"Name":"integrity","Value":"sha256-CSdzkItRKRb7ORqfSGx1vVg/aUtHh\u002BlRT8h/PWTwnDU="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Amethyst.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"358320"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022CSdzkItRKRb7ORqfSGx1vVg/aUtHh\u002BlRT8h/PWTwnDU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:14:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/AstrologyBook.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\AstrologyBook.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1105508"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 17:53:58 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-qESpEmW6ha20MWhdJZ9lf1b1yApHbTBYtqFgX7w8eU0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"142941"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022qESpEmW6ha20MWhdJZ9lf1b1yApHbTBYtqFgX7w8eU0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:07:09 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Citrine.8z440wwrzr.jpg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Citrine.jpg'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/AstrologyBook.wivj1938oq.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\AstrologyBook.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8z440wwrzr"},{"Name":"integrity","Value":"sha256-zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Citrine.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"653036"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 17:43:14 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wivj1938oq"},{"Name":"integrity","Value":"sha256-qESpEmW6ha20MWhdJZ9lf1b1yApHbTBYtqFgX7w8eU0="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/AstrologyBook.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"142941"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022qESpEmW6ha20MWhdJZ9lf1b1yApHbTBYtqFgX7w8eU0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:07:09 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Citrine.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Citrine.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"653036"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 17:43:14 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-syYy92T9Y6xb4kkOG9Dq75sfisgS8evYmEtGqdwEH48="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"661992"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022syYy92T9Y6xb4kkOG9Dq75sfisgS8evYmEtGqdwEH48=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:14:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Citrine.n7a8dpp631.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Citrine.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"n7a8dpp631"},{"Name":"integrity","Value":"sha256-syYy92T9Y6xb4kkOG9Dq75sfisgS8evYmEtGqdwEH48="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Citrine.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"661992"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022syYy92T9Y6xb4kkOG9Dq75sfisgS8evYmEtGqdwEH48=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:14:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Opal.0p5m42disc.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Opal.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0p5m42disc"},{"Name":"integrity","Value":"sha256-rB2UCmpuBLbL6WM97Jl5q7Uyl7jZUUCPZ8g9oVz7YHY="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Opal.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"328366"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022rB2UCmpuBLbL6WM97Jl5q7Uyl7jZUUCPZ8g9oVz7YHY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:00:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Opal.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Opal.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Q2y1UfzNoqPZe66DyQcK9t4dyN6s3Yu0LM4rkqgKGMI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"168670"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Q2y1UfzNoqPZe66DyQcK9t4dyN6s3Yu0LM4rkqgKGMI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 12:16:39 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Opal.tw6rkt1w36.jpg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Opal.jpg'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tw6rkt1w36"},{"Name":"integrity","Value":"sha256-Q2y1UfzNoqPZe66DyQcK9t4dyN6s3Yu0LM4rkqgKGMI="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Opal.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"168670"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Q2y1UfzNoqPZe66DyQcK9t4dyN6s3Yu0LM4rkqgKGMI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 07 Jun 2025 12:16:39 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-rB2UCmpuBLbL6WM97Jl5q7Uyl7jZUUCPZ8g9oVz7YHY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"328366"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022rB2UCmpuBLbL6WM97Jl5q7Uyl7jZUUCPZ8g9oVz7YHY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:00:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Opal1.ccyf98vppg.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Opal1.jpg'))</AssetFile>
@@ -2403,14 +2415,14 @@
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Opal2.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Opal2.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-aZBk6da8RHK\u002B\u002BXGkuvpamZ4ZPVLpRgG83bhCHrhCIxU="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"108757"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022aZBk6da8RHK\u002B\u002BXGkuvpamZ4ZPVLpRgG83bhCHrhCIxU=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 19:44:37 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-JUp39zFPpNkKpssswtgl5g6S\u002BC428wWS\u002B52s9IJHyLg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"166853"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022JUp39zFPpNkKpssswtgl5g6S\u002BC428wWS\u002B52s9IJHyLg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:00:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Opal2.v66l5yj5hn.jpg">
+    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Opal2.x5ht2n93wa.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Opal2.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"v66l5yj5hn"},{"Name":"integrity","Value":"sha256-aZBk6da8RHK\u002B\u002BXGkuvpamZ4ZPVLpRgG83bhCHrhCIxU="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Opal2.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"108757"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022aZBk6da8RHK\u002B\u002BXGkuvpamZ4ZPVLpRgG83bhCHrhCIxU=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 19:44:37 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"x5ht2n93wa"},{"Name":"integrity","Value":"sha256-JUp39zFPpNkKpssswtgl5g6S\u002BC428wWS\u002B52s9IJHyLg="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Opal2.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"166853"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022JUp39zFPpNkKpssswtgl5g6S\u002BC428wWS\u002B52s9IJHyLg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:00:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/pp1.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\pp1.jpg'))</AssetFile>
@@ -2592,17 +2604,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zRQH2SxDKMHiBaRnefEpQ\u002Bld6WoEzJbFUH4ziWTlMUQ="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6377"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022zRQH2SxDKMHiBaRnefEpQ\u002Bld6WoEzJbFUH4ziWTlMUQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 26 Dec 2024 14:38:48 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Tanzanite.8vvco47t7u.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Tanzanite.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8vvco47t7u"},{"Name":"integrity","Value":"sha256-VIQwPXF6tWkgNZyBSrpuyQwI3hQyyYYlWl174xMLfLI="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Tanzanite.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"95563"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VIQwPXF6tWkgNZyBSrpuyQwI3hQyyYYlWl174xMLfLI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:14:09 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Tanzanite.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Tanzanite.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LFJfVWfa4HmqaEr0FCJD5rcY\u002BdKRU5t/Q68YVjQmWr4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"168991"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022LFJfVWfa4HmqaEr0FCJD5rcY\u002BdKRU5t/Q68YVjQmWr4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 17:44:32 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/shop/Tanzanite.kc103h6etg.jpg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Tanzanite.jpg'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kc103h6etg"},{"Name":"integrity","Value":"sha256-LFJfVWfa4HmqaEr0FCJD5rcY\u002BdKRU5t/Q68YVjQmWr4="},{"Name":"label","Value":"_content/HoroScope/assets/images/content/shop/Tanzanite.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"168991"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022LFJfVWfa4HmqaEr0FCJD5rcY\u002BdKRU5t/Q68YVjQmWr4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Jun 2025 17:44:32 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VIQwPXF6tWkgNZyBSrpuyQwI3hQyyYYlWl174xMLfLI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"95563"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VIQwPXF6tWkgNZyBSrpuyQwI3hQyyYYlWl174xMLfLI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 16:14:09 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/images/content/solar/earth.5se36x2cjc.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\solar\earth.png'))</AssetFile>

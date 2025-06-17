@@ -1,4 +1,5 @@
 using HoroScope.DAL;
+using HoroScope.Services.Implementations;
 using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,10 +9,12 @@ namespace HoroScope.Controllers;
 public class HomeController : Controller
 {
     private readonly AppDbContext _context;
+    private readonly EmailService _service;
 
-    public HomeController(AppDbContext context)
+    public HomeController(AppDbContext context, EmailService service)
     {
         _context = context;
+        _service = service;
     }
 
     public async Task<IActionResult> Index(int? categoryId)

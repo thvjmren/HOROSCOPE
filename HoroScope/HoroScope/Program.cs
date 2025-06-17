@@ -27,9 +27,11 @@ namespace HoroScope
             });
 
             builder.Services.AddScoped<LayoutService>();
+            builder.Services.AddScoped<EmailService>();
 
             var app = builder.Build();
 
+            app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseStaticFiles();

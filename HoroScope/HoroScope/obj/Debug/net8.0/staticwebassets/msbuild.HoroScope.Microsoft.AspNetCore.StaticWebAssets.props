@@ -1362,8 +1362,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>17u4r6c6v8</Fingerprint>
-      <Integrity>I3vvOQbTP8zQXI843UKXTkRfncq9Lj+aIriGhxCOvFQ=</Integrity>
+      <Fingerprint>291440zkc6</Fingerprint>
+      <Integrity>VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz+fC7g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style2.css'))</OriginalItemSpec>
@@ -2303,6 +2303,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\footer_logo.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\galaxyImg.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HoroScope</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HoroScope</BasePath>
+      <RelativePath>assets/images/content/galaxyImg.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pocod40z57</Fingerprint>
+      <Integrity>xyxDLTRI3wi4JD3SyPvrlhrJOrc2C6fcsPvNRm1AwbA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\galaxyImg.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\kundali\aries_img.jpg'))">
       <SourceType>Package</SourceType>
@@ -3522,8 +3540,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>s0icuc549t</Fingerprint>
-      <Integrity>xDsFt9/CxhyuaWp+UWC5k85FJ4n+3H7JoXekBarokDA=</Integrity>
+      <Fingerprint>rr1cpfzbg6</Fingerprint>
+      <Integrity>CSdzkItRKRb7ORqfSGx1vVg/aUtHh+lRT8h/PWTwnDU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Amethyst.jpg'))</OriginalItemSpec>
@@ -3540,8 +3558,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>e5ule8655b</Fingerprint>
-      <Integrity>HuZRcS3Gjia1LaMT4mf88hFErno60uNEeR0Ki2Y0VNY=</Integrity>
+      <Fingerprint>wivj1938oq</Fingerprint>
+      <Integrity>qESpEmW6ha20MWhdJZ9lf1b1yApHbTBYtqFgX7w8eU0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\AstrologyBook.png'))</OriginalItemSpec>
@@ -3558,8 +3576,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8z440wwrzr</Fingerprint>
-      <Integrity>zM025sHk8xekk/X8mxjnqABcBcUJIqcByxElMRbf7Kc=</Integrity>
+      <Fingerprint>n7a8dpp631</Fingerprint>
+      <Integrity>syYy92T9Y6xb4kkOG9Dq75sfisgS8evYmEtGqdwEH48=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Citrine.jpg'))</OriginalItemSpec>
@@ -3576,8 +3594,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tw6rkt1w36</Fingerprint>
-      <Integrity>Q2y1UfzNoqPZe66DyQcK9t4dyN6s3Yu0LM4rkqgKGMI=</Integrity>
+      <Fingerprint>0p5m42disc</Fingerprint>
+      <Integrity>rB2UCmpuBLbL6WM97Jl5q7Uyl7jZUUCPZ8g9oVz7YHY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Opal.jpg'))</OriginalItemSpec>
@@ -3612,8 +3630,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>v66l5yj5hn</Fingerprint>
-      <Integrity>aZBk6da8RHK++XGkuvpamZ4ZPVLpRgG83bhCHrhCIxU=</Integrity>
+      <Fingerprint>x5ht2n93wa</Fingerprint>
+      <Integrity>JUp39zFPpNkKpssswtgl5g6S+C428wWS+52s9IJHyLg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Opal2.jpg'))</OriginalItemSpec>
@@ -3900,8 +3918,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kc103h6etg</Fingerprint>
-      <Integrity>LFJfVWfa4HmqaEr0FCJD5rcY+dKRU5t/Q68YVjQmWr4=</Integrity>
+      <Fingerprint>8vvco47t7u</Fingerprint>
+      <Integrity>VIQwPXF6tWkgNZyBSrpuyQwI3hQyyYYlWl174xMLfLI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Tanzanite.jpg'))</OriginalItemSpec>

@@ -126,6 +126,7 @@ wwwroot\assets\images\content\blog\zodiacs.jpeg
 wwwroot\assets\images\content\cart_img.jpg
 wwwroot\assets\images\content\cycle.jpg
 wwwroot\assets\images\content\footer_logo.png
+wwwroot\assets\images\content\galaxyImg.jpg
 wwwroot\assets\images\content\kundali\ar_img1.jpg
 wwwroot\assets\images\content\kundali\ar_img2.jpg
 wwwroot\assets\images\content\kundali\ar_img3.jpg
