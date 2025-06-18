@@ -57,7 +57,7 @@ namespace HoroScope.Controllers
 
             if (product is null) return NotFound();
 
-            DetailsVM vm = new DetailsVM
+            ShopDetailsVM vm = new ShopDetailsVM
             {
                 Product = product
             };

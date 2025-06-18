@@ -51,12 +51,12 @@
                                         <div class="hs_blog_cont_heading_wrapper">
                                             <h2>@blog.Title</h2>
                                             <h4><span></span></h4>
-                                            @{
-                                                var firstParagraph = blog.Content?.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
-                                                var preview = !string.IsNullOrWhiteSpace(firstParagraph) ? firstParagraph : blog.Content;
-                                            }
-                                             <p>@preview</p>
-                                            <h5><a href="">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            <p>
+                                                @(blog.Content.Length > 500
+                                                    ? blog.Content.Substring(0, 500) + "..."
+                                                    : blog.Content)
+                                            </p>
+                                            <h5><a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
                                         </div>
                                     </div>
                                     <div class="hs_blog_box1_bottom_cont_main_wrapper">
@@ -121,8 +121,7 @@
                                             </a>
                                         </li>
                                     }
-                          
-                                </ul>
+                                                          </ul>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -130,7 +129,7 @@
                                 <h2>Recent News</h2>
                             </div>
 
-                            @foreach (var blog in Model.Blogs)
+                            @foreach (var blog in Model.RecentNews)
                             {
                                 <div class="hs_blog_right_recnt_cont_wrapper">
                                     <div class="hs_footer_ln_img_wrapper">

@@ -1,5 +1,5 @@
 ﻿using HoroScope.DAL;
-using HoroScope.Models;
+using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,10 +13,23 @@ namespace HoroScope.ViewComponents
         {
             _context = context;
         }
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IViewComponentResult> InvokeAsync(int? categoryId = null)
         {
-            List<Product>? products = await _context.Products.Include(p => p.ProductImages.Where(pi => pi.IsPrimary != null)).ToListAsync();
-            return View(products);
+            var categories = await _context.ServiceCategories.ToListAsync();
+
+            var servicesQuery = _context.Services.Where(s => !s.IsDeleted);
+            if (categoryId != null)
+                servicesQuery = servicesQuery.Where(s => s.ServiceCategoryId == categoryId);
+
+            var services = await servicesQuery.ToListAsync();
+
+            var model = new HomeVM
+            {
+                ServiceCategories = categories,
+                Services = services
+            };
+
+            return View(model);
         }
     }
 }

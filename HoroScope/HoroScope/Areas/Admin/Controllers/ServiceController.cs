@@ -1,12 +1,14 @@
 ﻿using HoroScope.DAL;
 using HoroScope.Models;
 using HoroScope.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace HoroScope.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class ServiceController : Controller
     {
         private readonly AppDbContext _context;

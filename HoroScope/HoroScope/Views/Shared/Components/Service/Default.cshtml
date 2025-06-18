@@ -1,1 +1,69 @@
-﻿
+﻿@model HomeVM
+
+<!-- hs service wrapper Start -->
+<div class="hs_service_main_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>Our <span> Services</span></h2>
+                        <h4><span></span></h4>
+                        <p>We offer a variety of astrology-based tools and personalized services designed to guide, inspire, and empower our users on their life journey. Whether you're a beginner exploring your birth chart or someone seeking deeper astrological insights, we’ve got you covered.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-area ptb-100">
+                <div class="container">
+                    <div class="portfolio-filter clearfix text-center">
+
+                        <ul>
+                            <li>
+                                <a asp-controller="Home" asp-action="Index" asp-route-id="">
+                                    All
+                                </a>
+                            </li>
+                            @foreach (var serviceCategory in Model.ServiceCategories)
+                            {
+                                <li>
+                                    <a asp-controller="Home" asp-action="Index" asp-route-categoryId="@serviceCategory.Id">
+                                        @serviceCategory.Name
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+
+                    </div>
+                    <div class="row">
+                        <div id="gridWrapper" class="clearfix">
+
+                            @foreach (Service service in Model.Services)
+                            {
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                    <div class="hs_service_main_box_wrapper">
+                                        <div class="hs_service_icon_main_wrapper">
+                                            <div class="hs_service_icon_wrapper">
+                                                <i class="@service.Icon"></i>
+                                                <div class="btc_step_overlay"></div>
+                                            </div>
+                                        </div>
+                                        <div class="hs_service_icon_cont_wrapper">
+                                            <h2>@service.Name</h2>
+                                            <p>@service.Description</p>
+                                            <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <!--/#gridWrapper-->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!--/.portfolio-area-->
+        </div>
+    </div>
+</div>
+<!-- hs service wrapper End -->

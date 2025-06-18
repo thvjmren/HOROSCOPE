@@ -904,13 +904,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style2.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"291440zkc6"},{"Name":"integrity","Value":"sha256-VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g="},{"Name":"label","Value":"_content/HoroScope/assets/css/style2.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"168023"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Jun 2025 19:32:59 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"168023"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Jun 2025 17:19:26 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/css/style2.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style2.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"168023"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Jun 2025 19:32:59 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"168023"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022VpM5yltltVBoyET4xdHUqqGee3f7RTdutw8zuz\u002BfC7g=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Jun 2025 17:19:26 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HoroScope/assets/fonts/Flaticon.5v7k59aqsv.ttf">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\fonts\Flaticon.ttf'))</AssetFile>

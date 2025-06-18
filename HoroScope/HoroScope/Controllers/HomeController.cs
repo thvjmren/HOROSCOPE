@@ -19,16 +19,32 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Index(int? categoryId)
     {
-        var services = categoryId == null
-        ? await _context.Services.Where(s => !s.IsDeleted).ToListAsync()
-        : await _context.Services.Where(s => s.ServiceCategoryId == categoryId && !s.IsDeleted).ToListAsync();
+        ViewData["SelectedCategoryId"] = categoryId;
+
+        var services = await _context.Services
+            .Where(s => !s.IsDeleted && (categoryId == null || s.ServiceCategoryId == categoryId))
+            .ToListAsync();
+
+        var ServiceCategories = await _context.ServiceCategories
+            .Where(p => !p.IsDeleted)
+            .OrderByDescending(sc => sc.Services.Count(s => !s.IsDeleted))
+            .Take(4)
+            .ToListAsync();
+
 
         HomeVM vm = new()
         {
             Services = services,
-            ServiceCategories = await _context.ServiceCategories.Where(sc => !sc.IsDeleted).ToListAsync(),
+            ServiceCategories = ServiceCategories,
             AboutUs = await _context.AboutUs.Where(a => !a.IsDeleted).ToListAsync(),
-            Products = await _context.Products.Where(p => !p.IsDeleted).Include(p => p.ProductImages).Take(3).ToListAsync(),
+
+            Products = await _context.Products
+                .Include(p => p.ProductImages.Where(pi => pi.IsPrimary != null))
+                .Where(p => !p.IsDeleted)
+                .OrderByDescending(p => p.Id)
+                .Take(3)
+                .ToListAsync(),
+
             ProductCategories = await _context.ProductCategories.Where(pc => !pc.IsDeleted).ToListAsync(),
             Zodiacs = await _context.Zodiacs.Where(z => !z.IsDeleted).ToListAsync(),
             ZodiacElements = await _context.ZodiacElements.Where(ze => !ze.IsDeleted).ToListAsync(),

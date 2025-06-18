@@ -50,7 +50,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AboutUs");
+                    b.ToTable("AboutUs", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.AppUser", b =>
@@ -159,7 +159,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("BlogCategoryId");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.BlogCategory", b =>
@@ -182,7 +182,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BlogCategories");
+                    b.ToTable("BlogCategories", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.BlogImages", b =>
@@ -213,7 +213,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("BlogImages");
+                    b.ToTable("BlogImages", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.Expert", b =>
@@ -244,7 +244,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Experts");
+                    b.ToTable("Experts", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.New", b =>
@@ -275,7 +275,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("News");
+                    b.ToTable("News", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.Partner", b =>
@@ -298,7 +298,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Partners");
+                    b.ToTable("Partners", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.Product", b =>
@@ -336,7 +336,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductCategoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductCategory", b =>
@@ -359,7 +359,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductCategories");
+                    b.ToTable("ProductCategories", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductImages", b =>
@@ -390,7 +390,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages");
+                    b.ToTable("ProductImages", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.Service", b =>
@@ -426,7 +426,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ServiceCategoryId");
 
-                    b.ToTable("Services");
+                    b.ToTable("Services", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.ServiceCategory", b =>
@@ -449,7 +449,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ServiceCategories");
+                    b.ToTable("ServiceCategories", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.Setting", b =>
@@ -470,7 +470,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.Zodiac", b =>
@@ -508,7 +508,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ZodiacElementId");
 
-                    b.ToTable("Zodiacs");
+                    b.ToTable("Zodiacs", (string)null);
                 });
 
             modelBuilder.Entity("HoroScope.Models.ZodiacElement", b =>
@@ -531,7 +531,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ZodiacElements");
+                    b.ToTable("ZodiacElements", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
