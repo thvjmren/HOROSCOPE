@@ -1,12 +1,12 @@
 ﻿namespace HoroScope.Models
 {
-    public class ProductSpecification
+    public class ProductFeatureValue
     {
         public int Id { get; set; }
-        public string Key { get; set; }
-        public string Value { get; set; }
-
         public int ProductId { get; set; }
         public Product Product { get; set; }
+
+        public int FeatureValueId { get; set; }
+        public FeatureValue FeatureValue { get; set; }
     }
 }

@@ -2,9 +2,11 @@
 
 namespace HoroScope.Models
 {
-    public class ZodiacElement : BaseEntity
+    public class Planet : BaseEntity
     {
         public string Name { get; set; }
-        public List<Zodiac> Zodiacs { get; set; }
+
+        public List<PlanetZodiac>? PlanetZodiacs { get; set; }
     }
+
 }

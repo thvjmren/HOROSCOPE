@@ -13,23 +13,22 @@ namespace HoroScope.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index(int? blogId)
+        public async Task<IActionResult> Index(int? categoryId)
         {
-            var Blogs = blogId == null
-            ? await _context.Blogs.Where(p => !p.IsDeleted).Include(p => p.BlogImages.Where(pi => pi.IsPrimary != null)).ToListAsync()
-            : await _context.Blogs.Where(p => p.BlogCategoryId == blogId && !p.IsDeleted).Include(p => p.BlogImages.Where(pi => pi.IsPrimary != null)).ToListAsync();
+            var Blogs = categoryId == null
+            ? await _context.Blogs.Where(b => !b.IsDeleted).OrderByDescending(p => p.Id).ToListAsync()
+            : await _context.Blogs.Where(b => b.BlogCategoryId == categoryId && !b.IsDeleted).OrderByDescending(b => b.Id).ToListAsync();
 
             var recentNews = await _context.Blogs
-                .Include(p => p.BlogImages.Where(pi => pi.IsPrimary != null))
-                .Where(p => !p.IsDeleted)
-                .OrderByDescending(p => p.Id)
+                .Where(b => !b.IsDeleted)
+                .OrderByDescending(b => b.Id)
                 .Take(3)
                 .ToListAsync();
 
             BlogVM vm = new()
             {
                 BlogCategories = await _context.BlogCategories
-                .Where(pc => pc.IsDeleted == false)
+                .Where(bc => bc.IsDeleted == false)
                 .ToListAsync(),
 
                 Blogs = Blogs,
@@ -46,21 +45,20 @@ namespace HoroScope.Controllers
         {
             if (id is null || id <= 0) return BadRequest();
 
-            var blog = await _context.Blogs.Include(p => p.BlogImages.Where(bi => bi.IsPrimary != null)).FirstOrDefaultAsync(b => b.Id == id && !b.IsDeleted);
+            var blog = await _context.Blogs.FirstOrDefaultAsync(b => b.Id == id && !b.IsDeleted);
 
             if (blog is null) return NotFound();
 
             var recentNews = await _context.Blogs
-                .Include(p => p.BlogImages.Where(pi => pi.IsPrimary != null))
-                .Where(p => !p.IsDeleted)
-                .OrderByDescending(p => p.Id)
+                .Where(b => !b.IsDeleted)
+                .OrderByDescending(b => b.Id)
                 .Take(3)
                 .ToListAsync();
 
             BlogDetailsVM vm = new BlogDetailsVM
             {
                 BlogCategories = await _context.BlogCategories
-                .Where(pc => pc.IsDeleted == false)
+                .Where(bc => bc.IsDeleted == false)
                 .ToListAsync(),
 
                 RecentNews = recentNews,

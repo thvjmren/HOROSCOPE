@@ -4,6 +4,7 @@ using HoroScope.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HoroScope.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250621141202_ProductSpecificationsWasCreated")]
+    partial class ProductSpecificationsWasCreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -234,12 +237,7 @@ namespace HoroScope.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ProductCategoryId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ProductCategoryId");
 
                     b.ToTable("Features");
                 });
@@ -485,41 +483,6 @@ namespace HoroScope.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductImages");
-                });
-
-            modelBuilder.Entity("HoroScope.Models.ProductReview", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Comment")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ReviewerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductReviews");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Service", b =>
@@ -807,15 +770,6 @@ namespace HoroScope.Migrations
                     b.Navigation("BlogCategory");
                 });
 
-            modelBuilder.Entity("HoroScope.Models.Feature", b =>
-                {
-                    b.HasOne("HoroScope.Models.ProductCategory", "ProductCategory")
-                        .WithMany("Features")
-                        .HasForeignKey("ProductCategoryId");
-
-                    b.Navigation("ProductCategory");
-                });
-
             modelBuilder.Entity("HoroScope.Models.FeatureValue", b =>
                 {
                     b.HasOne("HoroScope.Models.Feature", "Feature")
@@ -880,17 +834,6 @@ namespace HoroScope.Migrations
                 {
                     b.HasOne("HoroScope.Models.Product", "Product")
                         .WithMany("ProductImages")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("HoroScope.Models.ProductReview", b =>
-                {
-                    b.HasOne("HoroScope.Models.Product", "Product")
-                        .WithMany("ProductReviews")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -996,14 +939,10 @@ namespace HoroScope.Migrations
                     b.Navigation("ProductFeatureValues");
 
                     b.Navigation("ProductImages");
-
-                    b.Navigation("ProductReviews");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductCategory", b =>
                 {
-                    b.Navigation("Features");
-
                     b.Navigation("Products");
                 });
 

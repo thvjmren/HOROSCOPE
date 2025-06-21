@@ -7,7 +7,6 @@ namespace HoroScope.DAL
     public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-        //public DbSet<Contact> Contact { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<ServiceCategory> ServiceCategories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
@@ -21,5 +20,12 @@ namespace HoroScope.DAL
         public DbSet<New> News { get; set; }
         public DbSet<Partner> Partners { get; set; }
         public DbSet<Expert> Experts { get; set; }
+        public DbSet<Planet> Planets { get; set; }
+        public DbSet<PlanetZodiac> PlanetZodiacs { get; set; }
+        public DbSet<Feature> Features { get; set; }
+        public DbSet<FeatureValue> FeatureValues { get; set; }
+        public DbSet<ProductFeatureValue> ProductFeatureValues { get; set; }
+        public DbSet<ProductReview> ProductReviews { get; set; }
+
     }
 }

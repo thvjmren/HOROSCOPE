@@ -11,6 +11,7 @@ namespace HoroScope.Models
         public int ProductCategoryId { get; set; }
         public ProductCategory ProductCategory { get; set; }
         public List<ProductImages>? ProductImages { get; set; }
-        public ICollection<ProductSpecification>? ProductSpecifications { get; set; }
+        public List<ProductFeatureValue> ProductFeatureValues { get; set; }
+        public List<ProductReview>? ProductReviews { get; set; } = new List<ProductReview>();
     }
 }

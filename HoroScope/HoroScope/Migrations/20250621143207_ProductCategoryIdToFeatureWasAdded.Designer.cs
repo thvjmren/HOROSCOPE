@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HoroScope.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250615185744_BlogImagesTableWasCreated")]
-    partial class BlogImagesTableWasCreated
+    [Migration("20250621143207_ProductCategoryIdToFeatureWasAdded")]
+    partial class ProductCategoryIdToFeatureWasAdded
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -188,37 +188,6 @@ namespace HoroScope.Migrations
                     b.ToTable("BlogCategories");
                 });
 
-            modelBuilder.Entity("HoroScope.Models.BlogImages", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BlogId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsPrimary")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlogId");
-
-                    b.ToTable("BlogImages");
-                });
-
             modelBuilder.Entity("HoroScope.Models.Expert", b =>
                 {
                     b.Property<int>("Id")
@@ -248,6 +217,62 @@ namespace HoroScope.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Experts");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.Feature", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ProductCategoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductCategoryId");
+
+                    b.ToTable("Features");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.FeatureValue", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FeatureId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FeatureId");
+
+                    b.ToTable("FeatureValues");
                 });
 
             modelBuilder.Entity("HoroScope.Models.New", b =>
@@ -302,6 +327,52 @@ namespace HoroScope.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Partners");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.Planet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Planets");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.PlanetZodiac", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("PlanetId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ZodiacId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlanetId");
+
+                    b.HasIndex("ZodiacId");
+
+                    b.ToTable("PlanetZodiacs");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Product", b =>
@@ -363,6 +434,29 @@ namespace HoroScope.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProductCategories");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.ProductFeatureValue", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("FeatureValueId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FeatureValueId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductFeatureValues");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductImages", b =>
@@ -504,7 +598,7 @@ namespace HoroScope.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("ZodiacElementId")
+                    b.Property<int>("ZodiacElementId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -681,15 +775,43 @@ namespace HoroScope.Migrations
                     b.Navigation("BlogCategory");
                 });
 
-            modelBuilder.Entity("HoroScope.Models.BlogImages", b =>
+            modelBuilder.Entity("HoroScope.Models.Feature", b =>
                 {
-                    b.HasOne("HoroScope.Models.Blog", "Blog")
-                        .WithMany("BlogImages")
-                        .HasForeignKey("BlogId")
+                    b.HasOne("HoroScope.Models.ProductCategory", "ProductCategory")
+                        .WithMany("Features")
+                        .HasForeignKey("ProductCategoryId");
+
+                    b.Navigation("ProductCategory");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.FeatureValue", b =>
+                {
+                    b.HasOne("HoroScope.Models.Feature", "Feature")
+                        .WithMany("FeatureValues")
+                        .HasForeignKey("FeatureId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Blog");
+                    b.Navigation("Feature");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.PlanetZodiac", b =>
+                {
+                    b.HasOne("HoroScope.Models.Planet", "Planet")
+                        .WithMany("PlanetZodiacs")
+                        .HasForeignKey("PlanetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HoroScope.Models.Zodiac", "Zodiac")
+                        .WithMany("PlanetZodiacs")
+                        .HasForeignKey("ZodiacId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Planet");
+
+                    b.Navigation("Zodiac");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Product", b =>
@@ -701,6 +823,25 @@ namespace HoroScope.Migrations
                         .IsRequired();
 
                     b.Navigation("ProductCategory");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.ProductFeatureValue", b =>
+                {
+                    b.HasOne("HoroScope.Models.FeatureValue", "FeatureValue")
+                        .WithMany("ProductFeatureValues")
+                        .HasForeignKey("FeatureValueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HoroScope.Models.Product", "Product")
+                        .WithMany("ProductFeatureValues")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FeatureValue");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductImages", b =>
@@ -727,9 +868,13 @@ namespace HoroScope.Migrations
 
             modelBuilder.Entity("HoroScope.Models.Zodiac", b =>
                 {
-                    b.HasOne("HoroScope.Models.ZodiacElement", null)
+                    b.HasOne("HoroScope.Models.ZodiacElement", "ZodiacElement")
                         .WithMany("Zodiacs")
-                        .HasForeignKey("ZodiacElementId");
+                        .HasForeignKey("ZodiacElementId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ZodiacElement");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -783,29 +928,48 @@ namespace HoroScope.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("HoroScope.Models.Blog", b =>
-                {
-                    b.Navigation("BlogImages");
-                });
-
             modelBuilder.Entity("HoroScope.Models.BlogCategory", b =>
                 {
                     b.Navigation("Blogs");
                 });
 
+            modelBuilder.Entity("HoroScope.Models.Feature", b =>
+                {
+                    b.Navigation("FeatureValues");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.FeatureValue", b =>
+                {
+                    b.Navigation("ProductFeatureValues");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.Planet", b =>
+                {
+                    b.Navigation("PlanetZodiacs");
+                });
+
             modelBuilder.Entity("HoroScope.Models.Product", b =>
                 {
+                    b.Navigation("ProductFeatureValues");
+
                     b.Navigation("ProductImages");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductCategory", b =>
                 {
+                    b.Navigation("Features");
+
                     b.Navigation("Products");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ServiceCategory", b =>
                 {
                     b.Navigation("Services");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.Zodiac", b =>
+                {
+                    b.Navigation("PlanetZodiacs");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ZodiacElement", b =>

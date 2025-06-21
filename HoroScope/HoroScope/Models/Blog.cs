@@ -9,6 +9,5 @@ namespace HoroScope.Models
         public string Image { get; set; }
         public int BlogCategoryId { get; set; }
         public BlogCategory? BlogCategory { get; set; }
-        public List<BlogImages>? BlogImages { get; set; }
     }
 }

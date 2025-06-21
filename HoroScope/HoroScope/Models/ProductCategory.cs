@@ -6,6 +6,7 @@ namespace HoroScope.Models
     {
         public string Name { get; set; }
         public List<Product>? Products { get; set; }
+        public List<Feature>? Features { get; set; }
 
     }
 }
