@@ -13,5 +13,11 @@ namespace HoroScope.Models
         public List<ProductImages>? ProductImages { get; set; }
         public List<ProductFeatureValue> ProductFeatureValues { get; set; }
         public List<ProductReview>? ProductReviews { get; set; } = new List<ProductReview>();
+
+        public int Stock { get; set; }
+        public int SalesCount { get; set; } = 0;
+        public int ViewsCount { get; set; } = 0;
+        public int ReviewCount { get; set; } = 0;
+        public double Rating { get; set; }
     }
 }
