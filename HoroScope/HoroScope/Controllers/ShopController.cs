@@ -14,17 +14,49 @@ namespace HoroScope.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index(int? categoryId)
+        public async Task<IActionResult> Index(int? categoryId, string? sort)
         {
-            var products = categoryId == null
-            ? await _context.Products
-            .Where(p => !p.IsDeleted)
-            .Include(p => p.ProductImages
-            .Where(pi => pi.IsPrimary != null)).ToListAsync()
-            : await _context.Products
-            .Where(p => p.ProductCategoryId == categoryId && !p.IsDeleted)
-            .Include(p => p.ProductImages
-            .Where(pi => pi.IsPrimary != null)).ToListAsync();
+            // Əsas məhsullar üçün sorğu qurulur
+            var query = _context.Products
+                .Where(p => !p.IsDeleted);
+
+            // Kateqoriya varsa, filtrlə
+            if (categoryId != null)
+            {
+                query = query.Where(p => p.ProductCategoryId == categoryId);
+            }
+
+            // Include şəkillər, amma filter etmə (sorğunu pozur)
+            query = query.Include(p => p.ProductImages);
+
+            // Sırala parametrlərinə görə OrderBy əlavə et
+            switch (sort)
+            {
+                case "popularity":
+                    // Burada öncə satış sayına, sonra baxış sayına, sonra reytinqə görə sırala
+                    query = query.OrderByDescending(p => p.SalesCount)
+                                 .ThenByDescending(p => p.ViewsCount)
+                                 .ThenByDescending(p => p.Rating);
+                    break;
+
+                case "priceHighToLow":
+                    query = query.OrderByDescending(p => p.Price);
+                    break;
+
+                case "priceLowToHigh":
+                    query = query.OrderBy(p => p.Price);
+                    break;
+
+                case "newest":
+                    query = query.OrderByDescending(p => p.Id);
+                    break;
+
+                default:
+                    query = query.OrderByDescending(p => p.Id);
+                    break;
+            }
+
+            var products = await query.ToListAsync();
 
             var newProducts = await _context.Products
             .Include(p => p.ProductImages.Where(pi => pi.IsPrimary != null))
@@ -52,6 +84,8 @@ namespace HoroScope.Controllers
                 ProductCount = products.Count,
 
                 TopCategories = topCategories,
+
+                SelectedSort = sort,
             };
             return View(vm);
         }
@@ -184,6 +218,44 @@ namespace HoroScope.Controllers
 
             return RedirectToAction("Details", new { id = vm.ProductReviewVM.ProductId });
         }
+
+        [HttpGet]
+        public async Task<IActionResult> CheckPinCode(string code)
+        {
+            if (string.IsNullOrWhiteSpace(code))
+                return Json(new { isDeliverable = false, message = "Zip code cannot be empty." });
+
+            var normalizedCode = code.Trim().ToUpper();
+
+            var isValidFormat = System.Text.RegularExpressions.Regex.IsMatch(
+                normalizedCode,
+                @"^(AZ\d{4}|\d{5,6})$"
+            );
+
+            if (!isValidFormat)
+            {
+                return Json(new
+                {
+                    isDeliverable = false,
+                    isFormatError = true,
+                    message = "❌ Please enter a valid zip code format (for ex. AZ1000 / 90210)"
+                });
+            }
+
+            bool isDeliverable = await _context.DeliverableAddress
+                .AnyAsync(d => d.PinCode.ToUpper() == normalizedCode && d.IsActive);
+
+            return Json(new
+            {
+                isDeliverable,
+                isFormatError = false,
+                message = isDeliverable
+                    ? "✅ Delivery available to this area."
+                    : "❌ Sorry, we don't deliver to this area."
+            });
+        }
+
+
 
 
     }

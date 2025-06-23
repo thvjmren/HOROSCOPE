@@ -19,5 +19,9 @@ namespace HoroScope.Models
         public int ViewsCount { get; set; } = 0;
         public int ReviewCount { get; set; } = 0;
         public double Rating { get; set; }
+
+        public int ShippingDays { get; set; } = 3;
+        public bool FreeShipping => Price >= 77;
+        public bool CodAvailable { get; set; } = true;
     }
 }

@@ -114,6 +114,17 @@
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="hs_kd_first_sec_cont_wrapper">
+
+                                                    <ul>
+                                                        <li>
+                                                            Sort by -
+                                                            <a asp-action="Index" asp-route-categoryId="@Model.SelectedCategoryId" asp-route-sort="popularity">Popularity</a> |
+                                                            <a asp-action="Index" asp-route-categoryId="@Model.SelectedCategoryId" asp-route-sort="priceHighToLow">Price - High to Low</a> |
+                                                            <a asp-action="Index" asp-route-categoryId="@Model.SelectedCategoryId" asp-route-sort="priceLowToHigh">Price - Low to High</a> |
+                                                            <a asp-action="Index" asp-route-categoryId="@Model.SelectedCategoryId" asp-route-sort="newest">Newest First</a>
+                                                        </li>
+                                                    </ul>
+
                                                     <ul>
                                                         <li>Sort by - <a href="#">Popularity</a></li>
                                                         <li>Price - <a href="#">High to Low</a></li>
@@ -148,11 +159,22 @@
                                                                     $@product.Price.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
                                                                 </h3>
                                                             }
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
+
+                                                            @{
+                                                                double rating = product?.Rating ?? 0;
+                                                                int fullStars = (int)Math.Floor(rating);
+                                                                int emptyStars = 5 - fullStars;
+                                                            }
+
+                                                            @for (int i = 0; i < fullStars; i++)
+                                                            {
+                                                                <i class="fa fa-star"></i>
+                                                            }
+                                                            @for (int i = 0; i < emptyStars; i++)
+                                                            {
+                                                                <i class="fa fa-star-o"></i>
+                                                            }
+
                                                         </div>
                                                     </div>
                                                 </div>

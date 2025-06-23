@@ -107,12 +107,26 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="hs_shop_single_cart_wrapper">
                     <h2>@Model.ShopDetailsVM.Product.Name</h2>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <i class="fa fa-star-o"></i> &nbsp;&nbsp;
-                    <span>5,331 Ratings & 1,151 Reviews</span>
+
+                    @{
+                        int fullStars = (int)Math.Floor(Model.ShopDetailsVM.Product.Rating);
+                        int emptyStars = 5 - fullStars;
+                    }
+
+                    @for (int i = 0; i < fullStars; i++)
+                    {
+                        <i class="fa fa-star"></i>
+                    }
+                    @for (int i = 0; i < emptyStars; i++)
+                    {
+                        <i class="fa fa-star-o"></i>
+                    }
+
+                    <span>
+                        @Model.ShopDetailsVM.Product.Rating.ToString("0.0") Rating &
+                        @Model.ShopDetailsVM.Product.ReviewCount Reviews
+                    </span>
+
                     @if (Model.ShopDetailsVM.Product.Discount > 0)
                     {
                         var discountedPrice = Model.ShopDetailsVM.Product.Price - (Model.ShopDetailsVM.Product.Price * Model.ShopDetailsVM.Product.Discount / 100);
@@ -134,7 +148,17 @@
                         <i class="fa fa-cart-arrow-down"></i>
                     </div>
                     <div class="hs_shop_single_cart_icon_cont_left">
-                        <p>Ships in 4 - 5 Days ( FREE Shipping in India )</p>
+                        <p>
+                            Ships within @Model.ShopDetailsVM.Product.ShippingDays Days
+                            @if (Model.ShopDetailsVM.Product.FreeShipping)
+                            {
+                            <p>(FREE Shipping Available)</p>
+                            }
+                            else
+                            {
+                            <p>(Shipping charges may apply)</p>
+                            }
+                        </p>
                     </div>
                 </div>
                 <div class="hs_shop_single_cart_icon_wrapper">
@@ -142,14 +166,25 @@
                         <i class="fa fa-money"></i>
                     </div>
                     <div class="hs_shop_single_cart_icon_cont_left">
-                        <p>Check for COD availability</p>
+                        <p>
+                            @if (Model.ShopDetailsVM.Product.CodAvailable)
+                            {
+                            <p>Cash on Delivery is available</p>
+                            }
+                            else
+                            {
+                            <p>Cash on Delivery not available for this product</p>
+                            }
+                        </p>
                     </div>
                 </div>
                 <div class="hs_shop_single_co_wrapper">
-                    <input type="text" placeholder="Enter Pin Code">
-                    <button type="submit">CHECK OUT</button>
-                    <p>30 Days Refund/Exchange</p>
+                    <label asp-for="ShopDetailsVM.DeliverableAddress.PinCode">Enter Zip Code to check free shipping availability</label>
+                    <input asp-for="ShopDetailsVM.DeliverableAddress.PinCode" type="text" id="pin-code-input" placeholder="For ex. AZ1090">
+                    <button type="button" onclick="checkPinCode()">CHECK</button>
+                    <p id="pin-code-result" style="margin-top:10px;"></p>
                 </div>
+
                 <div class="row">
                     <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12">
                         <div class="btc_shop_prod_quanty_bar">
@@ -159,6 +194,9 @@
                                         <i class="fa fa-plus"></i>
                                     </button>
                                     <input type="text" name="quantity" value="1" size="2" id="input-quantity" class="form-control" />
+
+                                    <input type="hidden" name="product_id" id="product-id" value="@Model.ShopDetailsVM.Product.Id" />
+
                                     <button onclick="changeQty(0); return false;" class="decrease">
                                         <i class="fa fa-minus"></i>
                                     </button>
@@ -252,7 +290,7 @@
                                 </div>
                             </div>
 
-@*                             <div class="col-lg-8 col-md-7 col-sm-8 col-xs-12">
+                            @*                             <div class="col-lg-8 col-md-7 col-sm-8 col-xs-12">
                                 <div class="hs_shop_single_cart_btn">
                                     <ul>
                                         <li><a asp-controller="Shop" asp-action="Review" asp-route-productId="@Model.ShopDetailsVM.Product.Id">Add Review</a></li>
@@ -328,3 +366,44 @@
     </div>
 </div>
 <!-- hs popular prodt wrapper End -->
+
+<script>
+    function checkPinCode() {
+        const pinCode = document.getElementById("pin-code-input").value.trim();
+        const result = document.getElementById("pin-code-result");
+
+        if (pinCode === "") {
+            result.innerText = "Please enter a zip code.";
+            result.style.color = "red";
+            return;
+        }
+
+        fetch(`/Shop/CheckPinCode?code=${pinCode}`)
+            .then(response => response.json())
+            .then(data => {
+                result.innerText = data.message;
+                result.style.color = data.isFormatError ? "orange" :
+                                     data.isDeliverable ? "green" : "red";
+            })
+            .catch(error => {
+                console.error(error);
+                result.innerText = "Something went wrong. Please try again.";
+                result.style.color = "red";
+            });
+    }
+</script>
+
+<script>
+    function changeQty(isIncrease) {
+        const qtyInput = document.getElementById("input-quantity");
+        let qty = parseInt(qtyInput.value) || 1;
+
+        if (isIncrease) {
+            qty++;
+        } else if (qty > 1) {
+            qty--;
+        }
+
+        qtyInput.value = qty;
+    }
+</script>
