@@ -1,9 +1,10 @@
-﻿using System.Net;
+﻿using HoroScope.Interfaces;
+using System.Net;
 using System.Net.Mail;
 
 namespace HoroScope.Services.Implementations
 {
-    public class EmailService
+    public class EmailService : IEmailService
     {
         private readonly IConfiguration _configuration;
 

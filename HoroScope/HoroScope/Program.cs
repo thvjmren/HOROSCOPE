@@ -1,4 +1,5 @@
 using HoroScope.DAL;
+using HoroScope.Interfaces;
 using HoroScope.Models;
 using HoroScope.Services.Implementations;
 using Microsoft.AspNetCore.Identity;
@@ -18,6 +19,15 @@ namespace HoroScope
                 opt.Password.RequiredLength = 8;
                 opt.Password.RequireUppercase = false;
                 opt.Password.RequireNonAlphanumeric = false;
+
+                opt.User.RequireUniqueEmail = true;
+
+                opt.Lockout.MaxFailedAccessAttempts = 3;
+                opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+                opt.Lockout.AllowedForNewUsers = true;
+
+                opt.SignIn.RequireConfirmedEmail = true;
+
             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
 
@@ -27,7 +37,8 @@ namespace HoroScope
             });
 
             builder.Services.AddScoped<LayoutService>();
-            builder.Services.AddScoped<EmailService>();
+            builder.Services.AddScoped<IEmailService, EmailService>();
+
 
             var app = builder.Build();
 

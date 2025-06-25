@@ -1,5 +1,5 @@
 using HoroScope.DAL;
-using HoroScope.Services.Implementations;
+using HoroScope.Interfaces;
 using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,9 +9,9 @@ namespace HoroScope.Controllers;
 public class HomeController : Controller
 {
     private readonly AppDbContext _context;
-    private readonly EmailService _service;
+    private readonly IEmailService _service;
 
-    public HomeController(AppDbContext context, EmailService service)
+    public HomeController(AppDbContext context, IEmailService service)
     {
         _context = context;
         _service = service;

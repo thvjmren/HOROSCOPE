@@ -5,7 +5,6 @@ namespace HoroScope.ViewModels
     public class LoginVM
     {
         [MaxLength(256)]
-        [MinLength(7)]
         public string UsernameOrEmail { get; set; }
         [MinLength(8)]
         [DataType(DataType.Password)]
