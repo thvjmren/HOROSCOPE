@@ -1,4 +1,5 @@
 ﻿using HoroScope.DAL;
+using HoroScope.Models;
 using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,11 +14,28 @@ namespace HoroScope.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index(int? categoryId)
+        public async Task<IActionResult> Index(int? categoryId, int page = 1)
         {
-            var Blogs = categoryId == null
-            ? await _context.Blogs.Where(b => !b.IsDeleted).OrderByDescending(p => p.Id).ToListAsync()
-            : await _context.Blogs.Where(b => b.BlogCategoryId == categoryId && !b.IsDeleted).OrderByDescending(b => b.Id).ToListAsync();
+            int pageSize = 3;
+
+            var query = _context.Blogs.Where(b => !b.IsDeleted);
+
+            if (categoryId != null)
+            {
+                query = query.Where(b => b.BlogCategoryId == categoryId);
+            }
+
+            int count = await query.CountAsync();
+
+            double total = Math.Ceiling((double)count / pageSize);
+
+            if (page > total && total != 0) return BadRequest();
+
+            var Blogs = await query
+                .OrderByDescending(b => b.Id)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
 
             var recentNews = await _context.Blogs
                 .Where(b => !b.IsDeleted)
@@ -28,18 +46,24 @@ namespace HoroScope.Controllers
             BlogVM vm = new()
             {
                 BlogCategories = await _context.BlogCategories
-                .Where(bc => bc.IsDeleted == false)
-                .ToListAsync(),
+                    .Where(bc => !bc.IsDeleted)
+                    .ToListAsync(),
 
-                Blogs = Blogs,
 
+                Blogs = new PaginatedVM<Blog>
+                {
+                    Items = Blogs,
+                    CurrentPage = page,
+                    TotalPage = total
+                },
                 RecentNews = recentNews,
-
-                BlogCount = Blogs.Count,
+                BlogCount = count,
+                SelectedCategoryId = categoryId
             };
 
             return View(vm);
         }
+
 
         public async Task<IActionResult> Details(int? id)
         {

@@ -28,6 +28,8 @@ namespace HoroScope.Areas.Admin.Controllers
                 CategoryName = s.ServiceCategory.Name,
                 CreatedAt = s.CreatedAt,
                 IsDeleted = s.IsDeleted,
+                IsFree = s.IsFree,
+                Price = s.Price
             }).ToListAsync();
             return View(serviceVMs);
         }
@@ -51,14 +53,14 @@ namespace HoroScope.Areas.Admin.Controllers
             bool result = await _context.Services.AnyAsync(s => s.Name == serviceVM.Name);
             if (result)
             {
-                ModelState.AddModelError(nameof(CreateServiceVM), $"this Service:{serviceVM.Name} is already exist");
+                ModelState.AddModelError(nameof(CreateServiceVM), $"This Service:{serviceVM.Name} is already exist");
                 return View(serviceVM);
             }
 
             bool serviceResult = serviceVM.ServiceCategories.Any(c => c.Id != serviceVM.CategoryId);
             if (!serviceResult)
             {
-                ModelState.AddModelError(nameof(CreateServiceVM.CategoryId), $"this Service Category does not exist");
+                ModelState.AddModelError(nameof(CreateServiceVM.CategoryId), $"This Service Category does not exist");
                 return View(serviceVM);
             }
 
@@ -69,6 +71,13 @@ namespace HoroScope.Areas.Admin.Controllers
                 return View(serviceVM);
             }
 
+            var category = await _context.ServiceCategories.FindAsync(serviceVM.CategoryId);
+            if (category == null)
+            {
+                ModelState.AddModelError(nameof(CreateServiceVM.CategoryId), $"This Service Category does not exist");
+                return View(serviceVM);
+            }
+
             Service service = new()
             {
                 Name = serviceVM.Name,
@@ -76,6 +85,8 @@ namespace HoroScope.Areas.Admin.Controllers
                 Description = serviceVM.Description,
                 CreatedAt = DateTime.Now,
                 Icon = serviceVM.Icon,
+                IsFree = category.Name.ToLower().Contains("free"),
+                Price = category.Name.ToLower().Contains("free") ? 0 : serviceVM.Price
             };
 
             await _context.Services.AddAsync(service);
@@ -109,7 +120,9 @@ namespace HoroScope.Areas.Admin.Controllers
                 Name = service.Name,
                 Icon = service.Icon,
                 Description = service.Description,
-                ServiceCategories = await _context.ServiceCategories.ToListAsync()
+                ServiceCategories = await _context.ServiceCategories.ToListAsync(),
+                IsFree = service.IsFree,
+                Price = service.Price,
             };
 
             return View(serviceVM);
@@ -122,38 +135,61 @@ namespace HoroScope.Areas.Admin.Controllers
 
             if (!ModelState.IsValid) return View(serviceVM);
 
-            bool result = await _context.Services.AnyAsync(s => s.Name == serviceVM.Name && s.Id != serviceVM.CategoryId);
+            if (id == null) return BadRequest();
+
+            var service = await _context.Services.FindAsync(id);
+
+            if (service == null) return NotFound();
+
+            bool result = await _context.Services.AnyAsync(s => s.Name == serviceVM.Name && s.Id != id);
             if (result)
             {
-                ModelState.AddModelError(nameof(CreateServiceVM), $"this Service:{serviceVM.Name} is already exist");
+                ModelState.AddModelError(nameof(serviceVM.Name), $"This service name '{serviceVM.Name}' already exists.");
                 return View(serviceVM);
             }
 
-            bool serviceResult = serviceVM.ServiceCategories.Any(c => c.Id != serviceVM.CategoryId);
+            bool serviceResult = await _context.ServiceCategories.AnyAsync(c => c.Id == serviceVM.CategoryId);
             if (!serviceResult)
             {
-                ModelState.AddModelError(nameof(CreateServiceVM.CategoryId), $"this Service Category does not exist");
+                ModelState.AddModelError(nameof(serviceVM.CategoryId), "This service category does not exist.");
                 return View(serviceVM);
             }
 
-            bool iconResult = await _context.Services.AnyAsync(s => s.Icon == serviceVM.Icon && s.Id != serviceVM.CategoryId);
+            bool iconResult = await _context.Services.AnyAsync(s => s.Icon == serviceVM.Icon && s.Id != id);
             if (iconResult)
             {
-                ModelState.AddModelError(nameof(CreateServiceVM.CategoryId), "This icon is already used");
+                ModelState.AddModelError(nameof(serviceVM.Icon), "This icon is already used by another service.");
                 return View(serviceVM);
             }
 
-            Service service = new()
+
+            var category = await _context.ServiceCategories.FindAsync(serviceVM.CategoryId);
+            if (category == null)
             {
-                Name = serviceVM.Name,
-                ServiceCategoryId = serviceVM.CategoryId,
-                Description = serviceVM.Description,
-                CreatedAt = DateTime.Now,
-                Icon = serviceVM.Icon,
-            };
+                ModelState.AddModelError(nameof(serviceVM.CategoryId), "This service category does not exist.");
+                return View(serviceVM);
+            }
+
+            service.Name = serviceVM.Name;
+            service.ServiceCategoryId = serviceVM.CategoryId;
+            service.Description = serviceVM.Description;
+            service.Icon = serviceVM.Icon;
+
+            service.IsFree = category.Name.ToLower().Contains("free");
+
+            if (service.IsFree)
+            {
+                service.Price = 0;
+            }
+            else
+            {
+                service.Price = serviceVM.Price;
+            }
+
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
     }
 }

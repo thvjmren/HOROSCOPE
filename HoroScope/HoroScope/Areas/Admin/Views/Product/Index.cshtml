@@ -1,0 +1,83 @@
+﻿@model PaginatedVM<GetProductVM>
+
+@{
+    int count = 0;
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Products</h4>
+            <a asp-action="Create" class="btn btn-info">Create</a>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Main Image</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Discount</th>
+                            <th>Stock</th>
+                            <th>Sales Count</th>
+                            <th>Created Time</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var productVM in Model.Items)
+                        {
+                            count++;
+                            <tr>
+                                <td>@count</td>
+                                <td>@productVM.Name</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(productVM.MainImage))
+                                    {
+                                        <img src="~/assets/images/content/shop/@productVM.MainImage" alt="Image" style="width: 60px; height: auto;" />
+                                    }
+                                    else
+                                    {
+                                        <span>No Image</span>
+                                    }
+                                </td>
+                                <td>@productVM.Description</td>
+                                <td>@productVM.CategoryName</td>
+                                <td>@productVM.Price.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)</td>
+                                <td>@productVM.Discount %</td>
+                                <td>@productVM.Stock</td>
+                                <td>@productVM.SalesCount</td>
+                                <td>@productVM.CreatedAt.ToString("d MMMM yyy HH:mm")</td>
+                                <td>
+                                    <a asp-action="Update" asp-route-id="@productVM.Id" class="btn btn-primary mb-2">
+                                        <i class="mdi mdi-pencil-box"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@productVM.Id" class="btn btn-danger"
+                                       onclick="return confirm('Are you sure you want to delete this product?');">
+                                        <i class="mdi mdi-delete-forever"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item @(Model.CurrentPage<=1?"disabled":"")"><a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage-1)">Previous</a></li>
+
+                        @for (int i = 1; i <= Model.TotalPage; i++)
+                        {
+                            <li class="page-item @(Model.CurrentPage==i?"disabled":"")"><a class="page-link" asp-action="Index" asp-route-page="@i">@i</a></li>
+                        }
+
+                        <li class="page-item @(Model.TotalPage==Model.CurrentPage?"disabled":"")"><a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage+1)">Next</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

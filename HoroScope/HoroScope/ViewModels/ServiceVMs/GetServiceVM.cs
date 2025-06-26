@@ -13,5 +13,7 @@ namespace HoroScope.ViewModels
         public DateTime CreatedAt { get; set; }
         public bool IsDeleted { get; set; }
         public string CategoryName { get; set; }
+        public decimal? Price { get; set; }
+        public bool IsFree { get; set; }
     }
 }

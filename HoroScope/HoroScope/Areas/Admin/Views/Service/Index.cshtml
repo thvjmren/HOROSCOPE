@@ -19,6 +19,7 @@
                             <th>Icon</th>
                             <th>Description</th>
                             <th>Category</th>
+                            <th>Price</th>
                             <th>Created Time</th>
                             <th>Setting</th>
                         </tr>
@@ -33,10 +34,15 @@
                                 <td>@serviceVM.Icon</td>
                                 <td>@serviceVM.Description</td>
                                 <td>@serviceVM.CategoryName</td>
-                                <td>@serviceVM.CreatedAt.ToString("d MMMM yyy HH:mm")</td>
+                                <td>@(serviceVM.IsFree ? "0" : $"${serviceVM.Price:0.##}")</td>
+                                <td>@serviceVM.CreatedAt.ToString("d MMMM yyyy HH:mm")</td>
                                 <td>
-                                    <a asp-action="Update" asp-route-id="@serviceVM.Id" class="btn btn-primary mb-2"><i class="mdi mdi-pencil-box"></i></a>
-                                    <a asp-action="Delete" asp-route-id="@serviceVM.Id" class="btn btn-danger"><i class="mdi mdi-delete-forever"></i></a>
+                                    <a asp-action="Update" asp-route-id="@serviceVM.Id" class="btn btn-primary mb-2">
+                                        <i class="mdi mdi-pencil-box"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@serviceVM.Id" class="btn btn-danger">
+                                        <i class="mdi mdi-delete-forever"></i>
+                                    </a>
                                 </td>
                             </tr>
                         }

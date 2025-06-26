@@ -14,81 +14,86 @@ namespace HoroScope.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index(int? categoryId, string? sort)
-        {
-            // Əsas məhsullar üçün sorğu qurulur
-            var query = _context.Products
-                .Where(p => !p.IsDeleted);
 
-            // Kateqoriya varsa, filtrlə
+        public async Task<IActionResult> Index(int? categoryId, string? sort, int page = 1)
+        {
+            int count = await _context.Products.CountAsync();
+            int pageSize = 3;
+            double total = Math.Ceiling((double)count / pageSize);
+
+            if (page > total) return BadRequest();
+
+            var query = _context.Products.Where(p => !p.IsDeleted);
+
             if (categoryId != null)
             {
                 query = query.Where(p => p.ProductCategoryId == categoryId);
             }
 
-            // Include şəkillər, amma filter etmə (sorğunu pozur)
             query = query.Include(p => p.ProductImages);
 
-            // Sırala parametrlərinə görə OrderBy əlavə et
             switch (sort)
             {
                 case "popularity":
-                    // Burada öncə satış sayına, sonra baxış sayına, sonra reytinqə görə sırala
                     query = query.OrderByDescending(p => p.SalesCount)
                                  .ThenByDescending(p => p.ViewsCount)
                                  .ThenByDescending(p => p.Rating);
                     break;
-
                 case "priceHighToLow":
                     query = query.OrderByDescending(p => p.Price);
                     break;
-
                 case "priceLowToHigh":
                     query = query.OrderBy(p => p.Price);
                     break;
-
                 case "newest":
                     query = query.OrderByDescending(p => p.Id);
                     break;
-
                 default:
                     query = query.OrderByDescending(p => p.Id);
                     break;
             }
 
-            var products = await query.ToListAsync();
+            int totalCount = await query.CountAsync();
+            var pagedProducts = await query
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
 
             var newProducts = await _context.Products
-            .Include(p => p.ProductImages.Where(pi => pi.IsPrimary != null))
-            .Where(p => !p.IsDeleted)
-            .OrderByDescending(p => p.Id)
-            .Take(3)
-            .ToListAsync();
+                .Include(p => p.ProductImages.Where(pi => pi.IsPrimary != null))
+                .Where(p => !p.IsDeleted)
+                .OrderByDescending(p => p.Id)
+                .Take(3)
+                .ToListAsync();
 
             var topCategories = await _context.ProductCategories
-            .Where(p => !p.IsDeleted)
-            .OrderByDescending(pc => pc.Products.Count(p => !p.IsDeleted))
-            .Take(5)
-            .ToListAsync();
+                .Where(p => !p.IsDeleted)
+                .OrderByDescending(pc => pc.Products.Count(p => !p.IsDeleted))
+                .Take(5)
+                .ToListAsync();
 
             ShopVM vm = new()
             {
                 ProductCategories = await _context.ProductCategories
-                .Where(pc => pc.IsDeleted == false)
-                .ToListAsync(),
+                    .Where(pc => !pc.IsDeleted)
+                    .ToListAsync(),
 
-                Products = products,
+                Products = new PaginatedVM<Product>
+                {
+                    Items = pagedProducts,
+                    CurrentPage = page,
+                    TotalPage = Math.Ceiling((double)totalCount / pageSize)
+                },
 
                 NewProducts = newProducts,
-
-                ProductCount = products.Count,
-
+                ProductCount = totalCount,
                 TopCategories = topCategories,
-
-                SelectedSort = sort,
+                SelectedSort = sort
             };
+
             return View(vm);
         }
+
 
         public async Task<IActionResult> Details(int? id)
         {

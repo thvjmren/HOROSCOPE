@@ -125,16 +125,10 @@
                                                         </li>
                                                     </ul>
 
-                                                    <ul>
-                                                        <li>Sort by - <a href="#">Popularity</a></li>
-                                                        <li>Price - <a href="#">High to Low</a></li>
-                                                        <li>Date by - <a href="#">Newest First</a></li>
-                                                    </ul>
-                                                    <p class="hidden-xs">Pages : <span>1-12</span> of 390</p>
                                                 </div>
                                             </div>
 
-                                            @foreach (var product in Model.Products)
+                                            @foreach (var product in Model.Products.Items)
                                             {
                                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                                     <div class="hs_shop_prodt_main_box">
@@ -180,20 +174,46 @@
                                                 </div>
                                             }
 
-
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 visible-lg visible-md">
-                                                <div class="pager_wrapper">
-                                                    <ul class="pagination">
-                                                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                                        <li class="btc_shop_pagi"><a href="#">01</a></li>
-                                                        <li class="btc_shop_pagi"><a href="#">02</a></li>
-                                                        <li class="btc_third_pegi btc_shop_pagi"><a href="#">03</a></li>
-                                                        <li class="hidden-xs btc_shop_pagi"><a href="#">04</a></li>
-                                                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
                                         </div>
+                                            <div class="pager_wrapper">
+                                                <ul class="pagination">
+                                                    @if (Model.Products.CurrentPage > 1)
+                                                    {
+                                                        <li>
+                                                            <a asp-action="Index"
+                                                               asp-route-page="@(Model.Products.CurrentPage - 1)"
+                                                               asp-route-categoryId="@Model.SelectedCategoryId"
+                                                               asp-route-sort="@Model.SelectedSort">
+                                                                <i class="fa fa-angle-left"></i>
+                                                            </a>
+                                                        </li>
+                                                    }
+
+                                                    @for (int i = 1; i <= Model.Products.TotalPage; i++)
+                                                    {
+                                                        <li class="btc_shop_pagi @(i == Model.Products.CurrentPage ? "active" : "")">
+                                                            <a asp-action="Index"
+                                                               asp-route-page="@i"
+                                                               asp-route-categoryId="@Model.SelectedCategoryId"
+                                                               asp-route-sort="@Model.SelectedSort">
+                                                                @i
+                                                            </a>
+                                                        </li>
+                                                    }
+
+                                                    @if (Model.Products.CurrentPage < Model.Products.TotalPage)
+                                                    {
+                                                        <li>
+                                                            <a asp-action="Index"
+                                                               asp-route-page="@(Model.Products.CurrentPage + 1)"
+                                                               asp-route-categoryId="@Model.SelectedCategoryId"
+                                                               asp-route-sort="@Model.SelectedSort">
+                                                                <i class="fa fa-angle-right"></i>
+                                                            </a>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
                                     </div>
                                 </div>
                             </div>

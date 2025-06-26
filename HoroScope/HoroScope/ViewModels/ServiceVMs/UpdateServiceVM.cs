@@ -12,5 +12,8 @@ namespace HoroScope.ViewModels
         public string Description { get; set; }
         public int CategoryId { get; set; }
         public List<ServiceCategory>? ServiceCategories { get; set; }
+        public decimal? Price { get; set; }
+        public bool IsFree { get; set; }
+
     }
 }
