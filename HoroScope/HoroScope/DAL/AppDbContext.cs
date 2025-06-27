@@ -27,6 +27,8 @@ namespace HoroScope.DAL
         public DbSet<ProductFeatureValue> ProductFeatureValues { get; set; }
         public DbSet<ProductReview> ProductReviews { get; set; }
         public DbSet<DeliverableAddress> DeliverableAddress { get; set; }
+        public DbSet<BlogComment> BlogComments { get; set; }
+        public DbSet<BlogLike> BlogLikes { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using HoroScope.Models.Base;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HoroScope.Models
 {
@@ -9,5 +10,15 @@ namespace HoroScope.Models
         public string Image { get; set; }
         public int BlogCategoryId { get; set; }
         public BlogCategory? BlogCategory { get; set; }
+        [NotMapped]
+        public string UserName { get; set; }
+
+        [NotMapped]
+        public int LikesCount { get; set; }
+
+        public ICollection<BlogComment>? Comments { get; set; }
+        public ICollection<BlogLike>? Likes { get; set; }
+        public int CommentsCount { get; set; }
+
     }
 }

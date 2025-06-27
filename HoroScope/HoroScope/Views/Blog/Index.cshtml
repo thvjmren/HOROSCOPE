@@ -3,6 +3,16 @@
     <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css" />
 }
 
+@{
+    string monthName = "";
+    if (Model.SelectedMonth != null)
+    {
+        monthName = new System.Globalization.CultureInfo("en-US")
+                        .DateTimeFormat.GetMonthName(Model.SelectedMonth.Value)
+                        .ToUpperInvariant();
+    }
+}
+
 @model BlogVM
 
 <!-- hs About Title Start -->
@@ -12,14 +22,21 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
                 <div class="hs_indx_title_left_wrapper">
-                    <h2>Blog Categories</h2>
+                    @if (Context.Request.Query.ContainsKey("month") && Context.Request.Query.ContainsKey("year"))
+                    {
+                        <h2>Results for: @monthName / @Model.SelectedYear</h2>
+                    }
+                    else
+                    {
+                        <h2>Blog</h2>
+                    }
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
                 <div class="hs_indx_title_right_wrapper">
                     <ul>
                         <li><a asp-controller="Home" asp-action="Index">Home</a> &nbsp;&nbsp;&nbsp;> </li>
-                        <li>Blog Categories</li>
+                        <li>Blog</li>
                     </ul>
                 </div>
             </div>
@@ -62,10 +79,9 @@
                                     <div class="hs_blog_box1_bottom_cont_main_wrapper">
                                         <div class="hs_blog_box1_bottom_cont_left">
                                             <ul>
-                                                <li><a href="">by - Admin</a></li>
-                                                <li><a href="">1244 Likes</a></li>
-                                                <li><a href="">256 Comments</a></li>
-                                                <li><a href="">In News - Horoscope</a></li>
+                                                <li><a href="#">by - Admin</a></li>
+                                                <li><span id="likesCount">@Model.BlogLikesCount Likes</span></li>
+                                                <li><a href="#">@Model.BlogCommentsCount Comments</a></li>
                                             </ul>
                                         </div>
                                         <div class="hs_blog_box1_bottom_cont_right">
@@ -83,42 +99,42 @@
                         }
 
                     </div>
-                        <div class="pager_wrapper">
-                            <ul class="pagination">
-                                @if (Model.Blogs.CurrentPage > 1)
-                                {
-                                    <li>
-                                        <a asp-action="Index"
-                                           asp-route-page="@(Model.Blogs.CurrentPage - 1)"
-                                           asp-route-categoryId="@Model.SelectedCategoryId">
-                                            <i class="fa fa-angle-left"></i>
-                                        </a>
-                                    </li>
-                                }
+                    <div class="pager_wrapper">
+                        <ul class="pagination">
+                            @if (Model.Blogs.CurrentPage > 1)
+                            {
+                                <li>
+                                    <a asp-action="Index"
+                                       asp-route-page="@(Model.Blogs.CurrentPage - 1)"
+                                       asp-route-categoryId="@Model.SelectedCategoryId">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                </li>
+                            }
 
-                                @for (int i = 1; i <= Model.Blogs.TotalPage; i++)
-                                {
-                                    <li class="btc_shop_pagi @(i == Model.Blogs.CurrentPage ? "active" : "")">
-                                        <a asp-action="Index"
-                                           asp-route-page="@i"
-                                           asp-route-categoryId="@Model.SelectedCategoryId">
-                                            @i
-                                        </a>
-                                    </li>
-                                }
+                            @for (int i = 1; i <= Model.Blogs.TotalPage; i++)
+                            {
+                                <li class="btc_shop_pagi @(i == Model.Blogs.CurrentPage ? "active" : "")">
+                                    <a asp-action="Index"
+                                       asp-route-page="@i"
+                                       asp-route-categoryId="@Model.SelectedCategoryId">
+                                        @i
+                                    </a>
+                                </li>
+                            }
 
-                                @if (Model.Blogs.CurrentPage < Model.Blogs.TotalPage)
-                                {
-                                    <li>
-                                        <a asp-action="Index"
-                                           asp-route-page="@(Model.Blogs.CurrentPage + 1)"
-                                           asp-route-categoryId="@Model.SelectedCategoryId">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
-                                    </li>
-                                }
-                            </ul>
-                        </div>
+                            @if (Model.Blogs.CurrentPage < Model.Blogs.TotalPage)
+                            {
+                                <li>
+                                    <a asp-action="Index"
+                                       asp-route-page="@(Model.Blogs.CurrentPage + 1)"
+                                       asp-route-categoryId="@Model.SelectedCategoryId">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -161,10 +177,12 @@
                             {
                                 <div class="hs_blog_right_recnt_cont_wrapper">
                                     <div class="hs_footer_ln_img_wrapper">
-                                        <img src="~/assets/images/content/blog/@blog.Image" class="img-responsive" alt="ln_img" />
+                                        <a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">
+                                            <img src="~/assets/images/content/blog/@blog.Image" class="img-responsive" alt="ln_img"/>
+                                            </a>
                                     </div>
                                     <div class="hs_footer_ln_cont_wrapper">
-                                        <h4>@blog.Title</h4>
+                                        <h4><a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">@blog.Title</a></h4>
                                         <p>
                                             @blog.CreatedAt.ToString("d MMMM yyyy")
                                         </p>
@@ -173,22 +191,26 @@
                             }
 
                         </div>
+
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="hs_blog_right_cate_list_heading_wrapper">
                                 <h2>Archives</h2>
                             </div>
                             <div class="hs_blog_right_cate_list_cont_wrapper">
                                 <ul>
-                                    <li><a href="#">May 2017</a></li>
-                                    <li><a href="#">June 2017</a></li>
-                                    <li><a href="#">July 2017</a></li>
-                                    <li><a href="#">Augast 2017</a></li>
-                                    <li><a href="#">September 2017</a></li>
-                                    <li><a href="#">October 2017</a></li>
-                                    <li><a href="#">November 2017</a></li>
+                                    @foreach (var blog in Model.Archives)
+                                    {
+                                        <li>
+                                            <a asp-action="Index" asp-controller="Blog" asp-route-year="@blog.Year" asp-route-month="@blog.Month">
+                                                @blog.MonthName @blog.Year (@blog.Count)
+                                            </a>
+                                        </li>
+                                    }
                                 </ul>
                             </div>
                         </div>
+
+                        @* 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="hs_blog_right_cate_list_heading_wrapper">
                                 <h2>Instagram</h2>
@@ -206,18 +228,8 @@
                                     <li><a href="#"><img src="~/assets/images/content/blog/inta9.jpg" alt="blog_img" /></a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> *@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 visible-sm visible-xs">
-                            <div class="pager_wrapper">
-                                <ul class="pagination">
-                                    <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                    <li class="btc_shop_pagi"><a href="#">01</a></li>
-                                    <li class="btc_shop_pagi"><a href="#">02</a></li>
-                                    <li class="btc_third_pegi btc_shop_pagi"><a href="#">03</a></li>
-                                    <li class="hidden-xs btc_shop_pagi"><a href="#">04</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>

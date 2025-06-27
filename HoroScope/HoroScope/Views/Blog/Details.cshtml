@@ -5,6 +5,34 @@
     <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css" />
 }
 
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+
+@section Scripts {
+    <script>
+        document.getElementById("likeBtn").addEventListener("click", function() {
+            fetch('/Blog/ToggleLike', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': '@Antiforgery.GetAndStoreTokens(Context).RequestToken'
+                },
+                body: JSON.stringify({ blogId: @Model.Blog.Id })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error("Network response was not ok.");
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById("likesCount").textContent = data.likesCount + " Likes";
+                document.getElementById("likeBtn").textContent = data.userHasLiked ? "Unlike" : "Like";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+}
+
     <!-- hs About Title Start -->
 <div class="hs_indx_title_main_wrapper">
     <div class="hs_title_img_overlay"></div>
@@ -59,43 +87,13 @@
                                         </p>
 
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="hs_blog_box3_main_wrapper hs_blog_single_box3_main_wrapper">
-                                                <div class="hs_blog_box3_left_cont_wrapper">
-                                                    <div class="hs_blog_quote">
-                                                        <i class="fa fa-quote-left"></i>
-                                                    </div>
-                                                    <div class="hs_blog_quote_cont">
-                                                        <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="hs_blog_box3_right_cont_wrapper">
-                                                    <div class="hs_testi_client_main_wrapper hs_blog_box3_client_main_wrapper">
-                                                        <div class="hs_testi_client_cont_img_sec">
-                                                            <img src="~/assets/images/content/testi_client_img1.jpg" alt="testi_img" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="hs_blog_single_first_cont_wrapper">
-                                                <p>
-                                                    Oluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore atis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-                                                    sit rnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="hs_blog_box1_bottom_cont_main_wrapper">
                                     <div class="hs_blog_box1_bottom_cont_left">
                                         <ul>
                                             <li><a href="#">by - Admin</a></li>
-                                            <li><a href="#">1244 Likes</a></li>
-                                            <li><a href="#">256 Comments</a></li>
-                                            <li><a href="#">In News - Horoscope</a></li>
+                                            <li><span id="likesCount">@Model.BlogLikesCount Likes</span></li>
+                                            <li><a href="#">@Model.BlogComments.Count Comments</a></li>
                                         </ul>
                                     </div>
                                     <div class="hs_blog_box1_bottom_cont_right">
@@ -108,102 +106,78 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_kd_first_sec_wrapper hs_ar_third_sec_heading_wrapper">
-                                <h2>Comments (04)</h2>
-                                <h4><span></span></h4>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <div class="blog-like-section" style="margin-top: 30px;">
+                                        <button id="likeBtn" class="btn btn-link" style="font-size: 24px; color: red; border: none;">
+                                            <i id="likeIcon" class="fa @(Model.UserHasLiked ? "fa-heart" : "fa-heart-o")"></i>
+                                            <span id="likesCount">@Model.BlogLikesCount</span>
+                                        </button>
+                                    </div>
+                                }
+
                             </div>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_rs_comment_main_wrapper">
-                                <div class="hs_rs_comment_img_wrapper">
-                                    <img src="~/assets/images/content/kundali/comm_img1.jpg" alt="comment_img">
+                        @if (Model.BlogComments != null && Model.BlogComments.Any())
+                        {
+                            foreach (var comment in Model.BlogComments)
+                            {
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="hs_rs_comment_main_wrapper">
+                                        <div class="hs_rs_comment_img_wrapper">
+                                            @* <img src="~/assets/images/content/kundali/comm_img1.jpg" alt="comment_img" /> *@
+                                        </div>
+                                        <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
+                                            <h2>
+                                                @comment.AppUser?.UserName ?? "Anonymous"
+                                                <span>@comment.CreatedAt.ToString("MMM d, yyyy - dddd")</span>
+                                                <a href="#"> - Reply</a>
+                                            </h2>
+                                            <p>
+                                                @comment.Text
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
-                                    <h2>Joahn Doe <span>Jan 2 , 2022 - Friday</span> <a href="#"> - Reply</a></h2>
-                                    <p>
-                                        The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly, live-wire actress, is none other than our dashing Ajay Devgan, originally named Vishal
-                                        Devgan !
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_rs_comment_main_wrapper">
-                                <div class="hs_rs_comment_img_wrapper">
-                                    <img src="~/assets/images/content/kundali/comm_img2.jpg" alt="comment_img">
-                                </div>
-                                <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
-                                    <h2>Joahn Doe <span>Jan 2 , 2022 - Friday</span> <a href="#"> - Reply</a></h2>
-                                    <p>
-                                        The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly, live-wire actress, is none other than our dashing Ajay Devgan, originally named Vishal
-                                        Devgan !
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_rs_comment_main_wrapper">
-                                <div class="hs_rs_comment_img_wrapper">
-                                    <img src="~/assets/images/content/kundali/comm_img3.jpg" alt="comment_img">
-                                </div>
-                                <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
-                                    <h2>Joahn Doe <span>Jan 2 , 2022 - Friday</span> <a href="#"> - Reply</a></h2>
-                                    <p>
-                                        The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly, live-wire actress, is none other than our dashing Ajay Devgan, originally named Vishal
-                                        Devgan !
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_rs_comment_main_wrapper">
-                                <div class="hs_rs_comment_img_wrapper">
-                                    <img src="~/assets/images/content/kundali/comm_img1.jpg" alt="comment_img">
-                                </div>
-                                <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
-                                    <h2>Joahn Doe <span>Jan 2 , 2022 - Friday</span> <a href="#"> - Reply</a></h2>
-                                    <p>
-                                        The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly, live-wire actress, is none other than our dashing Ajay Devgan, originally named Vishal
-                                        Devgan !
-                                    </p>
+                            }
+                        }
+                        else
+                        {
+                            <p>There are no comments yet. Be the first!</p>
+                        }
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_kd_five_heading_sec_wrapper">
+                                    <h2>Share Your Opinion</h2>
+                                    <h4><span></span></h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_kd_five_heading_sec_wrapper">
-                                <h2>Leave A Comment</h2>
-                                <h4><span></span></h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div class="hs_kd_six_sec_input_wrapper">
-                                <label>Name</label>
-                                <input type="text">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div class="hs_kd_six_sec_input_wrapper">
-                                <label>Email</label>
-                                <input type="email">
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_kd_six_sec_input_wrapper">
-                                <label>Comments</label>
-                                <textarea rows="6"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <form method="post" asp-controller="Blog" asp-action="AddComment">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" asp-for="BlogComment.BlogId" value="@Model.Blog.Id" />
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="hs_kd_six_sec_input_wrapper">
+                                        <label for="CommentText">Comment</label>
+                                        <textarea id="CommentText" name="Text" class="form-control" placeholder="Your comment here..." required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:10px;">
                             <div class="hs_kd_six_sec_btn">
                                 <ul>
-                                    <li><a href="#">submit</a></li>
+                                    <li><button type="submit">Submit</button></li>
                                 </ul>
                             </div>
                         </div>
+                            </form>
+                        }
+                        else
+                        {
+                            <p>If you would like to comment, please <a asp-controller="Account" asp-action="Login">REGISTER</a> or <a asp-controller="Account" asp-action="Login">LOGIN</a> if you already have an account.</p>
+                        }
                     </div>
                 </div>
             </div>
@@ -262,22 +236,25 @@
                                 </div>
                             }
                         </div>
+
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="hs_blog_right_cate_list_heading_wrapper">
                                 <h2>Archives</h2>
                             </div>
                             <div class="hs_blog_right_cate_list_cont_wrapper">
                                 <ul>
-                                    <li><a href="#">May 2017</a></li>
-                                    <li><a href="#">June 2017</a></li>
-                                    <li><a href="#">July 2017</a></li>
-                                    <li><a href="#">Augast 2017</a></li>
-                                    <li><a href="#">September 2017</a></li>
-                                    <li><a href="#">October 2017</a></li>
-                                    <li><a href="#">November 2017</a></li>
+                                    @foreach (var blog in Model.Archives)
+                                    {
+                                        <li>
+                                            <a asp-action="Index" asp-controller="Blog" asp-route-year="@blog.Year" asp-route-month="@blog.Month">
+                                                @blog.MonthName @blog.Year (@blog.Count)
+                                            </a>
+                                        </li>
+                                    }
                                 </ul>
                             </div>
                         </div>
+
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="hs_blog_right_cate_list_heading_wrapper">
                                 <h2>Instagram</h2>
@@ -315,3 +292,4 @@
     </div>
 </div>
 <!-- hs sidebar End -->
+
