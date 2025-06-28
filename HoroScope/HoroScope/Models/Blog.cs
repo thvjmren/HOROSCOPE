@@ -8,17 +8,21 @@ namespace HoroScope.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public string Image { get; set; }
+
         public int BlogCategoryId { get; set; }
-        public BlogCategory? BlogCategory { get; set; }
-        [NotMapped]
-        public string UserName { get; set; }
+        public BlogCategory BlogCategory { get; set; }
+
+        public string AppUserId { get; set; }
+        public AppUser AppUser { get; set; }
+
+        public ICollection<BlogComment> Comments { get; set; }
+        public ICollection<BlogLike> Likes { get; set; }
 
         [NotMapped]
-        public int LikesCount { get; set; }
+        public int LikesCount => Likes?.Count ?? 0;
 
-        public ICollection<BlogComment>? Comments { get; set; }
-        public ICollection<BlogLike>? Likes { get; set; }
-        public int CommentsCount { get; set; }
-
+        [NotMapped]
+        public int CommentsCount => Comments?.Count ?? 0;
     }
+
 }

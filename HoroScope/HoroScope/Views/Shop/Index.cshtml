@@ -1,4 +1,5 @@
-﻿@model ShopVM
+﻿@using HoroScope.Utilities.Enums
+@model ShopVM
 
 @section links {
     <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
@@ -34,12 +35,15 @@
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 visible-lg visible-md">
                 <div class="hs_blog_right_sidebar_main_wrapper">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_blog_right_search_wrapper">
-                                <input type="text" placeholder="Products Search..">
-                                <button type="submit"><i class="fa fa-search"></i></button>
+                        <form asp-action="Index" asp-route-id="@Model.SelectedCategoryId" asp-route-key="@Model.Key" method="get">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_blog_right_search_wrapper">
+                                    <input type="text" accept="@Model.Search" name="search" placeholder="Search..." value="@Context.Request.Query["search"]" />
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
+
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="hs_blog_right_cate_list_heading_wrapper">
                                 <h2>CATEGORIES</h2>
@@ -47,14 +51,14 @@
                             <div class="hs_blog_right_cate_list_cont_wrapper">
                                 <ul>
                                     <li>
-                                        <a asp-controller="Shop" asp-action="Index" asp-route-id="">
+                                        <a asp-controller="Shop" asp-action="Index">
                                             All Categories
                                         </a>
                                     </li>
                                     @foreach (var category in Model.TopCategories)
                                     {
                                         <li>
-                                            <a asp-controller="Shop" asp-action="Index" asp-route-categoryId="@category.Id">
+                                            <a asp-controller="Shop" asp-action="Index" asp-route-categoryId="@category.Id" asp-route-search="@Model.Search" asp-route-key="@Model.Key">
                                                 @category.Name
                                             </a>
                                         </li>
@@ -114,17 +118,24 @@
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="hs_kd_first_sec_cont_wrapper">
+                                                    <li class="short">
+                                                        <form asp-action="Index" asp-route-categoruId="@Model.SelectedCategoryId" asp-route-search="@Model.Search">
+                                                            <select name="key" onchange="this.form.submit()" class="nice-select">
+                                                                @foreach (var sort in Enum.GetValues(typeof(SortType)))
+                                                                {
+                                                                    @if (Model.Key == (int)sort)
+                                                                    {
+                                                                        <option selected value="@((int)sort)">Sort by: @sort.ToString()</option>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <option value="@((int)sort)">Sort by: @sort.ToString()</option>
+                                                                    }
 
-                                                    <ul>
-                                                        <li>
-                                                            Sort by -
-                                                            <a asp-action="Index" asp-route-categoryId="@Model.SelectedCategoryId" asp-route-sort="popularity">Popularity</a> |
-                                                            <a asp-action="Index" asp-route-categoryId="@Model.SelectedCategoryId" asp-route-sort="priceHighToLow">Price - High to Low</a> |
-                                                            <a asp-action="Index" asp-route-categoryId="@Model.SelectedCategoryId" asp-route-sort="priceLowToHigh">Price - Low to High</a> |
-                                                            <a asp-action="Index" asp-route-categoryId="@Model.SelectedCategoryId" asp-route-sort="newest">Newest First</a>
-                                                        </li>
-                                                    </ul>
-
+                                                                }
+                                                            </select>
+                                                        </form>
+                                                    </li>
                                                 </div>
                                             </div>
 
@@ -175,45 +186,42 @@
                                             }
 
                                         </div>
-                                            <div class="pager_wrapper">
-                                                <ul class="pagination">
-                                                    @if (Model.Products.CurrentPage > 1)
-                                                    {
-                                                        <li>
-                                                            <a asp-action="Index"
-                                                               asp-route-page="@(Model.Products.CurrentPage - 1)"
-                                                               asp-route-categoryId="@Model.SelectedCategoryId"
-                                                               asp-route-sort="@Model.SelectedSort">
-                                                                <i class="fa fa-angle-left"></i>
-                                                            </a>
-                                                        </li>
-                                                    }
+                                        <div class="pager_wrapper">
+                                            <ul class="pagination">
+                                                @if (Model.Products.CurrentPage > 1)
+                                                {
+                                                    <li>
+                                                        <a asp-action="Index"
+                                                           asp-route-page="@(Model.Products.CurrentPage - 1)"
+                                                           asp-route-categoryId="@Model.SelectedCategoryId">
+                                                            <i class="fa fa-angle-left"></i>
+                                                        </a>
+                                                    </li>
+                                                }
 
-                                                    @for (int i = 1; i <= Model.Products.TotalPage; i++)
-                                                    {
-                                                        <li class="btc_shop_pagi @(i == Model.Products.CurrentPage ? "active" : "")">
-                                                            <a asp-action="Index"
-                                                               asp-route-page="@i"
-                                                               asp-route-categoryId="@Model.SelectedCategoryId"
-                                                               asp-route-sort="@Model.SelectedSort">
-                                                                @i
-                                                            </a>
-                                                        </li>
-                                                    }
+                                                @for (int i = 1; i <= Model.Products.TotalPage; i++)
+                                                {
+                                                    <li class="btc_shop_pagi @(i == Model.Products.CurrentPage ? "active" : "")">
+                                                        <a asp-action="Index"
+                                                           asp-route-page="@i"
+                                                           asp-route-categoryId="@Model.SelectedCategoryId">
+                                                            @i
+                                                        </a>
+                                                    </li>
+                                                }
 
-                                                    @if (Model.Products.CurrentPage < Model.Products.TotalPage)
-                                                    {
-                                                        <li>
-                                                            <a asp-action="Index"
-                                                               asp-route-page="@(Model.Products.CurrentPage + 1)"
-                                                               asp-route-categoryId="@Model.SelectedCategoryId"
-                                                               asp-route-sort="@Model.SelectedSort">
-                                                                <i class="fa fa-angle-right"></i>
-                                                            </a>
-                                                        </li>
-                                                    }
-                                                </ul>
-                                            </div>
+                                                @if (Model.Products.CurrentPage < Model.Products.TotalPage)
+                                                {
+                                                    <li>
+                                                        <a asp-action="Index"
+                                                           asp-route-page="@(Model.Products.CurrentPage + 1)"
+                                                           asp-route-categoryId="@Model.SelectedCategoryId">
+                                                            <i class="fa fa-angle-right"></i>
+                                                        </a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

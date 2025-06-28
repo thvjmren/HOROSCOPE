@@ -17,117 +17,117 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HoroScope
 build_property.RootNamespace = HoroScope
-build_property.ProjectDir = C:\Users\Rana\Desktop\777\HoroScope\HoroScope\
+build_property.ProjectDir = C:\Users\Rana\Desktop\HOROSCOPE\HoroScope\HoroScope\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Rana\Desktop\777\HoroScope\HoroScope
+build_property.MSBuildProjectDirectory = C:\Users\Rana\Desktop\HOROSCOPE\HoroScope\HoroScope
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/Product/Index.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/ServiceCategory/Create.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/ServiceCategory/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZUNhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/ServiceCategory/Index.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/ServiceCategory/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZUNhdGVnb3J5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/ServiceCategory/Update.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/ServiceCategory/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZUNhdGVnb3J5XFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/Service/Create.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/Service/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/Service/Index.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/Service/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/Service/Update.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/Service/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/AboutUs/Index.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/AboutUs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRVc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Account/ConfirmEmail.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Account/Login.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Account/Register.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Account/SuccessfullyRegistered.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Account/SuccessfullyRegistered.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTdWNjZXNzZnVsbHlSZWdpc3RlcmVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Blog/Details.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Blog/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Blog/Index.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Contact/Index.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Home/Index.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Shared/Components/Service/Default.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Shared/Components/Service/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VydmljZVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Shop/Details.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Shop/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Shop/Index.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Shop/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/_ViewImports.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/_ViewStart.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rana/Desktop/777/HoroScope/HoroScope/Views/Shared/_Layout.cshtml]
+[C:/Users/Rana/Desktop/HOROSCOPE/HoroScope/HoroScope/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-iomu5fpi7p

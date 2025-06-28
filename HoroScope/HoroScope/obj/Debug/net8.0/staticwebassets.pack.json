@@ -1,1267 +1,1267 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HoroScope.bundle.scp.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HoroScope.bundle.scp.css",
       "PackagePath": "staticwebassets\\HoroScope.soljiurotg.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\css\\maps\\style.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\css\\maps\\style.css.map",
       "PackagePath": "staticwebassets\\admin\\css\\maps\\style.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\css\\style.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\css\\style.css",
       "PackagePath": "staticwebassets\\admin\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\auth\\lockscreen-bg.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\auth\\lockscreen-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\auth\\lockscreen-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\auth\\login-bg.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\auth\\login-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\auth\\login-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\auth\\register-bg.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\auth\\register-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\auth\\register-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face1.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face10.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face10.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face10.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face11.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face11.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face11.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face12.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face12.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face12.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face13.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face13.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face13.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face14.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face14.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face14.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face15.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face15.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face15.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face16.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face16.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face16.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face17.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face17.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face17.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face18.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face18.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face18.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face19.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face19.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face19.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face2.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face20.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face20.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face20.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face21.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face21.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face21.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face22.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face22.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face22.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face23.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face23.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face23.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face24.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face24.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face24.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face25.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face25.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face25.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face26.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face26.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face26.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face27.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face27.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face27.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face3.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face4.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face5.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face5.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face5.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face6.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face6.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face6.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face7.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face7.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face7.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face8.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face8.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face8.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face9.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\faces\\face9.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face9.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\favicon.ico",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\favicon.ico",
       "PackagePath": "staticwebassets\\admin\\images\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\favicon.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\favicon.png",
       "PackagePath": "staticwebassets\\admin\\images\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\logo-mini.svg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\logo-mini.svg",
       "PackagePath": "staticwebassets\\admin\\images\\logo-mini.svg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\logo.svg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\images\\logo.svg",
       "PackagePath": "staticwebassets\\admin\\images\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\Chart.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\Chart.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\Chart.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\chart.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\chart.js",
       "PackagePath": "staticwebassets\\admin\\js\\chart.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\dashboard.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\dashboard.js",
       "PackagePath": "staticwebassets\\admin\\js\\dashboard.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\data-table.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\data-table.js",
       "PackagePath": "staticwebassets\\admin\\js\\data-table.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\dataTables.bootstrap4.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\dataTables.bootstrap4.js",
       "PackagePath": "staticwebassets\\admin\\js\\dataTables.bootstrap4.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\documentation.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\documentation.js",
       "PackagePath": "staticwebassets\\admin\\js\\documentation.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\file-upload.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\file-upload.js",
       "PackagePath": "staticwebassets\\admin\\js\\file-upload.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\hoverable-collapse.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\hoverable-collapse.js",
       "PackagePath": "staticwebassets\\admin\\js\\hoverable-collapse.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\jquery.cookie.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\jquery.cookie.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.cookie.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\jquery.dataTables.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\jquery.dataTables.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.dataTables.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\off-canvas.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\off-canvas.js",
       "PackagePath": "staticwebassets\\admin\\js\\off-canvas.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\tabs.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\tabs.js",
       "PackagePath": "staticwebassets\\admin\\js\\tabs.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\template.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\js\\template.js",
       "PackagePath": "staticwebassets\\admin\\js\\template.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\base\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\base\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\admin\\vendors\\base\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\base\\vendor.bundle.base.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\base\\vendor.bundle.base.css",
       "PackagePath": "staticwebassets\\admin\\vendors\\base\\vendor.bundle.base.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\base\\vendor.bundle.base.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\base\\vendor.bundle.base.js",
       "PackagePath": "staticwebassets\\admin\\vendors\\base\\vendor.bundle.base.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\chart.js\\Chart.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\chart.js\\Chart.min.js",
       "PackagePath": "staticwebassets\\admin\\vendors\\chart.js\\Chart.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
       "PackagePath": "staticwebassets\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js",
       "PackagePath": "staticwebassets\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\datatables.net\\jquery.dataTables.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\datatables.net\\jquery.dataTables.js",
       "PackagePath": "staticwebassets\\admin\\vendors\\datatables.net\\jquery.dataTables.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css.map",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\animate.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\animate.css",
       "PackagePath": "staticwebassets\\assets\\css\\animate.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\assets\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\flaticon.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\flaticon.css",
       "PackagePath": "staticwebassets\\assets\\css\\flaticon.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\font-awesome.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\font-awesome.css",
       "PackagePath": "staticwebassets\\assets\\css\\font-awesome.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\fonts.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\fonts.css",
       "PackagePath": "staticwebassets\\assets\\css\\fonts.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\magnific-popup.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\magnific-popup.css",
       "PackagePath": "staticwebassets\\assets\\css\\magnific-popup.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\owl.carousel.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\owl.carousel.css",
       "PackagePath": "staticwebassets\\assets\\css\\owl.carousel.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\owl.theme.default.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\owl.theme.default.css",
       "PackagePath": "staticwebassets\\assets\\css\\owl.theme.default.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\reset.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\reset.css",
       "PackagePath": "staticwebassets\\assets\\css\\reset.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\responsive.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\responsive.css",
       "PackagePath": "staticwebassets\\assets\\css\\responsive.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\responsive2.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\responsive2.css",
       "PackagePath": "staticwebassets\\assets\\css\\responsive2.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\sign_flaticon.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\sign_flaticon.css",
       "PackagePath": "staticwebassets\\assets\\css\\sign_flaticon.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\style.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\style2.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\style2.css",
       "PackagePath": "staticwebassets\\assets\\css\\style2.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\Flaticon.eot",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\Flaticon.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.eot"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\Flaticon.ttf",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\Flaticon.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.ttf"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\Flaticon.woff",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\Flaticon.woff",
       "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.woff"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\Flaticond41d.eot",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\Flaticond41d.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\Flaticond41d.eot"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.eot",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.eot"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.svg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.svg",
       "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.svg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.ttf",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.ttf"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.woff",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.woff",
       "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.woff"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.woff2",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.woff2",
       "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.woff2"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfontd41d.eot",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\fontawesome-webfontd41d.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfontd41d.eot"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.eot",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.eot"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.svg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.svg",
       "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.svg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.ttf",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.ttf"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.woff",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.woff",
       "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.woff"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.woff2",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.woff2",
       "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.woff2"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regulard41d.eot",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\glyphicons-halflings-regulard41d.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regulard41d.eot"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.eot",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\sign_fonts\\Flaticon.eot"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.svg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.svg",
       "PackagePath": "staticwebassets\\assets\\fonts\\sign_fonts\\Flaticon.svg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.ttf",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\sign_fonts\\Flaticon.ttf"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.woff",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.woff",
       "PackagePath": "staticwebassets\\assets\\fonts\\sign_fonts\\Flaticon.woff"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.woff2",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticon.woff2",
       "PackagePath": "staticwebassets\\assets\\fonts\\sign_fonts\\Flaticon.woff2"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticond41d.eot",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\fonts\\sign_fonts\\Flaticond41d.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\sign_fonts\\Flaticond41d.eot"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about.jpeg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about.jpeg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\about.jpeg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\astro_img1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\astro_img1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\about\\astro_img1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\astro_img2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\astro_img2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\about\\astro_img2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\astro_img3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\astro_img3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\about\\astro_img3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\astro_img4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\astro_img4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\about\\astro_img4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\pgress_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\pgress_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\about\\pgress_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\play_icon.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\play_icon.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\about\\play_icon.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\video_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about\\video_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\about\\video_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\advert_bg.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\advert_bg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\advert_bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\b1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\b1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\b1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\b2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\b2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\b2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\b3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\b3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\b3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\b4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\b4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\b4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\bc1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\bc1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\bc1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\bc2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\bc2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\bc2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\bc3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\bc3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\bc3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta5.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta5.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta5.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta6.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta6.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta6.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta7.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta7.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta7.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta8.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta8.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta8.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta9.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\inta9.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\inta9.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\planets.jpeg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\planets.jpeg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\planets.jpeg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\zodiacs.jpeg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\blog\\zodiacs.jpeg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\blog\\zodiacs.jpeg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\cart_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\cart_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\cart_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\cycle.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\cycle.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\cycle.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\footer_logo.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\footer_logo.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\footer_logo.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\galaxyImg.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\galaxyImg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\galaxyImg.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ar_img1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ar_img1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\ar_img1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ar_img2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ar_img2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\ar_img2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ar_img3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ar_img3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\ar_img3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ar_img4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ar_img4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\ar_img4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\aries_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\aries_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\aries_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ball\\b1.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ball\\b1.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\ball\\b1.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ball\\b2.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ball\\b2.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\ball\\b2.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\card1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\card1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\card1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\card2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\card2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\card2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p01.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p01.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\p01.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p02.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p02.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\p02.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p03.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p03.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\p03.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p04.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p04.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\p04.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p05.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p05.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\p05.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p06.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\p06.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\p06.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\trt1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\trt1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\trt1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\trt2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\trt2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\trt2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\trt3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\trt3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\trt3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\trt4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\card\\trt4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\card\\trt4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\chinese_bg.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\chinese_bg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\chinese_bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cn1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cn1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\cn1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cn2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cn2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\cn2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cn3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cn3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\cn3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cn4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cn4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\cn4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\comm_img1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\comm_img1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\comm_img1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\comm_img2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\comm_img2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\comm_img2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\comm_img3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\comm_img3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\comm_img3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\crystal_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\crystal_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\crystal_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cs_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\cs_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\cs_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\e1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\e1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\e1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\e2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\e2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\e2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\hand_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\hand_img2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\hand_img3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\hand_img4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img5.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\hand_img5.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\hand_img5.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\j1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\j1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\j1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\j2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\j2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\j2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\j3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\j3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\j3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\kundli_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\kundli_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\kundli_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\love_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\love_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\love_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\num_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\num_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\num_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\patrika.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\patrika.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\patrika.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\patrika2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\patrika2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\patrika2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\patrika3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\patrika3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\patrika3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\patrika4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\patrika4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\patrika4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\pr_video_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\pr_video_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\pr_video_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\rs_slider_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\rs_slider_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\rs_slider_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ser1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ser1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\ser1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ser2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ser2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\ser2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ser3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\ser3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\ser3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\tarot_1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\kundali\\tarot_1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\kundali\\tarot_1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\logo01.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\logo01.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\logo01.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\logo02.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\logo02.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\logo02.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\logo03.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\logo03.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\logo03.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\logo04.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\logo04.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\logo04.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\mobile_logo.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\mobile_logo.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\mobile_logo.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_img1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_img1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\news_img1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_img2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_img2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\news_img2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_img3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_img3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\news_img3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_libra.jpeg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_libra.jpeg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\news_libra.jpeg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_slider_bg3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\news_slider_bg3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\news_slider_bg3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\online1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\online1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\online1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\online2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\online2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\online2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\online3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\online3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\online3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\online4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\online4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\online4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\pr_play.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\pr_play.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\pr_play.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Amethyst.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Amethyst.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\Amethyst.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\AstrologyBook.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\AstrologyBook.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\AstrologyBook.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Citrine.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Citrine.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\Citrine.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\Opal.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\Opal1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Opal2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\Opal2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Tanzanite.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\Tanzanite.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\Tanzanite.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\pp1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\pp1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\pp1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\pp2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\pp2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\pp2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\pp3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\pp3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\pp3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\shop_bg.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\shop_bg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\shop_bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\smp1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\smp1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\smp1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp5.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp5.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp5.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp6.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp6.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp6.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp7.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp7.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp7.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp8.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp8.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp8.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp9.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp9.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp9.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp_tabs_img.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\shop\\sp_tabs_img.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\shop\\sp_tabs_img.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\earth.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\earth.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\solar\\earth.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\jupiter.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\jupiter.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\solar\\jupiter.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\mars.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\mars.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\solar\\mars.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\mercury.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\mercury.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\solar\\mercury.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\shadow.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\shadow.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\solar\\shadow.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\slide_bg.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\slide_bg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\solar\\slide_bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\sun.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\sun.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\solar\\sun.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\venus.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\solar\\venus.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\solar\\venus.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\stars.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\stars.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\stars.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\testi_bg.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\testi_bg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\testi_bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\testi_client_img1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\testi_client_img1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\testi_client_img1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\testi_client_img2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\testi_client_img2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\testi_client_img2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\title_img1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\title_img1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\title_img1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\title_img2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\title_img2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\title_img2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\title_img3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\title_img3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\title_img3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\top_logo.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\top_logo.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\top_logo.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\twinkling.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\twinkling.png",
       "PackagePath": "staticwebassets\\assets\\images\\content\\twinkling.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\vastu\\v1.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\vastu\\v1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\vastu\\v1.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\vastu\\v2.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\vastu\\v2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\vastu\\v2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\vastu\\v3.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\vastu\\v3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\vastu\\v3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\vastu\\v4.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\vastu\\v4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\vastu\\v4.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\favicon.ico",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\favicon.ico",
       "PackagePath": "staticwebassets\\assets\\images\\header\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\horoscope.gif",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\horoscope.gif",
       "PackagePath": "staticwebassets\\assets\\images\\header\\horoscope.gif"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\slide.jpg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\slide.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\header\\slide.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\slider_logo.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\slider_logo.png",
       "PackagePath": "staticwebassets\\assets\\images\\header\\slider_logo.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\top_logo.png",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\top_logo.png",
       "PackagePath": "staticwebassets\\assets\\images\\header\\top_logo.png"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\userpp.jpeg",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\userpp.jpeg",
       "PackagePath": "staticwebassets\\assets\\images\\header\\userpp.jpeg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\assets\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\contact_form.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\contact_form.js",
       "PackagePath": "staticwebassets\\assets\\js\\contact_form.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\custom.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\custom.js",
       "PackagePath": "staticwebassets\\assets\\js\\custom.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\custom2.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\custom2.js",
       "PackagePath": "staticwebassets\\assets\\js\\custom2.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.countTo.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.countTo.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery.countTo.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.inview.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.inview.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery.inview.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.magnific-popup.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.magnific-popup.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery.magnific-popup.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.menu-aim.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.menu-aim.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery.menu-aim.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.shuffle.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery.shuffle.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery.shuffle.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery_min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\jquery_min.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery_min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\modernizr.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\modernizr.js",
       "PackagePath": "staticwebassets\\assets\\js\\modernizr.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\owl.carousel.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\owl.carousel.js",
       "PackagePath": "staticwebassets\\assets\\js\\owl.carousel.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\parallax.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\js\\parallax.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\parallax.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

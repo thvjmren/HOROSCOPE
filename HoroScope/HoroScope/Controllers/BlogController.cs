@@ -56,8 +56,8 @@ namespace HoroScope.Controllers
                     CreatedAt = b.CreatedAt,
                     Image = b.Image,
                     BlogCategoryId = b.BlogCategoryId,
-                    LikesCount = _context.BlogLikes.Count(l => l.BlogId == b.Id),
-                    CommentsCount = _context.BlogComments.Count(c => c.BlogId == b.Id && c.IsApproved)
+                    //LikesCount = _context.BlogLikes.Count(l => l.BlogId == b.Id),
+                    //CommentsCount = _context.BlogComments.Count(c => c.BlogId == b.Id && c.IsApproved)
                 })
                 .ToListAsync();
 

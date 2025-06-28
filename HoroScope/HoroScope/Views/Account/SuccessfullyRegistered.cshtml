@@ -2,5 +2,68 @@
     Layout = null;
 }
 
-<h1>Successfully Registered 
-    Please confirm your Email</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Registration Successful</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #331847;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .message-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px 50px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #f0e6ff;
+        }
+
+        p {
+            font-size: 16px;
+            color: #dcd0ff;
+        }
+
+        .btn-login {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: rgba(173, 128, 191, 0.47);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(155, 89, 182, 0.4);
+        }
+
+            .btn-login:hover {
+                background-color: #7D3C98;
+            }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <h2>Successfully Registered</h2>
+        <p>Please confirm your email to activate your account.</p>
+        <a href="/Account/Login" class="btn-login">Go to Login</a>
+    </div>
+</body>
+</html>

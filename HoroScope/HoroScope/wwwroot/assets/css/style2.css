@@ -30,13 +30,14 @@
 /*--------------
 1.Theme default CSS
 --------------------------*/
+
 .col-lg-9 {
 	display: flex;
 	align-items: flex-end;
 }
 
 .hs_navi_cart_wrapper {
-	margin-left: auto; /* kart ikonunu sa?a it?l?yir */
+	margin-left: auto;
 }
 
 .rating-stars {

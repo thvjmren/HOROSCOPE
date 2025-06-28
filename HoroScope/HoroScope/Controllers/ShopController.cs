@@ -1,5 +1,6 @@
 ﻿using HoroScope.DAL;
 using HoroScope.Models;
+using HoroScope.Utilities.Enums;
 using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,85 +15,88 @@ namespace HoroScope.Controllers
         {
             _context = context;
         }
-
-        public async Task<IActionResult> Index(int? categoryId, string? sort, int page = 1)
+        public async Task<IActionResult> Index(string? search, int? categoryId, int key = 1, int page = 1)
         {
-            int count = await _context.Products.CountAsync();
             int pageSize = 3;
-            double total = Math.Ceiling((double)count / pageSize);
 
-            if (page > total) return BadRequest();
+            IQueryable<Product> query = _context.Products
+                .Where(p => !p.IsDeleted);
 
-            var query = _context.Products.Where(p => !p.IsDeleted);
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(p => p.Name.ToLower().Contains(search.ToLower()));
+            }
 
-            if (categoryId != null)
+            if (categoryId != null && categoryId > 0)
             {
                 query = query.Where(p => p.ProductCategoryId == categoryId);
             }
 
             query = query.Include(p => p.ProductImages);
 
-            switch (sort)
+            switch (key)
             {
-                case "popularity":
+                case (int)SortType.Name:
                     query = query.OrderByDescending(p => p.SalesCount)
                                  .ThenByDescending(p => p.ViewsCount)
                                  .ThenByDescending(p => p.Rating);
                     break;
-                case "priceHighToLow":
+                case (int)SortType.Price:
                     query = query.OrderByDescending(p => p.Price);
                     break;
-                case "priceLowToHigh":
-                    query = query.OrderBy(p => p.Price);
-                    break;
-                case "newest":
-                    query = query.OrderByDescending(p => p.Id);
-                    break;
-                default:
-                    query = query.OrderByDescending(p => p.Id);
+                case (int)SortType.Date:
+                    query = query.OrderBy(p => p.CreatedAt);
                     break;
             }
 
             int totalCount = await query.CountAsync();
+            double totalPage = Math.Ceiling((double)totalCount / pageSize);
+
+            if (page > totalPage && totalPage != 0)
+                return BadRequest();
+
             var pagedProducts = await query
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
 
             var newProducts = await _context.Products
-                .Include(p => p.ProductImages.Where(pi => pi.IsPrimary != null))
                 .Where(p => !p.IsDeleted)
+                .Include(p => p.ProductImages.Where(pi => pi.IsPrimary == true))
                 .OrderByDescending(p => p.Id)
                 .Take(3)
                 .ToListAsync();
 
             var topCategories = await _context.ProductCategories
-                .Where(p => !p.IsDeleted)
+                .Where(pc => !pc.IsDeleted)
                 .OrderByDescending(pc => pc.Products.Count(p => !p.IsDeleted))
                 .Take(5)
                 .ToListAsync();
 
+            var productCategories = await _context.ProductCategories
+                .Where(pc => !pc.IsDeleted)
+                .ToListAsync();
+
             ShopVM vm = new()
             {
-                ProductCategories = await _context.ProductCategories
-                    .Where(pc => !pc.IsDeleted)
-                    .ToListAsync(),
-
+                ProductCategories = productCategories,
                 Products = new PaginatedVM<Product>
                 {
                     Items = pagedProducts,
                     CurrentPage = page,
-                    TotalPage = Math.Ceiling((double)totalCount / pageSize)
+                    TotalPage = totalPage
                 },
-
                 NewProducts = newProducts,
                 ProductCount = totalCount,
                 TopCategories = topCategories,
-                SelectedSort = sort
+                Search = search,
+                SelectedCategoryId = categoryId,
+                Key = key
             };
 
             return View(vm);
         }
+
 
 
         public async Task<IActionResult> Details(int? id)
@@ -129,7 +133,7 @@ namespace HoroScope.Controllers
                 ShopDetailsVM = new ShopDetailsVM
                 {
                     Product = product,
-                    Reviews = product.ProductReviews,
+                    Reviews = product.ProductReviews.ToList(),
                     PopularProducts = popularProducts
                 },
                 ProductReviewVM = new ProductReviewVM
@@ -141,30 +145,15 @@ namespace HoroScope.Controllers
             return View(vm);
         }
 
-
-
-
-        public async Task<IActionResult> Review()
+        public IActionResult Review(int id)
         {
-            //var product = await _context.Products
-            //    .Include(p => p.ProductReviews)
-            //    .FirstOrDefaultAsync(p => p.Id == productId && !p.IsDeleted);
-
-            //if (product == null)
-            //    return NotFound();
-
-            //var vm = new ShopDetailsVM
-            //{
-            //    Product = product,
-            //    Reviews = product.ProductReviews
-            //};
-
-            return View();
+            return RedirectToAction("Details", new { id });
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Review(ProductPageVM vm)
+        public async Task<IActionResult> Review(ProductReviewVM model)
         {
             if (!ModelState.IsValid)
             {
@@ -174,33 +163,41 @@ namespace HoroScope.Controllers
                         .ThenInclude(pfv => pfv.FeatureValue)
                         .ThenInclude(fv => fv.Feature)
                     .Include(p => p.ProductReviews)
-                    .FirstOrDefaultAsync(p => p.Id == vm.ProductReviewVM.ProductId && !p.IsDeleted);
+                    .FirstOrDefaultAsync(p => p.Id == model.ProductId && !p.IsDeleted);
 
                 if (product == null)
                 {
                     return NotFound();
                 }
 
-                vm.ShopDetailsVM = new ShopDetailsVM
+                var popularProducts = await _context.Products
+                    .Where(p => !p.IsDeleted && p.Id != product.Id)
+                    .OrderByDescending(p => p.Rating)
+                    .Take(4)
+                    .ToListAsync();
+
+                var vm = new ProductPageVM
                 {
-                    Product = product,
-                    Reviews = product.ProductReviews
+                    ShopDetailsVM = new ShopDetailsVM
+                    {
+                        Product = product,
+                        Reviews = product.ProductReviews,
+                        PopularProducts = popularProducts
+                    },
+                    ProductReviewVM = model
                 };
 
-                vm.ProductReviewVM ??= new ProductReviewVM
-                {
-                    ProductId = product.Id
-                };
+                ModelState.Clear();
 
                 return View("Details", vm);
             }
 
             var review = new ProductReview
             {
-                ProductId = vm.ProductReviewVM.ProductId,
+                ProductId = model.ProductId,
                 ReviewerName = User.Identity.Name,
-                Comment = vm.ProductReviewVM.Comment,
-                Rating = vm.ProductReviewVM.Rating,
+                Comment = model.Comment,
+                Rating = model.Rating,
                 CreatedAt = DateTime.UtcNow
             };
 
@@ -208,8 +205,8 @@ namespace HoroScope.Controllers
             await _context.SaveChangesAsync();
 
             var productToUpdate = await _context.Products
-            .Include(p => p.ProductReviews)
-            .FirstOrDefaultAsync(p => p.Id == vm.ProductReviewVM.ProductId);
+                .Include(p => p.ProductReviews)
+                .FirstOrDefaultAsync(p => p.Id == model.ProductId);
 
             if (productToUpdate != null)
             {
@@ -221,8 +218,10 @@ namespace HoroScope.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToAction("Details", new { id = vm.ProductReviewVM.ProductId });
+            return RedirectToAction("Details", new { id = model.ProductId });
         }
+
+
 
         [HttpGet]
         public async Task<IActionResult> CheckPinCode(string code)

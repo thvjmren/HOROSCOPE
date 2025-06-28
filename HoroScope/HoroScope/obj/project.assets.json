@@ -7776,11 +7776,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\HoroScope.csproj",
+      "projectUniqueName": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\HoroScope.csproj",
       "projectName": "HoroScope",
-      "projectPath": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\HoroScope.csproj",
+      "projectPath": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\HoroScope.csproj",
       "packagesPath": "C:\\Users\\Rana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\obj\\",
+      "outputPath": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

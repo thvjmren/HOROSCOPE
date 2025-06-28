@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8CbobefX190=",
+  "dgSpecHash": "FTnCrpxyPyE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rana\\Desktop\\777\\HoroScope\\HoroScope\\HoroScope.csproj",
+  "projectFilePath": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\HoroScope.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rana\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Rana\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

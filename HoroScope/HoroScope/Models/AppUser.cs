@@ -7,6 +7,8 @@ namespace HoroScope.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public ICollection<BlogComment>? Comments { get; set; }
+        public ICollection<BlogLike>? Likes { get; set; }
+        public ICollection<Blog>? Blogs { get; set; }
     }
 
 }

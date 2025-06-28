@@ -13,5 +13,7 @@ namespace HoroScope.ViewModels
         public int? SelectedCategoryId { get; set; }
         public PaginatedVM<Product>? Products { get; set; }
         public int PageSize { get; set; }
+        public string Search { get; set; }
+        public int Key { get; set; }
     }
 }

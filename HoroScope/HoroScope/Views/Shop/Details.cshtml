@@ -26,7 +26,7 @@
             .rating-stars input[type="radio"]:checked ~ label,
             .rating-stars label:hover,
             .rating-stars label:hover ~ label {
-                color: gold;
+                color: darkkhaki;
             }
 
             .rating-stars label::before {
@@ -259,30 +259,99 @@
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            @if (!Model.ShopDetailsVM.Reviews.Any())
+                                            {
+                                                <p>No reviews yet. Be the first to review!</p>
+                                            }
+                                            else
+                                            {
+                                                @foreach (var review in Model.ShopDetailsVM.Reviews)
+                                                {
+                                                    <div class="hs_rs_comment_main_wrapper" style="margin-bottom:20px; border-bottom:1px solid #ccc; padding-bottom:15px;">
+                                                        <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
+                                                            <h2>@review.ReviewerName <span>@review.CreatedAt.ToString("MMM d, yyyy - dddd", System.Globalization.CultureInfo.InvariantCulture)</span></h2>
+
+                                                            <p>@review.Comment</p>
+
+                                                            @{
+                                                                int fullStarsReview = (int)Math.Floor((double)review.Rating);
+                                                                int emptyStarsReview = 5 - fullStarsReview;
+                                                            }
+
+                                                            <div>
+                                                                @for (int i = 0; i < fullStarsReview; i++)
+                                                                {
+                                                                    <i class="fa fa-star" style="color:darkkhaki"></i>
+                                                                }
+                                                                @for (int i = 0; i < emptyStarsReview; i++)
+                                                                {
+                                                                    <i class="fa fa-star-o" style="color:darkkhaki"></i>
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+
                                         <div class="hs_about_heading_main_wrapper">
 
-                                            <form method="post" asp-action="Review">
-                                                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
-
-                                                <div class="form-group">
-                                                    <label asp-for="ProductReviewVM.Comment">Comment</label>
-                                                    <input asp-for="ProductReviewVM.Comment" class="form-control" placeholder="Comment" />
-                                                    <span asp-validation-for="ProductReviewVM.Comment" class="text-danger"></span>
-                                                </div>
-
-                                                <div class="rating-stars mb-3">
-                                                    @for (int i = 5; i >= 1; i--)
+                                            @if (!ViewData.ModelState.IsValid)
+                                            {
+                                                <div class="alert alert-danger">
+                                                    @foreach (var modelError in ViewData.ModelState.Values.SelectMany(v => v.Errors))
                                                     {
-                                                        <input type="radio" asp-for="ProductReviewVM.Rating" id="star-@i" value="@i" />
-                                                        <label for="star-@i" title="@i star"></label>
+                                                        <p>@modelError.ErrorMessage</p>
                                                     }
-                                                    <span asp-validation-for="ProductReviewVM.Rating" class="text-danger"></span>
                                                 </div>
+                                            }
 
-                                                <input type="hidden" asp-for="ProductReviewVM.ProductId" />
+                                            <div class="review-container">
+                                                @if (!User.Identity.IsAuthenticated)
+                                                {
+                                                    <div class="alert alert-warning">
+                                                        Please <a href="@Url.Action("Login", "Account", new { returnUrl = Context.Request.Path })" style="color:#fff; text-decoration: underline;">log in</a> to leave a review.
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    @if (!ViewData.ModelState.IsValid)
+                                                    {
+                                                        <div class="alert alert-danger">
+                                                            @foreach (var modelError in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                                            {
+                                                                <p>@modelError.ErrorMessage</p>
+                                                            }
+                                                        </div>
+                                                    }
 
-                                                <button type="submit" class="btn btn-outline-dark">Submit</button>
-                                            </form>
+                                                    <form asp-action="Review" method="post">
+                                                        @Html.AntiForgeryToken()
+
+                                                        <input type="hidden" name="ProductId" value="@Model.ShopDetailsVM.Product.Id" />
+
+                                                        <div class="form-group">
+                                                            <label for="Comment">Comment</label>
+                                                            <input name="Comment" class="form-control" placeholder="Comment" />
+                                                        </div>
+
+                                                        <div class="rating-stars mb-3">
+                                                            @for (int i = 5; i >= 1; i--)
+                                                            {
+                                                                <input type="radio" name="Rating" id="star-@i" value="@i" />
+                                                                <label for="star-@i" title="@i star"></label>
+                                                            }
+                                                        </div>
+
+                                                        <button type="submit" class="btn btn-outline-dark">Submit</button>
+                                                    </form>
+
+                                                }
+                                            </div>
+
 
 
                                         </div>
