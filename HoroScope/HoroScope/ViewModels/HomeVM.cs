@@ -11,7 +11,7 @@ namespace HoroScope.ViewModels
         public List<ProductCategory>? ProductCategories { get; set; }
         public List<Zodiac>? Zodiacs { get; set; }
         public List<ZodiacElement>? ZodiacElements { get; set; }
-        public List<New>? News { get; set; }
+        public List<Blog>? Blogs { get; set; }
         public List<Partner>? Partners { get; set; }
         public List<Expert>? Experts { get; set; }
     }

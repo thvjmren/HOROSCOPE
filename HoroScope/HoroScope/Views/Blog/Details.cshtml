@@ -7,33 +7,59 @@
 
 @inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
 
+
 @section Scripts {
     <script>
-        document.getElementById("likeBtn").addEventListener("click", function() {
-            fetch('/Blog/ToggleLike', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'RequestVerificationToken': '@Antiforgery.GetAndStoreTokens(Context).RequestToken'
-                },
-                body: JSON.stringify({ blogId: @Model.Blog.Id })
-            })
-            .then(response => {
-                if (!response.ok) throw new Error("Network response was not ok.");
-                return response.json();
-            })
-            .then(data => {
-                document.getElementById("likesCount").textContent = data.likesCount + " Likes";
-                document.getElementById("likeBtn").textContent = data.userHasLiked ? "Unlike" : "Like";
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            });
+        document.addEventListener("DOMContentLoaded", function () {
+            const likeBtn = document.getElementById("likeBtn");
+
+            if (likeBtn) {
+                likeBtn.addEventListener("click", function () {
+                    const blogId = @Model.Blog.Id;
+                    const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+                    fetch('/Blog/ToggleLike', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': token
+                        },
+                        body: JSON.stringify({ blogId: blogId })
+                    })
+                        .then(response => {
+                            if (!response.ok) throw new Error("Network response was not ok.");
+                            return response.json();
+                        })
+                        .then(data => {
+                                                    const likesCountText = document.getElementById("likesCountText");
+                            const likesCountNumber = document.getElementById("likesCountNumber");
+                            if (likesCountText) likesCountText.textContent = data.likesCount + " Likes";
+                            if (likesCountNumber) likesCountNumber.textContent = data.likesCount;
+
+                                                    const icon = document.getElementById("likeIcon");
+                            if (icon) {
+                                if (data.userHasLiked) {
+                                    icon.classList.remove("fa-heart-o");
+                                    icon.classList.add("fa-heart");
+                                } else {
+                                    icon.classList.remove("fa-heart");
+                                    icon.classList.add("fa-heart-o");
+                                }
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Error:", error);
+                        });
+                });
+            }
         });
     </script>
 }
 
-    <!-- hs About Title Start -->
+
+
+
+<!-- hs About Title Start -->
 <div class="hs_indx_title_main_wrapper">
     <div class="hs_title_img_overlay"></div>
     <div class="container">
@@ -92,48 +118,36 @@
                                     <div class="hs_blog_box1_bottom_cont_left">
                                         <ul>
                                             <li><a href="#">by - Admin</a></li>
-                                            <li><span id="likesCount">@Model.BlogLikesCount Likes</span></li>
+                                            <li><span id="likesCountText">@Model.BlogLikesCount Likes</span></li>
                                             <li><a href="#">@Model.BlogComments.Count Comments</a></li>
                                         </ul>
                                     </div>
-                                    <div class="hs_blog_box1_bottom_cont_right">
-                                        <ul>
-                                            <li>Share :</li>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <div class="hs_blog_box1_bottom_cont_left">
+                                            <div class="blog-like-section" style="margin-top: 30px;">
+                                                <button id="likeBtn" class="btn btn-link" style="font-size: 24px; color: red; border: none;">
+                                                    <i id="likeIcon" class="fa @(Model.UserHasLiked ? "fa-heart" : "fa-heart-o")"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    }
                                 </div>
 
-                                @if (User.Identity.IsAuthenticated)
-                                {
-                                    <div class="blog-like-section" style="margin-top: 30px;">
-                                        <button id="likeBtn" class="btn btn-link" style="font-size: 24px; color: red; border: none;">
-                                            <i id="likeIcon" class="fa @(Model.UserHasLiked ? "fa-heart" : "fa-heart-o")"></i>
-                                            <span id="likesCount">@Model.BlogLikesCount</span>
-                                        </button>
-                                    </div>
-                                }
 
                             </div>
                         </div>
-                        @if (Model.BlogComments != null && Model.BlogComments.Any())
+                        @if (Model.BlogComments != null)
                         {
                             foreach (var comment in Model.BlogComments)
                             {
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="hs_rs_comment_main_wrapper">
-                                        <div class="hs_rs_comment_img_wrapper">
-                                            @* <img src="~/assets/images/content/kundali/comm_img1.jpg" alt="comment_img" /> *@
-                                        </div>
+                                        @*      <div class="hs_rs_comment_img_wrapper">
+                                            <img src="images/content/kundali/comm_img2.jpg" alt="comment_img">
+                                        </div> *@
                                         <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
-                                            <h2>
-                                                @comment.AppUser?.UserName ?? "Anonymous"
-                                                <span>@comment.CreatedAt.ToString("MMM d, yyyy - dddd")</span>
-                                                <a href="#"> - Reply</a>
-                                            </h2>
+                                            <h2>@(comment.AppUser?.Name ?? "Anonymous")<span>@comment.CreatedAt.ToString("MMM d, yyyy - dddd", System.Globalization.CultureInfo.InvariantCulture)</span></h2>
                                             <p>
                                                 @comment.Text
                                             </p>
@@ -147,49 +161,46 @@
                             <p>There are no comments yet. Be the first!</p>
                         }
 
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="hs_kd_five_heading_sec_wrapper">
-                                    <h2>Share Your Opinion</h2>
-                                    <h4><span></span></h4>
-                                </div>
-                            </div>
-                            <form method="post" asp-controller="Blog" asp-action="AddComment">
-                                @Html.AntiForgeryToken()
-                                <input type="hidden" asp-for="BlogComment.BlogId" value="@Model.Blog.Id" />
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="hs_kd_six_sec_input_wrapper">
-                                        <label for="CommentText">Comment</label>
-                                        <textarea id="CommentText" name="Text" class="form-control" placeholder="Your comment here..." required></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:10px;">
-                            <div class="hs_kd_six_sec_btn">
-                                <ul>
-                                    <li><button type="submit">Submit</button></li>
-                                </ul>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_five_heading_sec_wrapper">
+                                <h2>Share Your Opinion</h2>
+                                <h4><span></span></h4>
                             </div>
                         </div>
-                            </form>
-                        }
-                        else
-                        {
-                            <p>If you would like to comment, please <a asp-controller="Account" asp-action="Login">REGISTER</a> or <a asp-controller="Account" asp-action="Login">LOGIN</a> if you already have an account.</p>
-                        }
+                        <form method="post" asp-controller="Blog" asp-action="AddComment">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" asp-for="BlogCommentVM.BlogId" value="@Model.Blog.Id" />
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="hs_kd_six_sec_input_wrapper">
+                                    <label for="CommentText">Comment</label>
+                                    <textarea asp-for="BlogCommentVM.Comment" id="CommentText" class="form-control" placeholder="Your comment here..." required></textarea>
+                                    <span asp-validation-for="BlogCommentVM.Comment" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:10px;">
+                                <div class="hs_effect_btn hs_about_btn">
+                                    <ul>
+                                        <li><button type="submit" class="hs_btn_hover blog-button">Submit</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="hs_blog_right_sidebar_main_wrapper">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_blog_right_search_wrapper">
-                                <input type="text" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
+                        <form asp-action="Index" asp-route-id="@Model.SelectedCategoryId" method="get">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_blog_right_search_wrapper">
+                                    <input type="text" accept="@Model.Search" name="search" placeholder="Search..." value="@Context.Request.Query["search"]" />
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="hs_blog_right_cate_list_heading_wrapper">
                                 <h2>CATEGORIES</h2>
@@ -204,7 +215,7 @@
                                     @foreach (var blogCategory in Model.BlogCategories)
                                     {
                                         <li>
-                                            <a asp-controller="Blog" asp-action="Index" asp-route-categoryId="@blogCategory.Id">
+                                            <a asp-controller="Blog" asp-action="Index" asp-route-categoryId="@blogCategory.Id" asp-route-search="@Model.Search">
                                                 @blogCategory.Name
                                             </a>
                                         </li>
@@ -226,9 +237,9 @@
                                         </a>
                                     </div>
                                     <div class="hs_footer_ln_cont_wrapper">
-                                            <a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">
-                                                @blog.Title
-                                            </a>
+                                        <a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">
+                                            @blog.Title
+                                        </a>
                                         <p>
                                             @blog.CreatedAt.ToString("d MMMM yyyy")
                                         </p>
@@ -255,24 +266,6 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_blog_right_cate_list_heading_wrapper">
-                                <h2>Instagram</h2>
-                            </div>
-                            <div class="hs_blog_right_insta_img_wrapper">
-                                <ul>
-                                    <li><a href="#"><img src="~/assets/images/content/blog/inta1.jpg" alt="blog_img" /></a></li>
-                                    <li><a href="#"><img src="~/assets/images/content/blog/inta2.jpg" alt="blog_img" /></a></li>
-                                    <li><a href="#"><img src="~/assets/images/content/blog/inta3.jpg" alt="blog_img" /></a></li>
-                                    <li><a href="#"><img src="~/assets/images/content/blog/inta4.jpg" alt="blog_img" /></a></li>
-                                    <li><a href="#"><img src="~/assets/images/content/blog/inta5.jpg" alt="blog_img" /></a></li>
-                                    <li><a href="#"><img src="~/assets/images/content/blog/inta6.jpg" alt="blog_img" /></a></li>
-                                    <li><a href="#"><img src="~/assets/images/content/blog/inta7.jpg" alt="blog_img" /></a></li>
-                                    <li><a href="#"><img src="~/assets/images/content/blog/inta8.jpg" alt="blog_img" /></a></li>
-                                    <li><a href="#"><img src="~/assets/images/content/blog/inta9.jpg" alt="blog_img" /></a></li>
-                                </ul>
-                            </div>
-                        </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 visible-sm visible-xs">
                             <div class="pager_wrapper">
                                 <ul class="pagination">
@@ -292,4 +285,3 @@
     </div>
 </div>
 <!-- hs sidebar End -->
-

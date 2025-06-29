@@ -48,12 +48,27 @@ public class HomeController : Controller
             ProductCategories = await _context.ProductCategories.Where(pc => !pc.IsDeleted).ToListAsync(),
             Zodiacs = await _context.Zodiacs.Where(z => !z.IsDeleted).ToListAsync(),
             ZodiacElements = await _context.ZodiacElements.Where(ze => !ze.IsDeleted).ToListAsync(),
-            News = await _context.News.Where(n => !n.IsDeleted).ToListAsync(),
+            Blogs = await _context.Blogs.Where(b => !b.IsDeleted).Include(b => b.Likes).Include(b => b.Comments).Include(b => b.AppUser).ToListAsync(),
             Partners = await _context.Partners.Where(p => !p.IsDeleted).ToListAsync(),
             Experts = await _context.Experts.Where(e => !e.IsDeleted).ToListAsync(),
         };
 
         return View(vm);
+    }
+
+    public IActionResult Test()
+    {
+        Response.Cookies.Append("name", "sunay", new CookieOptions { MaxAge = TimeSpan.FromSeconds(10) });
+
+
+        HttpContext.Session.SetString("name2", "rena");
+
+        return Ok();
+    }
+
+    public IActionResult GetCookie()
+    {
+        return Content(Request.Cookies["name"]);
     }
 
 }

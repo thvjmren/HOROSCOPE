@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hiZNof3d7jgHfyiYL7zMMMUAMoi8lzSmh0pfA+7dCd8=",
+  "Hash": "osI4//1xOOUSZaDWec6eivazQBmm1mXyHR1mjUdrlko=",
   "Source": "HoroScope",
   "BasePath": "_content/HoroScope",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "0mjcycychp",
-      "Integrity": "uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo=",
+      "Fingerprint": "251g4ehvdy",
+      "Integrity": "OkpqQeNld8PR6qTEUCgbogabx6HbSH3qXGnYGFdWUj8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\css\\style.css"
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "m1p3yxiskc",
-      "Integrity": "drjUA4ECnyKnM6mJj9jZnQfEv2MK27AD7+R3bpbH64A=",
+      "Fingerprint": "mmbbkonshp",
+      "Integrity": "nnPmibTOrj0kaj0xEIB8Eb1SBEteC1EMX2nEU8o0Upo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\bootstrap.css"
@@ -1648,8 +1648,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rsxkdnk7o3",
-      "Integrity": "5S7ag1AmZDP71vmHhNCwao9e3b4fFrUb0n1VWFSgGVs=",
+      "Fingerprint": "hz30csdiz4",
+      "Integrity": "LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\style2.css"
@@ -6758,7 +6758,7 @@
       ]
     },
     {
-      "Route": "admin/css/style.0mjcycychp.css",
+      "Route": "admin/css/style.251g4ehvdy.css",
       "AssetFile": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\admin\\css\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6768,7 +6768,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "531598"
+          "Value": "531618"
         },
         {
           "Name": "Content-Type",
@@ -6776,11 +6776,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo=\""
+          "Value": "\"OkpqQeNld8PR6qTEUCgbogabx6HbSH3qXGnYGFdWUj8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Jun 2025 14:13:36 GMT"
+          "Value": "Sun, 29 Jun 2025 12:06:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6790,7 +6790,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "0mjcycychp"
+          "Value": "251g4ehvdy"
         },
         {
           "Name": "label",
@@ -6798,7 +6798,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo="
+          "Value": "sha256-OkpqQeNld8PR6qTEUCgbogabx6HbSH3qXGnYGFdWUj8="
         }
       ]
     },
@@ -6813,7 +6813,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "531598"
+          "Value": "531618"
         },
         {
           "Name": "Content-Type",
@@ -6821,11 +6821,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo=\""
+          "Value": "\"OkpqQeNld8PR6qTEUCgbogabx6HbSH3qXGnYGFdWUj8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Jun 2025 14:13:36 GMT"
+          "Value": "Sun, 29 Jun 2025 12:06:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6835,7 +6835,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-uN//KXSEX2SXWBXw9xMoFgNbtYtAxKIojqMjpQNwnbo="
+          "Value": "sha256-OkpqQeNld8PR6qTEUCgbogabx6HbSH3qXGnYGFdWUj8="
         }
       ]
     },
@@ -11852,7 +11852,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "146026"
+          "Value": "146040"
         },
         {
           "Name": "Content-Type",
@@ -11860,11 +11860,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"drjUA4ECnyKnM6mJj9jZnQfEv2MK27AD7+R3bpbH64A=\""
+          "Value": "\"nnPmibTOrj0kaj0xEIB8Eb1SBEteC1EMX2nEU8o0Upo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Jun 2025 15:54:15 GMT"
+          "Value": "Sun, 29 Jun 2025 11:06:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11874,12 +11874,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-drjUA4ECnyKnM6mJj9jZnQfEv2MK27AD7+R3bpbH64A="
+          "Value": "sha256-nnPmibTOrj0kaj0xEIB8Eb1SBEteC1EMX2nEU8o0Upo="
         }
       ]
     },
     {
-      "Route": "assets/css/bootstrap.m1p3yxiskc.css",
+      "Route": "assets/css/bootstrap.mmbbkonshp.css",
       "AssetFile": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -11889,7 +11889,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "146026"
+          "Value": "146040"
         },
         {
           "Name": "Content-Type",
@@ -11897,11 +11897,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"drjUA4ECnyKnM6mJj9jZnQfEv2MK27AD7+R3bpbH64A=\""
+          "Value": "\"nnPmibTOrj0kaj0xEIB8Eb1SBEteC1EMX2nEU8o0Upo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Jun 2025 15:54:15 GMT"
+          "Value": "Sun, 29 Jun 2025 11:06:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11911,7 +11911,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "m1p3yxiskc"
+          "Value": "mmbbkonshp"
         },
         {
           "Name": "label",
@@ -11919,7 +11919,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-drjUA4ECnyKnM6mJj9jZnQfEv2MK27AD7+R3bpbH64A="
+          "Value": "sha256-nnPmibTOrj0kaj0xEIB8Eb1SBEteC1EMX2nEU8o0Upo="
         }
       ]
     },
@@ -12836,7 +12836,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "168709"
+          "Value": "168751"
         },
         {
           "Name": "Content-Type",
@@ -12844,11 +12844,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5S7ag1AmZDP71vmHhNCwao9e3b4fFrUb0n1VWFSgGVs=\""
+          "Value": "\"LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Jun 2025 15:46:26 GMT"
+          "Value": "Sun, 29 Jun 2025 18:09:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12858,12 +12858,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5S7ag1AmZDP71vmHhNCwao9e3b4fFrUb0n1VWFSgGVs="
+          "Value": "sha256-LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ="
         }
       ]
     },
     {
-      "Route": "assets/css/style2.rsxkdnk7o3.css",
+      "Route": "assets/css/style2.hz30csdiz4.css",
       "AssetFile": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\style2.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -12873,7 +12873,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "168709"
+          "Value": "168751"
         },
         {
           "Name": "Content-Type",
@@ -12881,11 +12881,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5S7ag1AmZDP71vmHhNCwao9e3b4fFrUb0n1VWFSgGVs=\""
+          "Value": "\"LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Jun 2025 15:46:26 GMT"
+          "Value": "Sun, 29 Jun 2025 18:09:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12895,7 +12895,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rsxkdnk7o3"
+          "Value": "hz30csdiz4"
         },
         {
           "Name": "label",
@@ -12903,7 +12903,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-5S7ag1AmZDP71vmHhNCwao9e3b4fFrUb0n1VWFSgGVs="
+          "Value": "sha256-LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ="
         }
       ]
     },

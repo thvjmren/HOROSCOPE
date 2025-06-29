@@ -1,4 +1,5 @@
 using HoroScope.DAL;
+using HoroScope.Implementations;
 using HoroScope.Interfaces;
 using HoroScope.Models;
 using HoroScope.Services.Implementations;
@@ -12,6 +13,8 @@ namespace HoroScope
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddSession(opt => opt.IdleTimeout = TimeSpan.FromSeconds(10));
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
@@ -38,10 +41,12 @@ namespace HoroScope
 
             builder.Services.AddScoped<LayoutService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
+
 
 
             var app = builder.Build();
-
+            app.UseSession();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

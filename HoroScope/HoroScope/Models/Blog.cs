@@ -19,10 +19,10 @@ namespace HoroScope.Models
         public ICollection<BlogLike> Likes { get; set; }
 
         [NotMapped]
-        public int LikesCount => Likes?.Count ?? 0;
+        public int LikesCount { get; set; }
 
         [NotMapped]
-        public int CommentsCount => Comments?.Count ?? 0;
+        public int CommentsCount { get; set; }
     }
 
 }

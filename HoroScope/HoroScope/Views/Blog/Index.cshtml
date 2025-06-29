@@ -79,18 +79,9 @@
                                     <div class="hs_blog_box1_bottom_cont_main_wrapper">
                                         <div class="hs_blog_box1_bottom_cont_left">
                                             <ul>
-                                                <li><a href="#">by - Admin</a></li>
+                                                <li><a href="#">by - @blog.AppUser.Name</a></li>
                                                 <li><span id="likesCount">@Model.BlogLikesCount Likes</span></li>
-                                                <li><a href="#">@Model.BlogCommentsCount Comments</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="hs_blog_box1_bottom_cont_right">
-                                            <ul>
-                                                <li>Share :</li>
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#">@blog.CommentsCount Comments</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -138,14 +129,19 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
                 <div class="hs_blog_right_sidebar_main_wrapper">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_blog_right_search_wrapper">
-                                <input type="text" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
+
+                        <form asp-action="Index" asp-route-id="@Model.SelectedCategoryId" method="get">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_blog_right_search_wrapper">
+                                    <input type="text" accept="@Model.Search" name="search" placeholder="Search..." value="@Context.Request.Query["search"]" />
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
+
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="hs_blog_right_cate_list_heading_wrapper">
                                 <h2>CATEGORIES</h2>
@@ -160,7 +156,7 @@
                                     @foreach (var blogCategory in Model.BlogCategories)
                                     {
                                         <li>
-                                            <a asp-controller="Blog" asp-action="Index" asp-route-categoryId="@blogCategory.Id">
+                                            <a asp-controller="Blog" asp-action="Index" asp-route-categoryId="@blogCategory.Id" asp-route-search="@Model.Search">
                                                 @blogCategory.Name
                                             </a>
                                         </li>
@@ -178,8 +174,8 @@
                                 <div class="hs_blog_right_recnt_cont_wrapper">
                                     <div class="hs_footer_ln_img_wrapper">
                                         <a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">
-                                            <img src="~/assets/images/content/blog/@blog.Image" class="img-responsive" alt="ln_img"/>
-                                            </a>
+                                            <img src="~/assets/images/content/blog/@blog.Image" class="img-responsive" alt="ln_img" />
+                                        </a>
                                     </div>
                                     <div class="hs_footer_ln_cont_wrapper">
                                         <h4><a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">@blog.Title</a></h4>

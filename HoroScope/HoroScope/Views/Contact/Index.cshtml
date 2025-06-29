@@ -108,38 +108,77 @@
                     </div>
                 </div>
             </div>
-            <form>
+
+            @if (TempData["Success"] != null)
+            {
+                <div class="col-12">
+                    <div class="alert alert-success">
+                        @TempData["Success"]
+                    </div>
+                </div>
+            }
+
+
+            <form asp-action="Contact" method="post">
+                @Html.AntiForgeryToken()
+
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="hs_kd_six_sec_input_wrapper">
                         <label>Name</label>
-                        <input type="text" class="require" name="first_name">
+                        <input asp-for="Name" placeholder="Name" class="form-control" value="@ViewBag.Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
                 </div>
+
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="hs_kd_six_sec_input_wrapper">
                         <label>Email</label>
-                        <input type="email" class="require" name="email" data-valid="email" data-error="Email should be valid.">
+                        <input asp-for="Email" placeholder="Email" class="form-control" value="@ViewBag.Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                 </div>
+
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hs_kd_six_sec_input_wrapper">
                         <label>Message</label>
-                        <textarea rows="6" class="require" name="message"></textarea>
+                        <textarea asp-for="Message" placeholder="Message" class="form-control" rows="6"></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
                     </div>
                 </div>
+
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="response"></div>
                     <div class="hs_contact_indx_form_btn">
                         <ul>
                             <li>
-                                <input type="hidden" name="form_type" value="contact">
-                                <button type="button" class="hs_btn_hover submitForm">Send a Message</button>
+                                <button type="submit" class="hs_btn_hover">Send a Message</button>
                             </li>
                         </ul>
                     </div>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
 <!-- hs contact form End -->
+
+@section Scripts {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var map = L.map('map').setView([40.378202, 49.854482], 15);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            L.marker([40.378202, 49.854482]).addTo(map)
+                .bindPopup('This is our office!')
+                .openPopup();
+        });
+    </script>
+}
+

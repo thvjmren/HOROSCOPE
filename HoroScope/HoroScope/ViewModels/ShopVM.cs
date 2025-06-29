@@ -9,7 +9,6 @@ namespace HoroScope.ViewModels
         public List<ProductCategory>? TopCategories { get; set; }
         public Product Product { get; set; }
         public int ProductCount { get; set; }
-        public string SelectedSort { get; set; }
         public int? SelectedCategoryId { get; set; }
         public PaginatedVM<Product>? Products { get; set; }
         public int PageSize { get; set; }

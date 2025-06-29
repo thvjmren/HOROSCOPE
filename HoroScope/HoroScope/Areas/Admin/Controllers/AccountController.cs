@@ -38,6 +38,7 @@ namespace HoroScope.Areas.Admin.Controllers
 
             var existingUserByEmail = await _userManager.FindByEmailAsync(registerVM.Email);
             if (existingUserByEmail != null)
+
             {
                 ModelState.AddModelError(nameof(registerVM.Email), "This email is already registered.");
                 return View(registerVM);

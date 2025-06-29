@@ -12,17 +12,13 @@ namespace HoroScope.Models
         public int BlogId { get; set; }
         public Blog? Blog { get; set; }
 
-        public bool IsApproved { get; set; } = false;
 
-        [Required]
-        public string AppUserId { get; set; }
+        //[Required]
+        public string? AppUserId { get; set; }
         public AppUser? AppUser { get; set; }
 
-        [Required]
-        public string FullName { get; set; }
-
-        [Required]
+        //[Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string? Email { get; set; }
     }
 }

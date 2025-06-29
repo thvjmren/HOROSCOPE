@@ -307,6 +307,12 @@ body::-webkit-scrollbar-thumb{
 .hs_effect_btnli a > span {
 	vertical-align: middle;
 }
+
+.blog-button {
+	padding: 10px;
+}
+
+
 .hs_effect_btn li .hs_btn_hover {
 	border-radius: 50px;
 	background: #4f2b7f;

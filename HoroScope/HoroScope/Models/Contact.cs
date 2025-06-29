@@ -1,13 +1,16 @@
 ﻿using HoroScope.Models.Base;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace HoroScope.Models
 {
     public class Contact : BaseEntity
     {
-        public string Icon { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string FormTitle { get; set; }
-        public string FormDescription { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+        public string Message { get; set; }
     }
 }

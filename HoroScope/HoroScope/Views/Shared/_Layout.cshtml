@@ -111,7 +111,7 @@ Purchase:
                                                 <ul>
                                                     <li>
                                                         <a href="#">
-                                                            Account: 
+                                                            Account:
                                                             @if (User.Identity.IsAuthenticated)
                                                             {
                                                                 <span>(@User.Identity.Name)</span>
@@ -121,10 +121,16 @@ Purchase:
                                                 </ul>
                                             </div>
                                             <div class="drop-menu hs_mega_menu">
-                                                @if (User.Identity.IsAuthenticated)
+                                                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                                                 {
                                                     <a class="menu-button">@User.Identity.Name</a>
-                                                    <a class="menu-button2" asp-controller="account" asp-action="logout">Log Out</a>
+                                                    <a class="menu-button3" asp-area="Admin" asp-action="Index">Admin Panel</a>
+                                                    <a class="menu-button2" asp-controller="Account" asp-action="Logout">Log Out</a>
+                                                }
+                                                else if (User.Identity.IsAuthenticated)
+                                                {
+                                                    <a class="menu-button">@User.Identity.Name</a>
+                                                    <a class="menu-button2" asp-controller="Account" asp-action="Logout">Log Out</a>
                                                 }
                                                 else
                                                 {
@@ -132,10 +138,10 @@ Purchase:
                                                     <a class="menu-button" asp-controller="Account" asp-action="Login">Login</a>
                                                 }
                                             </div>
+
                                         </div>
                                     </li>
                                 </ul>
-
                             </ul>
                         </div>
                     </div>
@@ -192,7 +198,7 @@ Purchase:
                             </li>
                         </ul>
                     </nav>
-                                        @if (currentController == "Home" || currentController == "Shop")
+                    @if (currentController == "Home" || currentController == "Shop")
                     {
                         <div class="hs_navi_cart_wrapper hidden-xs">
                             <div class="dropdown-wrapper menu-button">
@@ -477,22 +483,21 @@ Purchase:
                 </div>
 
                 <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
-                    <div class="hs_footer_contact_wrapper">
+                    <div class="hs_footer_contact_wrapper text-center">
                         <h2>Contact <span>Us Today</span></h2>
                         <p>
                             Call Us <span>@settings["Phone"]</span><br>
                             Send an Email: <a href="mailto:@settings["Email"]">@settings["Email"]</a><br>
-                            Visit Us @settings["Address"] <br>
+                            Visit Us @settings["Address"]
                         </p>
-                        <form method="post" action="/subscribe">
-                            <div class="hs_footer_contact_input_wrapper">
-                                <input type="email" name="email" placeholder="Email Address..." required>
-                                <button type="submit"><i class="fa fa-envelope"></i></button>
-                            </div>
-                        </form>
-
+                        <div class="hs_footer_help_btn">
+                            <ul>
+                                <li><a asp-controller="Contact" asp-action="Index" class="hs_btn_hover">Contact Us</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

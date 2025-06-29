@@ -17,6 +17,7 @@ namespace HoroScope.ViewModels
         public int BlogCommentsCount { get; set; }
         public bool UserHasLiked { get; set; }
         public List<BlogComment>? BlogComments { get; set; }
+        public string Search { get; set; }
 
     }
 }

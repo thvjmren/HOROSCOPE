@@ -13,5 +13,8 @@ namespace HoroScope.ViewModels
         public List<ArchiveVM> Archives { get; set; }
         public int BlogLikesCount { get; set; }
         public bool UserHasLiked { get; set; }
+        public BlogCommentVM BlogCommentVM { get; set; }
+        public string Search { get; set; }
+        public int? SelectedCategoryId { get; set; }
     }
 }

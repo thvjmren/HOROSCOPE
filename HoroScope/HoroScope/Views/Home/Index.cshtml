@@ -87,7 +87,7 @@
                         </p>
                         <div class="hs_effect_btn hs_about_btn">
                             <ul>
-                                <li><a asp-controller="AboutUs" asp-action="Index" class="hs_btn_hover">Read more</a></li>
+                                <li><a asp-controller="AboutUs" asp-action="Index" class="hs_btn_hover">Read More</a></li>
                             </ul>
                         </div>
                     </div>
@@ -298,7 +298,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="hs_about_heading_main_wrapper">
                     <div class="hs_about_heading_wrapper">
-                        <h2>Latest <span> News</span></h2>
+                        <h2>Latest <span> Blogs</span></h2>
                         <h4><span></span></h4>
                         <p>
                             Stay Informed with the Stars
@@ -308,33 +308,37 @@
                 </div>
             </div>
 
-            @foreach (New latestNew in Model.News)
+            @foreach (Blog blog in Model.Blogs)
             {
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="hs_lest_news_box_wrapper">
                         <div class="hs_lest_news_img_wrapper">
-                            <img src="~/assets/images/content/@latestNew.Image">
+                            <img src="~/assets/images/content/blog/@blog.Image">
                             <div class="hs_lest_news_date_wrapper">
                                 <ul>
-                                    <li>@latestNew.CreatedAt.ToString("dd")</li>
-                                    <li>@latestNew.CreatedAt.ToString("MMM").ToUpper()</li>
+                                    <li>@blog.CreatedAt.ToString("dd")</li>
+                                    <li>@blog.CreatedAt.ToString("MMM").ToUpper()</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="hs_lest_news_cont_wrapper">
-                            <h5>@latestNew.Title</h5>
-                            <p>@latestNew.Description</p>
+                            <h5>@blog.Title</h5>
+                            <p>
+                                @(blog.Content.Length > 200
+                                    ? blog.Content.Substring(0, 200) + "..."
+                                    : blog.Content)
+                            </p>
                             <h4><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
                         </div>
                         <div class="hs_lest_news_cont_bottom">
                             <div class="hs_lest_news_cont_bottom_left">
-                                <p><a href="#">by - Admin</a></p>
+                                <p><a href="#">by - @blog.AppUser.Name</a></p>
                             </div>
                             <div class="hs_lest_news_cont_bottom_center">
-                                <p><a href="#">1244 Likes</a></p>
+                                <p><a href="#">@blog.Likes.Count Likes</a></p>
                             </div>
                             <div class="hs_lest_news_cont_bottom_right">
-                                <p><a href="#">04 Comm.</a></p>
+                                <p><a href="#">@blog.Comments.Count Comments</a></p>
                             </div>
                         </div>
                     </div>

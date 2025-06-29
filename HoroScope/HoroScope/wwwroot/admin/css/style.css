@@ -22614,10 +22614,10 @@ dl li {
   color: #000000;
 }
 
-.sidebar .nav.sub-menu .nav-item .nav-link.active {
-  color: #000000;
-  background: transparent;
-}
+    .sidebar .nav.sub-menu .nav-item .nav-link.active {
+        color: #ffffff;
+        background: transparent;
+    }
 
 .sidebar .nav.sub-menu .nav-item:hover {
   background: transparent;

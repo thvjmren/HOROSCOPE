@@ -97,8 +97,6 @@ namespace HoroScope.Controllers
             return View(vm);
         }
 
-
-
         public async Task<IActionResult> Details(int? id)
         {
             if (id is null || id <= 0) return BadRequest();

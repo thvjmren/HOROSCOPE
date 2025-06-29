@@ -2,6 +2,7 @@
 using HoroScope.Models;
 using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,11 +23,16 @@ namespace HoroScope.Controllers
             _antiforgery = antiforgery;
         }
 
-        public async Task<IActionResult> Index(int? categoryId, int page = 1, int? year = null, int? month = null)
+        public async Task<IActionResult> Index(string? search, int? categoryId, int page = 1, int? year = null, int? month = null)
         {
             int pageSize = 3;
 
             var query = _context.Blogs.Where(b => !b.IsDeleted);
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(b => b.Title.ToLower().Contains(search.ToLower()));
+            }
 
             if (categoryId != null)
             {
@@ -45,6 +51,7 @@ namespace HoroScope.Controllers
             if (page > total && total != 0) return BadRequest();
 
             var Blogs = await query
+                .Include(b => b.AppUser)
                 .OrderByDescending(b => b.Id)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
@@ -56,8 +63,9 @@ namespace HoroScope.Controllers
                     CreatedAt = b.CreatedAt,
                     Image = b.Image,
                     BlogCategoryId = b.BlogCategoryId,
-                    //LikesCount = _context.BlogLikes.Count(l => l.BlogId == b.Id),
-                    //CommentsCount = _context.BlogComments.Count(c => c.BlogId == b.Id && c.IsApproved)
+                    LikesCount = _context.BlogLikes.Count(l => l.BlogId == b.Id),
+                    CommentsCount = _context.BlogComments.Count(c => c.BlogId == b.Id),
+                    AppUser = b.AppUser
                 })
                 .ToListAsync();
 
@@ -130,9 +138,11 @@ namespace HoroScope.Controllers
                 RecentNews = await _context.Blogs.Where(b => !b.IsDeleted).OrderByDescending(b => b.Id).Take(3).ToListAsync(),
                 Blog = blog,
                 BlogComments = await _context.BlogComments
-                                    .Where(c => c.BlogId == id && c.IsApproved)
-                                    .OrderByDescending(c => c.CreatedAt)
-                                    .ToListAsync(),
+                .Include(c => c.AppUser)
+                .Where(c => c.BlogId == id)
+                .OrderByDescending(c => c.CreatedAt)
+                .ToListAsync(),
+
                 BlogComment = new BlogComment(),
                 Archives = await _context.Blogs
                                     .Where(b => !b.IsDeleted)
@@ -154,38 +164,31 @@ namespace HoroScope.Controllers
         }
 
 
+        [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddComment(BlogComment blogComment)
+        public async Task<IActionResult> AddComment(BlogDetailsVM blogComment)
         {
-            if (!User.Identity.IsAuthenticated)
-                return Unauthorized();
+            var user = User.Identity.IsAuthenticated
+                ? await _userManager.GetUserAsync(User)
+                : null;
 
-            var user = await _userManager.GetUserAsync(User);
-
-            blogComment.AppUserId = user.Id;
-            blogComment.CreatedAt = DateTime.UtcNow;
-            blogComment.IsDeleted = false;
-            blogComment.IsApproved = false;
-            blogComment.FullName = string.Concat(user.Name, user.Surname);
-            blogComment.Email = user.Email;
-
-            if (!ModelState.IsValid)
+            BlogComment newBlogComment = new()
             {
-                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
-                return Content("Validation errors: " + string.Join(", ", errors));
-            }
+                Text = blogComment.BlogCommentVM.Comment,
+                AppUserId = user?.Id,
+                CreatedAt = DateTime.UtcNow,
+                IsDeleted = false,
+                BlogId = blogComment.BlogCommentVM.BlogId,
+                Email = user?.Email
+            };
 
-            if (blogComment.BlogId == 0 || string.IsNullOrEmpty(blogComment.Text))
-            {
-                return Content("BlogId və ya Text boşdur.");
-            }
-
-            _context.BlogComments.Add(blogComment);
+            _context.BlogComments.Add(newBlogComment);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Details", new { id = blogComment.BlogId });
+            return RedirectToAction("Details", new { id = blogComment.BlogCommentVM.BlogId });
         }
+
 
 
         [HttpPost]
@@ -200,9 +203,12 @@ namespace HoroScope.Controllers
             var existingLike = await _context.BlogLikes
                 .FirstOrDefaultAsync(l => l.BlogId == blogId && l.AppUserId == user.Id);
 
+            bool userHasLiked;
+
             if (existingLike != null)
             {
                 _context.BlogLikes.Remove(existingLike);
+                userHasLiked = false;
             }
             else
             {
@@ -212,13 +218,14 @@ namespace HoroScope.Controllers
                     AppUserId = user.Id,
                 };
                 await _context.BlogLikes.AddAsync(like);
+                userHasLiked = true;
             }
 
             await _context.SaveChangesAsync();
 
             int likesCount = await _context.BlogLikes.CountAsync(l => l.BlogId == blogId);
 
-            return Json(new { likesCount });
+            return Json(new { likesCount, userHasLiked });
         }
 
     }

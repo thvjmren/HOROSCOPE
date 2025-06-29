@@ -6,11 +6,13 @@ namespace HoroScope.DAL
 {
     public class AppDbContext : IdentityDbContext<AppUser>
     {
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<Service> Services { get; set; }
         public DbSet<ServiceCategory> ServiceCategories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
         public DbSet<AboutUs> AboutUs { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -29,6 +31,7 @@ namespace HoroScope.DAL
         public DbSet<DeliverableAddress> DeliverableAddress { get; set; }
         public DbSet<BlogComment> BlogComments { get; set; }
         public DbSet<BlogLike> BlogLikes { get; set; }
-
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
     }
 }
