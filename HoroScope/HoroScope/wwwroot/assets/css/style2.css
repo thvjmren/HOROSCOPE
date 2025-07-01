@@ -939,6 +939,7 @@ ul{
 	-ms-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
+
 }
 .cc_cart_cont_wrapper h4 a:hover{
 	color:#674694 !important;
@@ -954,14 +955,15 @@ ul{
 	padding-top:3px;
 	float:left;
 }
-.cc_cart_cont_wrapper h5{
-	float: right;
-    padding-right: 35px;
-	color:#fff;
-	font-family: 'Lato', sans-serif;
-	font-size: 18px;
-	margin-top: -9px;
-}
+	.cc_cart_cont_wrapper h5 {
+		float: right;
+		padding-right: 35px;
+		color: #fff;
+		font-family: 'Lato', sans-serif;
+		font-size: 17px;
+		margin-top: 17px;
+	}
+
 .cc_cart_total_wrapper{
 	float:left;
 	width:100%;

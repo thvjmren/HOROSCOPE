@@ -961,6 +961,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\content\\vastu\\v4.jpg"
     },
     {
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\default-avatar.png",
+      "PackagePath": "staticwebassets\\assets\\images\\default-avatar.png"
+    },
+    {
       "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\favicon.ico",
       "PackagePath": "staticwebassets\\assets\\images\\header\\favicon.ico"
     },

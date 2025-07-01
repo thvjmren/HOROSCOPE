@@ -14,7 +14,7 @@ namespace HoroScope
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddSession(opt => opt.IdleTimeout = TimeSpan.FromSeconds(10));
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
@@ -46,7 +46,6 @@ namespace HoroScope
 
 
             var app = builder.Build();
-            app.UseSession();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "osI4//1xOOUSZaDWec6eivazQBmm1mXyHR1mjUdrlko=",
+  "Hash": "jaFZjzt+ATtrovIXVKVbH4YecugtrdRQa3Yf0WqIzSs=",
   "Source": "HoroScope",
   "BasePath": "_content/HoroScope",
   "Mode": "Default",
@@ -1648,8 +1648,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hz30csdiz4",
-      "Integrity": "LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ=",
+      "Fingerprint": "xs2jtgehd4",
+      "Integrity": "8TGR5sSXIxlHMPe6oZMb6oyI1fGqsoCcLx17rOa2zDA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\style2.css"
@@ -5076,6 +5076,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\content\\vastu\\v4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\default-avatar.png",
+      "SourceId": "HoroScope",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\",
+      "BasePath": "_content/HoroScope",
+      "RelativePath": "assets/images/default-avatar#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m96ztoimnk",
+      "Integrity": "hrjwIthiLxD8ulOc/TKAykCQsdo/oTIe8aBf3pFjwIc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\default-avatar.png"
     },
     {
       "Identity": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\header\\favicon.ico",
@@ -12836,7 +12857,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "168751"
+          "Value": "168762"
         },
         {
           "Name": "Content-Type",
@@ -12844,11 +12865,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ=\""
+          "Value": "\"8TGR5sSXIxlHMPe6oZMb6oyI1fGqsoCcLx17rOa2zDA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 29 Jun 2025 18:09:54 GMT"
+          "Value": "Tue, 01 Jul 2025 18:56:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12858,12 +12879,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ="
+          "Value": "sha256-8TGR5sSXIxlHMPe6oZMb6oyI1fGqsoCcLx17rOa2zDA="
         }
       ]
     },
     {
-      "Route": "assets/css/style2.hz30csdiz4.css",
+      "Route": "assets/css/style2.xs2jtgehd4.css",
       "AssetFile": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\css\\style2.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -12873,7 +12894,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "168751"
+          "Value": "168762"
         },
         {
           "Name": "Content-Type",
@@ -12881,11 +12902,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ=\""
+          "Value": "\"8TGR5sSXIxlHMPe6oZMb6oyI1fGqsoCcLx17rOa2zDA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 29 Jun 2025 18:09:54 GMT"
+          "Value": "Tue, 01 Jul 2025 18:56:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12895,7 +12916,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hz30csdiz4"
+          "Value": "xs2jtgehd4"
         },
         {
           "Name": "label",
@@ -12903,7 +12924,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-LeAkZ/baDz1rANRrirKMBT+Z3IPsAkVOqIFUm+ndEuQ="
+          "Value": "sha256-8TGR5sSXIxlHMPe6oZMb6oyI1fGqsoCcLx17rOa2zDA="
         }
       ]
     },
@@ -26270,6 +26291,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-zhO/UN3is7o+v8QtlL3wvBo3ykb86b1gAnNccNIzieg="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/default-avatar.m96ztoimnk.png",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\default-avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26155"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hrjwIthiLxD8ulOc/TKAykCQsdo/oTIe8aBf3pFjwIc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Jul 2025 19:42:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m96ztoimnk"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/default-avatar.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hrjwIthiLxD8ulOc/TKAykCQsdo/oTIe8aBf3pFjwIc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/default-avatar.png",
+      "AssetFile": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\default-avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26155"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hrjwIthiLxD8ulOc/TKAykCQsdo/oTIe8aBf3pFjwIc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Jul 2025 19:42:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hrjwIthiLxD8ulOc/TKAykCQsdo/oTIe8aBf3pFjwIc="
         }
       ]
     },

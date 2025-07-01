@@ -56,19 +56,6 @@ public class HomeController : Controller
         return View(vm);
     }
 
-    public IActionResult Test()
-    {
-        Response.Cookies.Append("name", "sunay", new CookieOptions { MaxAge = TimeSpan.FromSeconds(10) });
 
-
-        HttpContext.Session.SetString("name2", "rena");
-
-        return Ok();
-    }
-
-    public IActionResult GetCookie()
-    {
-        return Content(Request.Cookies["name"]);
-    }
 
 }

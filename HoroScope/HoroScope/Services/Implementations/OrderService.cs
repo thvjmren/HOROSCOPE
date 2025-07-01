@@ -1,6 +1,7 @@
 ﻿using HoroScope.DAL;
 using HoroScope.Interfaces;
 using HoroScope.Utilities.Enums;
+using HoroScope.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -16,6 +17,27 @@ namespace HoroScope.Implementations
             _context = context;
             _logger = logger;
         }
+
+        public async Task<List<OrderVM>> GetAllOrderVMsAsync(string userId, bool isAdmin)
+        {
+            var query = _context.Orders.Include(o => o.OrderItems).AsQueryable();
+
+            if (!isAdmin)
+            {
+                query = query.Where(o => o.UserId == userId);
+            }
+
+            return await query.Select(o => new OrderVM
+            {
+                Id = o.Id,
+                Status = o.Status,
+                CreatedAt = o.CreatedAt,
+                TotalItems = o.OrderItems.Sum(i => i.Quantity),
+                TotalPrice = o.OrderItems.Sum(i => i.Quantity * i.Product.Price)
+            }).ToListAsync();
+        }
+
+
 
         private bool IsValidStatusTransition(OrderStatus currentStatus, OrderStatus newStatus)
         {
@@ -116,5 +138,6 @@ namespace HoroScope.Implementations
                 throw;
             }
         }
+
     }
 }

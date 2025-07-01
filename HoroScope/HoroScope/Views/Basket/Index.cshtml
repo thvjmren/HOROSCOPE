@@ -1,0 +1,231 @@
+﻿@{
+    Layout = null;
+    decimal total = 0;
+}
+
+@model List<BasketItemVM>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        body {
+            background-color: #331847;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 60px;
+        }
+
+        .cart-container {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 40px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        table {
+            color: #ffffff;
+        }
+
+        thead th {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        tbody td {
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        td, th {
+            vertical-align: middle !important;
+            text-align: center;
+        }
+
+        .cart-img {
+            width: 60px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .text-right h4 {
+            color: #ffffff;
+        }
+
+        .text-danger {
+            color: #ff6b6b !important;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+            .text-danger:hover {
+                color: #ff3b3b !important;
+            }
+
+
+        .btn-checkout {
+            background-color: rgba(173, 128, 191, 0.47);
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 24px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
+        }
+
+            .btn-checkout:hover {
+                background-color: #7D3C98;
+            }
+
+        a.text-light {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+
+            a.text-light:hover {
+                text-decoration: underline;
+            }
+
+        .btn-circle {
+            border-radius: 50% !important;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            text-align: center;
+            line-height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-outline-light {
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+            .btn-outline-light:hover {
+                background-color: #fff;
+                color: #331847;
+            }
+
+            .btn-outline-light.btn-circle {
+                border-radius: 50px !important;
+                padding: 8px 20px;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                border: 1px solid #fff;
+                color: #fff;
+                text-decoration: none;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+                .btn-outline-light.btn-circle:hover {
+                    background-color: #fff;
+                    color: #331847;
+                    text-decoration: none;
+                }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="cart-container">
+        <h2>🛒 My Shopping Cart</h2>
+
+        @if (Model == null || !Model.Any())
+        {
+            <div class="alert alert-info text-center bg-light text-dark">Your basket is empty.</div>
+        }
+        else
+        {
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Count</th>
+                        <th>SubTotal</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var itemVM in Model)
+                    {
+                        total += itemVM.SubTotal;
+                        <tr>
+                            <td>
+                                <a asp-controller="Shop" asp-action="Details" asp-route-id="@itemVM.Id">
+                                    <img src="~/assets/images/content/shop/@itemVM.Image" class="cart-img" alt="Cart Thumbnail" />
+                                </a>
+                            </td>
+                            <td>
+                                <a asp-controller="Shop" asp-action="Details" asp-route-id="@itemVM.Id" class="text-light">
+                                    @itemVM.Name
+                                </a>
+                            </td>
+                            <td>$@itemVM.Price</td>
+
+                            <td>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a asp-controller="Basket" asp-action="DecreaseCount" asp-route-id="@itemVM.Id" class="btn btn-sm btn-outline-light btn-circle mr-2">−</a>
+                                    <span>@itemVM.Count</span>
+                                    <a asp-controller="Basket" asp-action="IncreaseCount" asp-route-id="@itemVM.Id" class="btn btn-sm btn-outline-light btn-circle ml-2">+</a>
+                                </div>
+                            </td>
+
+
+                            <td>$@itemVM.SubTotal</td>
+                            <td>
+                                <a asp-controller="Basket" asp-action="RemoveFromBasket" asp-route-id="@itemVM.Id" class="text-danger">
+                                    <i class="fas fa-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <a asp-controller="shop" asp-action="index" class="btn btn-outline-light btn-circle">
+                    <i class="fas fa-arrow-left"></i> Continue Shopping
+                </a>
+
+                <div class="text-right">
+                    <h4>Total: $@total</h4>
+                    <a href="#" class="btn btn-checkout mt-2">Proceed to Checkout</a>
+                </div>
+            </div>
+
+        }
+    </div>
+</body>
+</html>

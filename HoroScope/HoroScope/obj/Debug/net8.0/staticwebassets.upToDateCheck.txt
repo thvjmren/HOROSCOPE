@@ -237,6 +237,7 @@ wwwroot\assets\images\content\vastu\v1.jpg
 wwwroot\assets\images\content\vastu\v2.jpg
 wwwroot\assets\images\content\vastu\v3.jpg
 wwwroot\assets\images\content\vastu\v4.jpg
+wwwroot\assets\images\default-avatar.png
 wwwroot\assets\images\header\favicon.ico
 wwwroot\assets\images\header\horoscope.gif
 wwwroot\assets\images\header\slide.jpg

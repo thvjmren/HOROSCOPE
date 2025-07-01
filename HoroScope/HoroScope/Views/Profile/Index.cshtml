@@ -1,0 +1,95 @@
+﻿@model HoroScope.ViewModels.UserProfileVM
+
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+    body {
+        background-color: #331847;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: #f0e6ff;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-container {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        width: 400px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+        .profile-container h2 {
+            margin-bottom: 30px;
+            color: #f0e6ff;
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+    .profile-avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 3px solid #9b59b6;
+    }
+
+    .profile-info p {
+        margin: 10px 0;
+        font-size: 15px;
+        color: #dcd0ff;
+    }
+
+        .profile-info p strong {
+            color: #f0e6ff;
+        }
+
+    .btn-custom {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        background-color: rgba(173, 128, 191, 0.47);
+        border: none;
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(155, 89, 182, 0.4);
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+        .btn-custom:hover {
+            background-color: #7D3C98;
+            text-decoration: none;
+            color: white;
+        }
+</style>
+
+<div class="profile-container">
+    <h2>My Profile</h2>
+
+    <img src="@(string.IsNullOrEmpty(Model.Image) ? "/images/default-avatar.png" : Model.Image)"
+         alt="Profile Picture" class="profile-avatar" />
+
+    <div class="profile-info">
+        <p><strong>Name:</strong> @Model.Name</p>
+        <p><strong>Surname:</strong> @Model.Surname</p>
+        <p><strong>Username:</strong> @Model.UserName</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
+    </div>
+
+    <a asp-controller="Profile" asp-action="UploadImage" class="btn-custom">Change Profile Picture</a>
+</div>

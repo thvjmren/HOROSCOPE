@@ -1,29 +1,49 @@
-﻿@model List<HoroScope.Models.Order>
+﻿@{
+    Layout = null;
+}
 
-<h2>Orders List</h2>
+@model List<OrderVM>
 
-<table class="table table-striped">
-    <thead>
+<h2>Orders</h2>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
         <tr>
-            <th>Order ID</th>
+            <th>ID</th>
             <th>Status</th>
-            <th>Created At</th>
-            <th>Total Items</th>
-            <th>Actions</th>
+            <th>Created</th>
+            <th>Items</th>
+            <th>Price</th>
+            <th>Change Status</th>
         </tr>
     </thead>
     <tbody>
+        @{
+            var statuses = Enum.GetValues(typeof(HoroScope.Utilities.Enums.OrderStatus));
+        }
         @foreach (var order in Model)
         {
-                <tr>
-                    <td>@order.Id</td>
-                    <td>@order.Status</td>
-                    <td>@order.CreatedAt.ToString("yyyy-MM-dd")</td>
-                    <td>@order.OrderItems.Sum(i => i.Quantity)</td>
-                    <td>
-                        <a asp-action="Details" asp-route-id="@order.Id" class="btn btn-primary btn-sm">Details</a>
-                    </td>
-                </tr>
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.Status</td>
+                <td>@order.CreatedAt.ToString("yyyy-MM-dd")</td>
+                <td>@order.TotalItems</td>
+                <td>$@order.TotalPrice.ToString("0.##")</td>
+                <td>
+                    <form asp-action="UpdateOrderStatus" method="post" class="d-flex gap-2 align-items-center">
+                        <input type="hidden" name="orderId" value="@order.Id" />
+ @*                        <select name="newStatus" class="form-control form-control-sm">
+                            @foreach (var status in statuses)
+                            {
+                                var selected = status.Equals(order.Status) ? "selected" : "";
+                                <option value="@status" @(status.Equals(order.Status) ? "selected" : "")>@status</option>
+
+                            }
+                        </select> *@
+                        <button type="submit" class="btn btn-sm btn-success">Change</button>
+                    </form>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
