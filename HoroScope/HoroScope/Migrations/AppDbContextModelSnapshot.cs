@@ -61,6 +61,15 @@ namespace HoroScope.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("BirthPlace")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BirthTime")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -80,6 +89,9 @@ namespace HoroScope.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("MoonSign")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -102,7 +114,16 @@ namespace HoroScope.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ProfileImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RisingSign")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SunSign")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Surname")
@@ -127,6 +148,33 @@ namespace HoroScope.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("HoroScope.Models.BasketItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("BasketItems");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Blog", b =>
@@ -443,14 +491,20 @@ namespace HoroScope.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -826,6 +880,30 @@ namespace HoroScope.Migrations
                     b.ToTable("Settings");
                 });
 
+            modelBuilder.Entity("HoroScope.Models.WishlistItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("WishlistItems");
+                });
+
             modelBuilder.Entity("HoroScope.Models.Zodiac", b =>
                 {
                     b.Property<int>("Id")
@@ -1020,6 +1098,25 @@ namespace HoroScope.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("HoroScope.Models.BasketItem", b =>
+                {
+                    b.HasOne("HoroScope.Models.AppUser", "AppUser")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HoroScope.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("HoroScope.Models.Blog", b =>
                 {
                     b.HasOne("HoroScope.Models.AppUser", "AppUser")
@@ -1207,6 +1304,25 @@ namespace HoroScope.Migrations
                     b.Navigation("ServiceCategory");
                 });
 
+            modelBuilder.Entity("HoroScope.Models.WishlistItem", b =>
+                {
+                    b.HasOne("HoroScope.Models.AppUser", "AppUser")
+                        .WithMany("WishlistItems")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HoroScope.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("HoroScope.Models.Zodiac", b =>
                 {
                     b.HasOne("HoroScope.Models.ZodiacElement", "ZodiacElement")
@@ -1271,6 +1387,8 @@ namespace HoroScope.Migrations
 
             modelBuilder.Entity("HoroScope.Models.AppUser", b =>
                 {
+                    b.Navigation("BasketItems");
+
                     b.Navigation("Blogs");
 
                     b.Navigation("Comments");
@@ -1278,6 +1396,8 @@ namespace HoroScope.Migrations
                     b.Navigation("Likes");
 
                     b.Navigation("Orders");
+
+                    b.Navigation("WishlistItems");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Blog", b =>

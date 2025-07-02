@@ -1,0 +1,168 @@
+﻿@{
+    Layout = null;
+}
+
+@model List<WishlistItemVM>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Wishlist</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        body {
+            background-color: #331847;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 60px;
+        }
+
+        .wishlist-container {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 40px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        table {
+            color: #ffffff;
+        }
+
+        thead th {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        tbody td {
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        td, th {
+            vertical-align: middle !important;
+            text-align: center;
+        }
+
+        .wishlist-img {
+            width: 60px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .btn-remove {
+            color: #ff6b6b;
+            font-size: 18px;
+        }
+
+            .btn-remove:hover {
+                color: #ff3b3b;
+            }
+
+        a.text-light {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+
+            a.text-light:hover {
+                text-decoration: underline;
+            }
+
+        .btn-outline-light.btn-circle {
+            border-radius: 50px !important;
+            padding: 8px 20px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+            .btn-outline-light.btn-circle:hover {
+                background-color: #fff;
+                color: #331847;
+                text-decoration: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="wishlist-container">
+        <h2>♡ My Wishlist ♡</h2>
+
+        @if (Model == null || !Model.Any())
+        {
+            <div class="alert alert-info text-center bg-light text-dark">Your WishList is empty.</div>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <a asp-controller="shop" asp-action="index" class="btn btn-outline-light btn-circle">
+                    <i class="fas fa-arrow-left"></i> Continue Shopping
+                </a>
+            </div>
+        }
+        else
+        {
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>
+                                <a asp-controller="Shop" asp-action="Details" asp-route-id="@product.Id">
+                                    <img src="~/assets/images/content/shop/@product.Image"
+                                         class="wishlist-img" alt="Wishlist Thumbnail" />
+                                </a>
+                            </td>
+                            <td>
+                                <a asp-controller="Shop" asp-action="Details" asp-route-id="@product.Id" class="text-light">
+                                    @product.Name
+                                </a>
+                            </td>
+                            <td>$@product.Price</td>
+                            <td>
+                                <a asp-controller="Wishlist" asp-action="Remove" asp-route-id="@product.Id" class="btn-remove">
+                                    <i class="fas fa-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-start mt-4">
+                <a asp-controller="Shop" asp-action="Index" class="btn btn-outline-light btn-circle">
+                    <i class="fas fa-arrow-left"></i> Continue Shopping
+                </a>
+            </div>
+        }
+    </div>
+</body>
+</html>

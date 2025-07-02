@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HoroScope")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57f286562e1d8f93f30a63735bf5694e5249bd4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7d352d9d787d97f9eeff8fb993348d66c65e183")]
 [assembly: System.Reflection.AssemblyProductAttribute("HoroScope")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HoroScope")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

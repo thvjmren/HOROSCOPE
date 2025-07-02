@@ -35,7 +35,6 @@
             }
 </style>
 
-
 <!-- hs About Title Start -->
 <div class="hs_indx_title_main_wrapper">
     <div class="hs_title_img_overlay"></div>
@@ -211,6 +210,28 @@
                                 <li><a href="#">BUY NOW</a></li>
                             </ul>
                         </div>
+                        <div class="hs_shop_single_cart_btn">
+
+                            <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-id="@Model.ShopDetailsVM.Product.Id"
+                               style="position: absolute; top: 10px; right: 10px; font-size: 24px; color: red;"
+                               title="Add to Wishlist">
+                                <i class="fa fa-heart"></i>
+                            </a>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_pp_bottom_btn_wrapper">
+                                <div class="hs_pp_bottom_btn">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="add-to-basket-btn" data-id="@Model.ShopDetailsVM.Product.Id">
+                                                <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -396,11 +417,18 @@
             </div>
             @foreach (var product in Model.ShopDetailsVM.PopularProducts)
             {
+                var fullStarsP = (int)Math.Floor(product.Rating);
+                if (fullStarsP > 5) fullStarsP = 5;
+                var emptyStarsP = 5 - fullStarsP;
+
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="hs_shop_prodt_main_box">
                         <div class="hs_shop_prodt_img_wrapper">
-                            <img src="~/assets/images/content/shop/@product.ProductImages?.FirstOrDefault(pi=>pi.IsPrimary==true)?.Image" alt="shop_product">
-                            <a asp-controller="basket" asp-action="addbasket" asp-route-id="@product.Id"><i class="fa fa-shopping-cart" style="font-size:24px"></i></a>
+                            <img src="~/assets/images/content/shop/@product.ProductImages?.FirstOrDefault(pi => pi.IsPrimary == true)?.Image" alt="shop_product" />
+                            <a href="#" class="add-to-basket-btn" data-id="@product.Id">
+                                <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+                            </a>
+
                         </div>
                         <div class="hs_shop_prodt_img_cont_wrapper">
                             <h2><a asp-controller="Shop" asp-action="Details" asp-route-id="@product.Id">@product.Name</a></h2>
@@ -415,19 +443,22 @@
                             }
                             else
                             {
-                                <h3>
-                                    $@product.Price.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
-                                </h3>
+                                <h3>$@product.Price.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)</h3>
                             }
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+
+                            @for (int i = 0; i < fullStarsP; i++)
+                            {
+                                <i class="fa fa-star"></i>
+                            }
+                            @for (int i = 0; i < emptyStarsP; i++)
+                            {
+                                <i class="fa fa-star-o"></i>
+                            }
                         </div>
                     </div>
                 </div>
             }
+
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="hs_pp_bottom_btn_wrapper">
                     <div class="hs_pp_bottom_btn">

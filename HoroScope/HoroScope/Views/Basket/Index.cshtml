@@ -3,6 +3,13 @@
     decimal total = 0;
 }
 
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
 @model List<BasketItemVM>
 
 <!DOCTYPE html>
@@ -151,7 +158,6 @@
                     text-decoration: none;
                 }
 
-
     </style>
 
 
@@ -162,7 +168,12 @@
 
         @if (Model == null || !Model.Any())
         {
-            <div class="alert alert-info text-center bg-light text-dark">Your basket is empty.</div>
+            <div class="alert alert-info text-center bg-light text-dark">Your Basket is empty.</div>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <a asp-controller="shop" asp-action="index" class="btn btn-outline-light btn-circle">
+                    <i class="fas fa-arrow-left"></i> Continue Shopping
+                </a>
+            </div>
         }
         else
         {
@@ -192,7 +203,7 @@
                                     @itemVM.Name
                                 </a>
                             </td>
-                            <td>$@itemVM.Price</td>
+                            <td>$@itemVM.Price.ToString("F2")</td>
 
                             <td>
                                 <div class="d-flex justify-content-center align-items-center">
@@ -203,7 +214,7 @@
                             </td>
 
 
-                            <td>$@itemVM.SubTotal</td>
+                            <td>$@itemVM.SubTotal.ToString("F2")</td>
                             <td>
                                 <a asp-controller="Basket" asp-action="RemoveFromBasket" asp-route-id="@itemVM.Id" class="text-danger">
                                     <i class="fas fa-times"></i>
@@ -220,11 +231,10 @@
                 </a>
 
                 <div class="text-right">
-                    <h4>Total: $@total</h4>
-                    <a href="#" class="btn btn-checkout mt-2">Proceed to Checkout</a>
+                    <h4>Total: $@total.ToString("F2")</h4>
+                    <a asp-controller="Basket" asp-action="CheckOut" class="btn btn-checkout mt-2">Proceed to Checkout</a>
                 </div>
             </div>
-
         }
     </div>
 </body>

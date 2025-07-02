@@ -1,15 +1,17 @@
-﻿@using HoroScope.Services.Implementations
-@inject LayoutService service;
+﻿@using HoroScope.Interfaces
+@using HoroScope.Services.Implementations
+@inject ILayoutService _service;
+@inject IBasketService _basketService;
+
 @{
-    Dictionary<string, string> settings = await service.GetSettingsAsync();
-    List<BasketItemVM> basketItems = await service.GetBasketAsync();
+    Dictionary<string, string> settings = await _service.GetSettingsAsync();
+    List<BasketItemVM> basketItems = await _basketService.GetBasketAsync();
 }
 
 @{
     var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
     var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
 }
-
 <!DOCTYPE html>
 <!--
 Template Name: Horoscope
@@ -139,7 +141,6 @@ Purchase:
                                                     <a class="menu-button" asp-controller="Account" asp-action="Login">Login</a>
                                                 }
                                             </div>
-
                                         </div>
                                     </li>
                                 </ul>
@@ -198,47 +199,26 @@ Purchase:
                                 <a asp-controller="Contact" asp-action="Index" class="menu-button2">Contact</a>
                             </li>
                         </ul>
+
                     </nav>
                     @if (currentController == "Home" || currentController == "Shop")
                     {
-                        <div class="hs_navi_cart_wrapper hidden-xs">
-                            <div class="dropdown-wrapper menu-button">
-                                <a class="menu-button" href="#"><i class="flaticon-shop"></i><span>@basketItems.Count</span></a>
-                                @if (basketItems.Count != 0)
-                                {
-                                    <div class="drop-menu">
-                                        @foreach (var item in basketItems)
-                                        {
-                                            <div class="cc_cart_wrapper1 menu-button">
-                                                <div class="cc_cart_img_wrapper">
-                                                    <img src="~/assets/images/content/shop/@item.Image" width="70px" height="70px" alt="cart_img" />
-                                                </div>
-                                                <div class="cc_cart_cont_wrapper">
-                                                    <h4><a href="#">@item.Name</a></h4>
-                                                    <p>@item.Count × $@item.Price</p>
-                                                    <h5>$@item.SubTotal</h5>
-                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                </div>
-                                            </div>
-                                        }
+                        @await Component.InvokeAsync("Basket")
 
-                                        <div class="cc_cart_wrapper1 menu-button">
-                                            <div class="hs_effect_btn ceckout_btn">
-                                                <ul>
-                                                    <li><a asp-controller="Basket" asp-action="Index" class="hs_btn_hover">View Cart</a></li>
-                                                    <li><a href="#" class="hs_btn_hover">Checkout</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-                                else
-                                {
-                                    <h4>Your Cart is Empty <a asp-controller="Shop" asp-action="Index">SHOP NOW</a></h4>
-                                }
-                            </div>
-                        </div>
                     }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a asp-controller="Wishlist" asp-action="Index">
+                            <i class="fa fa-heart"></i> WL
+                        </a>
+                    }
+                    else
+                    {
+                        <a id="wishlistBtn" href="javascript:void(0)">
+                            <i class="fa fa-heart"></i> WL
+                        </a>
+                    }
+
 
                     <header class="mobail_menu visible-xs">
                         <div class="container-fluid">
@@ -543,8 +523,58 @@ Purchase:
     <!--main js file end-->
     @RenderSection("Scripts", required: false)
 
+    <script>
+        var wishlistBtn = document.getElementById('wishlistBtn');
+        if (wishlistBtn) {
+            wishlistBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                var isAuthenticated = @User.Identity.IsAuthenticated.ToString().ToLower();
+
+                if (isAuthenticated) {
+                    window.location.href = '@Url.Action("Index", "Wishlist")';
+                } else {
+                    alert('Please log in to access your wishlist.');
+                    window.location.href = '@Url.Action("Login", "Account")';
+                }
+            });
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('body').on('click', '.add-to-basket-btn', function(e) {
+                e.preventDefault();
+
+                var productId = $(this).data('id');
+
+                $.ajax({
+                    url: '/Basket/AddBasket',
+                    type: 'POST',
+                    data: { id: productId },
+                    success: function(response) {
+                        if (response.success) {
+                       
+                            $('#basketCount').text(response.count);
+                        } else {
+               
+                            console.error("Error: " + response.message);
+                        }
+                    },
+                    error: function() {
+                        console.error("Failed to add product to basket.");
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
 </body>
 
 
 <!-- Mirrored from www.webstrot.com/html/horoscope/dark_version/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jun 2025 08:16:46 GMT -->
 </html>
+
+

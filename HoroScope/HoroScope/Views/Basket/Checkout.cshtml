@@ -1,0 +1,225 @@
+﻿@{
+    Layout = null;
+    decimal total = 0;
+}
+
+@model OrderVM
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+    <style>
+        .iti__country-list {
+            background-color: #2d1c3a !important;
+        }
+
+        body {
+            background-color: #331847;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 60px;
+        }
+
+        .checkout-container {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 40px;
+            padding-bottom: 60px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        label {
+            color: #ddd;
+            font-weight: 500;
+        }
+
+        input.form-control,
+        textarea.form-control {
+            background-color: #ffffff;
+            border: none;
+            color: #231131;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #999;
+        }
+
+        input.form-control:focus,
+        textarea.form-control:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .order-summary {
+            background-color: rgba(255, 255, 255, 0.12);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            color: #fff;
+        }
+
+            .order-summary h4 {
+                margin-bottom: 20px;
+            }
+
+            .order-summary .item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                border-bottom: 1px solid rgba(255,255,255,0.15);
+                padding-bottom: 8px;
+            }
+
+        .btn-checkout {
+            background-color: rgba(173, 128, 191, 0.47);
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 12px 30px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
+            width: 100%;
+            margin-top: 20px;
+        }
+
+            .btn-checkout:hover {
+                background-color: #7D3C98;
+                color: #fff;
+            }
+
+        .btn-back {
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+            .btn-back:hover {
+                color: #d1b3f9;
+            }
+
+        .back-links {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+
+        <div class="back-links">
+            <a asp-controller="Basket" asp-action="Index" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Back to Cart
+            </a>
+            <a asp-controller="Shop" asp-action="Index" class="btn-back">
+                <i class="fas fa-store"></i> Back to Shop
+            </a>
+        </div>
+
+        <h2>Checkout</h2>
+
+        @if (Model == null)
+        {
+            <div class="alert alert-info text-center bg-light text-dark">Your basket is empty.</div>
+        }
+        else
+        {
+            <form method="post" id="checkoutForm">
+                <div class="form-group">
+                    <label asp-for="Address">Address</label>
+                    <input asp-for="Address" id="Address" name="Address" class="form-control" placeholder="Enter shipping address" required />
+                    <span asp-validation-for="Address"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PhoneNumber">Phone Number</label>
+                    <input asp-for="PhoneNumber" id="PhoneNumber" name="PhoneNumber" class="form-control" placeholder="Enter phone number" required />
+                    <span asp-validation-for="PhoneNumber"></span>
+                </div>
+
+                <input type="hidden" id="FullPhoneNumber" name="FullPhoneNumber" />
+
+                <div class="order-summary">
+                    <h4>Order Summary</h4>
+                    @foreach (var itemVM in Model.BasketInOrderVMs)
+                    {
+                        total += itemVM.SubTotal;
+                        <div class="item">
+                            <span>@itemVM.Name x @itemVM.Count</span>
+                            <span>$@itemVM.SubTotal.ToString("F2")</span>
+                        </div>
+                    }
+                    <hr />
+                    <div class="item" style="font-weight:700; font-size:18px;">
+                        <span>Total:</span>
+                        <span>$@total.ToString("F2")</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-checkout">Place Order</button>
+            </form>
+        }
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+    <script>
+        const phoneInputField = document.querySelector("#PhoneNumber");
+
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                fetch('https://ipinfo.io/json?token=<YOUR_TOKEN_HERE>')
+                    .then(response => response.json())
+                    .then(data => callback(data.country))
+                    .catch(() => callback('us'));
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+
+        const form = document.querySelector("#checkoutForm");
+
+        form.addEventListener('submit', function (e) {
+            if (phoneInput.isValidNumber()) {
+                const fullNumber = phoneInput.getNumber();
+                document.querySelector("#FullPhoneNumber").value = fullNumber;
+            } else {
+                e.preventDefault();
+                alert("Please enter a valid phone number.");
+                phoneInputField.focus();
+            }
+        });
+    </script>
+</body>
+</html>

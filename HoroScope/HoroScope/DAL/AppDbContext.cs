@@ -31,6 +31,8 @@ namespace HoroScope.DAL
         public DbSet<DeliverableAddress> DeliverableAddress { get; set; }
         public DbSet<BlogComment> BlogComments { get; set; }
         public DbSet<BlogLike> BlogLikes { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<WishlistItem> WishlistItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
     }

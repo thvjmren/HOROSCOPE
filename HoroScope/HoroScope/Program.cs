@@ -1,5 +1,4 @@
 using HoroScope.DAL;
-using HoroScope.Implementations;
 using HoroScope.Interfaces;
 using HoroScope.Models;
 using HoroScope.Services.Implementations;
@@ -39,9 +38,9 @@ namespace HoroScope
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("default"));
             });
 
-            builder.Services.AddScoped<LayoutService>();
+            builder.Services.AddScoped<ILayoutService, LayoutService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
-            builder.Services.AddScoped<IOrderService, OrderService>();
+            builder.Services.AddScoped<IBasketService, BasketService>();
 
 
 

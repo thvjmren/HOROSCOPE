@@ -314,7 +314,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.1;
 	font-weight:400;
-	color: #222222;
+	color: #fff;
 	margin:0;
 	padding:0;
 }
@@ -820,13 +820,14 @@ ul{
 	padding-top:3px;
 	float:left;
 }
-.cc_cart_cont_wrapper h5{
-	float: right;
-    padding-right: 35px;
-	color:#ffffff;
-	font-family: 'Lato', sans-serif;
-	font-size: 18px;
-	margin-top: -9px;
+	.cc_cart_cont_wrapper h5 {
+		float: right;
+		padding-right: 35px;
+		color: #fff;
+		font-family: 'Lato', sans-serif;
+		font-size: 17px;
+		margin-top: 17px;
+	}
 }
 .cc_cart_total_wrapper{
 	float:left;
