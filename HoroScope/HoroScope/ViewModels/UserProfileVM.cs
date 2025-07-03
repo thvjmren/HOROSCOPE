@@ -14,8 +14,6 @@
         public IFormFile? ProfilePhoto { get; set; }
 
         public string? SunSign { get; set; }
-        public string? RisingSign { get; set; }
-        public string? MoonSign { get; set; }
         private string? _profileImageUrl;
         public string? ProfileImageUrl
         {

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HoroScope.Migrations
 {
     /// <inheritdoc />
-    public partial class AddAstroFieldsToAppUser : Migration
+    public partial class SunSignAddingToAppUser : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,19 +30,7 @@ namespace HoroScope.Migrations
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "MoonSign",
-                table: "AspNetUsers",
-                type: "nvarchar(max)",
-                nullable: true);
-
-            migrationBuilder.AddColumn<string>(
                 name: "ProfileImageUrl",
-                table: "AspNetUsers",
-                type: "nvarchar(max)",
-                nullable: true);
-
-            migrationBuilder.AddColumn<string>(
-                name: "RisingSign",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
                 nullable: true);
@@ -70,15 +58,7 @@ namespace HoroScope.Migrations
                 table: "AspNetUsers");
 
             migrationBuilder.DropColumn(
-                name: "MoonSign",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
                 name: "ProfileImageUrl",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "RisingSign",
                 table: "AspNetUsers");
 
             migrationBuilder.DropColumn(

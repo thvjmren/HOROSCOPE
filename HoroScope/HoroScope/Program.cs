@@ -1,6 +1,7 @@
 using HoroScope.DAL;
 using HoroScope.Interfaces;
 using HoroScope.Models;
+using HoroScope.Services;
 using HoroScope.Services.Implementations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -44,9 +45,16 @@ namespace HoroScope
                 opt.AccessDeniedPath = "/Account/AccessDenied";
             });
 
+            builder.Services.AddHttpClient<AstroService>(client =>
+            {
+                client.BaseAddress = new Uri("http://127.0.0.1:5000/");
+            });
+
+            builder.Services.AddHttpClient<NominatimService>();
             builder.Services.AddScoped<ILayoutService, LayoutService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
             builder.Services.AddScoped<IBasketService, BasketService>();
+
 
 
 

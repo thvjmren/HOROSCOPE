@@ -35,5 +35,7 @@ namespace HoroScope.DAL
         public DbSet<WishlistItem> WishlistItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<UserSubscription> UserSubscriptions { get; set; }
+        public DbSet<SubscriptionPlan> SubscriptionPlans { get; set; }
     }
 }

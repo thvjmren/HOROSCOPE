@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HoroScope.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250702184939_AddAstroFieldsToAppUser")]
-    partial class AddAstroFieldsToAppUser
+    [Migration("20250703202624_SunSignAddingToAppUser")]
+    partial class SunSignAddingToAppUser
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -93,9 +93,6 @@ namespace HoroScope.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("MoonSign")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -118,9 +115,6 @@ namespace HoroScope.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ProfileImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RisingSign")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")

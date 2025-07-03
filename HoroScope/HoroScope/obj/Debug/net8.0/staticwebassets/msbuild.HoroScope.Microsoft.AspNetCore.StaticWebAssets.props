@@ -1344,8 +1344,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gqlqknqkog</Fingerprint>
-      <Integrity>eB+7omlPBTqcbRkGXPPHJOUpygvVMmJkyMjfYJlFffk=</Integrity>
+      <Fingerprint>1nakx03npl</Fingerprint>
+      <Integrity>3SPOAZEED/IpsMgWzOa8moC/1/fJDCHCzEqetihlUEs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style.css'))</OriginalItemSpec>
@@ -1782,12 +1782,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\05b3f56a-05d5-4279-b382-67cf9057fd2b.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\b4285acc-6ccf-4feb-895c-4a771a4c6c3b.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\7b0030d9-f634-421e-a0e6-b16492534238.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>HoroScope</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/HoroScope</BasePath>
-      <RelativePath>assets/images/b4285acc-6ccf-4feb-895c-4a771a4c6c3b.jpg</RelativePath>
+      <RelativePath>assets/images/7b0030d9-f634-421e-a0e6-b16492534238.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1798,7 +1798,7 @@
       <Integrity>rB2UCmpuBLbL6WM97Jl5q7Uyl7jZUUCPZ8g9oVz7YHY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\b4285acc-6ccf-4feb-895c-4a771a4c6c3b.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\7b0030d9-f634-421e-a0e6-b16492534238.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\about.jpeg'))">
       <SourceType>Package</SourceType>
@@ -4337,6 +4337,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\vastu\v4.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\da832931-5850-402e-9b13-053353158565.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HoroScope</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HoroScope</BasePath>
+      <RelativePath>assets/images/da832931-5850-402e-9b13-053353158565.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8vvco47t7u</Fingerprint>
+      <Integrity>VIQwPXF6tWkgNZyBSrpuyQwI3hQyyYYlWl174xMLfLI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\da832931-5850-402e-9b13-053353158565.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\defaulticon.jpg'))">
       <SourceType>Package</SourceType>

@@ -1,12 +1,14 @@
-﻿@model HomeVM
+﻿@using System.Globalization
+@model HomeVM
 
 @{
     int count = 0;
+    var enCulture = new CultureInfo("en-US");
 }
 
 @{
     ViewData["Title"] = "Home";
-}
+    }
 
 
 <!-- hs Slider Start -->
@@ -65,9 +67,12 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="hs_about_heading_main_wrapper">
                     <div class="hs_about_heading_wrapper">
-                        <h2>About <span>Horoscope</span></h2>
+                        <h2>You still haven’t uncovered your zodiac secrets?</span></h2>
                         <h4><span></span></h4>
-                        <p>Horoscopes are a fascinating way to explore how the alignment of the stars and planets at the time of your birth can influence your personality, behavior, and life path. Rooted in ancient astrology, horoscopes offer insights into your emotional tendencies, strengths, challenges, and even your future.</p>
+                        <p>
+                            Have you ever wondered what the stars say about you? ✨<br />
+                            Your zodiac sign reveals more than just your traits — it opens the door to cosmic wisdom, guiding your path through love, growth, and self-discovery. With just a few birth details, unlock your sun, moon, and rising signs in seconds.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -87,7 +92,10 @@
                         </p>
                         <div class="hs_effect_btn hs_about_btn">
                             <ul>
-                                <li><a asp-controller="AboutUs" asp-action="Index" class="hs_btn_hover">Read More</a></li>
+                                <li>
+                                    <a asp-controller="Horoscope" asp-action="Index" class="hs_btn_hover">
+                                        Discover                                      </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -200,7 +208,7 @@
                             <div class="hs_slider_tabs_icon_cont_wrapper">
                                 <ul>
                                     <li><a href="#" class="hs_tabs_btn">@zodiac.Name</a></li>
-                                    <li>@zodiac.StartDate.ToString("dd MMMM") - @zodiac.EndDate.ToString("dd MMMM")</li>
+                                    <li>@zodiac.StartDate.ToString("dd MMMM", enCulture) - @zodiac.EndDate.ToString("dd MMMM", enCulture)</li>
                                 </ul>
                             </div>
                             <span></span>
@@ -269,7 +277,7 @@
                             <div class="hs_slider_tabs_icon_cont_wrapper">
                                 <ul>
                                     <li><a href="#" class="hs_tabs_btn">@zodiac.Name</a></li>
-                                    <li>@zodiac.StartDate.ToString("dd MMMM") - @zodiac.EndDate.ToString("dd MMMM")</li>
+                                    <li>@zodiac.StartDate.ToString("dd MMMM", enCulture) - @zodiac.EndDate.ToString("dd MMMM", enCulture)</li>
                                 </ul>
                             </div>
                             <div class="hs_slider_tabs_icon_wrapper">
@@ -348,219 +356,7 @@
     </div>
 </div>
 <!-- hs latest news wrapper End -->
-<!-- hs Counter wrapper Start -->
-<div class="hs_counter_main_wrapper">
-    <div class="hs_counter_cont_wrapper hs_counter_cont_wrapper1">
-        <div class="count-description">
-            <div class="hs_main_cycle_main">
-                <span class="timer">25</span>
-            </div>
-            <h5 class="con1">Trusted by<br> Million Clients</h5>
-        </div>
-    </div>
-    <div class="hs_counter_cont_wrapper">
-        <div class="count-description">
-            <div class="hs_main_cycle_main">
-                <span class="timer">73</span>
-            </div>
-            <h5 class="con2">
-                Years of<br> Experience
-            </h5>
-        </div>
-    </div>
-    <div class="hs_counter_cont_wrapper">
-        <div class="count-description">
-            <div class="hs_main_cycle_main">
-                <span class="timer">45</span>
-            </div>
-            <h5 class="con3">
-                Types of <br> Horoscopes
-            </h5>
-        </div>
-    </div>
-    <div class="hs_counter_cont_wrapper">
-        <div class="count-description">
-            <div class="hs_main_cycle_main">
-                <span class="timer">99</span>
-            </div>
-            <h5 class="con4">
-                Qualified <br> Astrologers
-            </h5>
-        </div>
-    </div>
-    <div class="hs_counter_cont_wrapper hs_counter_cont_wrapper5">
-        <div class="count-description">
-            <div class="hs_main_cycle_main">
-                <span class="timer">89</span>
-            </div>
-            <h5 class="con4">
-                Sucess<br> Horoscope
-            </h5>
-        </div>
-    </div>
-</div>
-<!-- hs Counter wrapper End -->
-<!-- hs testi slider wrapper Start -->
-<div class="hs_testi_slider_main_wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="hs_about_heading_main_wrapper">
-                    <div class="hs_about_heading_wrapper">
-                        <h2>What clients <span> are saying</span></h2>
-                        <h4><span></span></h4>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="hs_testi_slider_wrapper">
-                    <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <div class="hs_testi_cont_main_wrapper">
-                                        <div class="hs_testi_cont_inner_wrapper">
-                                            <div class="hs_testi_quote_wrapper">
-                                                <i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="hs_testi_quote_cont_wrapper">
-                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hs_testi_client_main_wrapper">
-                                        <div class="hs_testi_client_cont_sec">
-                                            <h2>Joan doe</h2>
-                                            <p>Designer</p>
-                                        </div>
-                                        <div class="hs_testi_client_cont_img_sec">
-                                            <img src="~/assets/images/content/testi_client_img1.jpg" alt="testi_img" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
-                                    <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
-                                        <div class="hs_testi_cont_inner_wrapper">
-                                            <div class="hs_testi_quote_wrapper">
-                                                <i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="hs_testi_quote_cont_wrapper">
-                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
-                                        <div class="hs_testi_client_cont_img_sec">
-                                            <img src="~/assets/images/content/testi_client_img2.jpg" alt="testi_img" />
-                                        </div>
-                                        <div class="hs_testi_client_cont_sec">
-                                            <h2>Joan doe</h2>
-                                            <p>Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
-                                    <div class="hs_testi_cont_main_wrapper">
-                                        <div class="hs_testi_cont_inner_wrapper">
-                                            <div class="hs_testi_quote_wrapper">
-                                                <i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="hs_testi_quote_cont_wrapper">
-                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hs_testi_client_main_wrapper">
-                                        <div class="hs_testi_client_cont_sec">
-                                            <h2>Joan doe</h2>
-                                            <p>Designer</p>
-                                        </div>
-                                        <div class="hs_testi_client_cont_img_sec">
-                                            <img src="~/assets/images/content/testi_client_img1.jpg" alt="testi_img" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
-                                        <div class="hs_testi_cont_inner_wrapper">
-                                            <div class="hs_testi_quote_wrapper">
-                                                <i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="hs_testi_quote_cont_wrapper">
-                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
-                                        <div class="hs_testi_client_cont_img_sec">
-                                            <img src="~/assets/images/content/testi_client_img2.jpg" alt="testi_img" />
-                                        </div>
-                                        <div class="hs_testi_client_cont_sec">
-                                            <h2>Joan doe</h2>
-                                            <p>Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  hidden-xs">
-                                    <div class="hs_testi_cont_main_wrapper">
-                                        <div class="hs_testi_cont_inner_wrapper">
-                                            <div class="hs_testi_quote_wrapper">
-                                                <i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="hs_testi_quote_cont_wrapper">
-                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hs_testi_client_main_wrapper">
-                                        <div class="hs_testi_client_cont_sec">
-                                            <h2>Joan doe</h2>
-                                            <p>Designer</p>
-                                        </div>
-                                        <div class="hs_testi_client_cont_img_sec">
-                                            <img src="~/assets/images/content/testi_client_img1.jpg" alt="testi_img" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
-                                        <div class="hs_testi_cont_inner_wrapper">
-                                            <div class="hs_testi_quote_wrapper">
-                                                <i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="hs_testi_quote_cont_wrapper">
-                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
-                                        <div class="hs_testi_client_cont_img_sec">
-                                            <img src="~/assets/images/content/testi_client_img2.jpg" alt="testi_img" />
-                                        </div>
-                                        <div class="hs_testi_client_cont_sec">
-                                            <h2>Joan doe</h2>
-                                            <p>Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- hs testi slider wrapper End -->
+
 
 <!-- hs client slider wrapper Start -->
 <div class="hs_client_slider_main_wrapper">

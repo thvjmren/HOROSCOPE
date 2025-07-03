@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+    ViewData["Title"] = "Astrology Chart Result";
+    var astroData = ViewBag.AstroData as string;
+}
+
+<h2>Astrology Chart Result</h2>
+
+<pre>@astroData</pre>
+
+<a asp-action="Index">Back</a>

@@ -38,8 +38,6 @@ public class ProfileController : Controller
                 ? "/assets/images/defaulticon.jpg"
                 : user.ProfileImageUrl,
             SunSign = user.SunSign,
-            RisingSign = user.RisingSign,
-            MoonSign = user.MoonSign,
         };
 
         return View(model);

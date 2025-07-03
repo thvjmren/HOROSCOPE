@@ -142,6 +142,7 @@
         margin-bottom: 20px;
         text-align: center;
     }
+
 </style>
 
 <div class="container">
@@ -217,16 +218,6 @@
             </div>
 
             <div>
-                <label>Rising Sign</label>
-                <input value="@Model.RisingSign" class="form-control" readonly />
-            </div>
-
-            <div>
-                <label>Moon Sign</label>
-                <input value="@Model.MoonSign" class="form-control" readonly />
-            </div>
-
-            <div>
                 <button type="submit" class="btn-save">Save Profile</button>
             </div>
         </form>
@@ -236,3 +227,4 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+

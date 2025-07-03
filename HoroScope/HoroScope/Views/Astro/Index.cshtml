@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+    ViewData["Title"] = "Astrology Chart Input";
+    var countries = ViewBag.Countries as List<string>;
+}
+
+<h2>Enter your birth details</h2>
+
+<form method="post" asp-action="GetChart">
+    <label>Date:</label>
+    <input type="date" name="date" required />
+    <br />
+    <label>Time:</label>
+    <input type="time" name="time" required />
+    <br />
+    <label>Country:</label>
+    <select name="country" required>
+        <option value="">Select country</option>
+        @foreach (var country in countries)
+        {
+            <option value="@country">@country</option>
+        }
+    </select>
+    <br />
+    <button type="submit">Get Chart</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+    {
+        <p style="color:red">@error.ErrorMessage</p>
+    }
+}
+

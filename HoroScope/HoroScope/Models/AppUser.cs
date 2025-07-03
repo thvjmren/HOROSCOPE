@@ -13,13 +13,12 @@ namespace HoroScope.Models
         public ICollection<Order>? Orders { get; set; }
         public ICollection<BasketItem> BasketItems { get; set; }
         public ICollection<WishlistItem> WishlistItems { get; set; }
+        public ICollection<UserSubscription> UserSubscriptions { get; set; }
         public DateTime? BirthDate { get; set; }
         public string? BirthTime { get; set; }
         public string? BirthPlace { get; set; }
         public string? ProfileImageUrl { get; set; }
         public string? SunSign { get; set; }
-        public string? RisingSign { get; set; }
-        public string? MoonSign { get; set; }
     }
 
 }

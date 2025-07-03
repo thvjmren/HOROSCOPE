@@ -114,8 +114,7 @@ namespace HoroScope.Controllers
             product.ViewsCount += 1;
             await _context.SaveChangesAsync();
 
-            product.ProductImages = product.ProductImages?
-                .Where(pi => pi.IsPrimary == true).ToList();
+            product.ProductImages = product.ProductImages?.ToList();
 
             var popularProducts = await _context.Products
            .Where(p => !p.IsDeleted)

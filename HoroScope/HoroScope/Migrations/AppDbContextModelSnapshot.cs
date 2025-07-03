@@ -50,7 +50,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AboutUs", (string)null);
+                    b.ToTable("AboutUs");
                 });
 
             modelBuilder.Entity("HoroScope.Models.AppUser", b =>
@@ -90,9 +90,6 @@ namespace HoroScope.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("MoonSign")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -115,9 +112,6 @@ namespace HoroScope.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ProfileImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RisingSign")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
@@ -174,7 +168,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("BasketItems", (string)null);
+                    b.ToTable("BasketItems");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Blog", b =>
@@ -216,7 +210,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("BlogCategoryId");
 
-                    b.ToTable("Blogs", (string)null);
+                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("HoroScope.Models.BlogCategory", b =>
@@ -239,7 +233,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BlogCategories", (string)null);
+                    b.ToTable("BlogCategories");
                 });
 
             modelBuilder.Entity("HoroScope.Models.BlogComment", b =>
@@ -275,7 +269,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("BlogComments", (string)null);
+                    b.ToTable("BlogComments");
                 });
 
             modelBuilder.Entity("HoroScope.Models.BlogLike", b =>
@@ -305,7 +299,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("BlogLikes", (string)null);
+                    b.ToTable("BlogLikes");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Contact", b =>
@@ -336,7 +330,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contacts", (string)null);
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("HoroScope.Models.DeliverableAddress", b =>
@@ -362,7 +356,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DeliverableAddress", (string)null);
+                    b.ToTable("DeliverableAddress");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Expert", b =>
@@ -393,7 +387,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Experts", (string)null);
+                    b.ToTable("Experts");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Feature", b =>
@@ -421,7 +415,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductCategoryId");
 
-                    b.ToTable("Features", (string)null);
+                    b.ToTable("Features");
                 });
 
             modelBuilder.Entity("HoroScope.Models.FeatureValue", b =>
@@ -449,7 +443,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("FeatureId");
 
-                    b.ToTable("FeatureValues", (string)null);
+                    b.ToTable("FeatureValues");
                 });
 
             modelBuilder.Entity("HoroScope.Models.New", b =>
@@ -480,7 +474,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("News", (string)null);
+                    b.ToTable("News");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Order", b =>
@@ -517,7 +511,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("HoroScope.Models.OrderItem", b =>
@@ -552,7 +546,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderItems", (string)null);
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Partner", b =>
@@ -575,7 +569,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Partners", (string)null);
+                    b.ToTable("Partners");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Planet", b =>
@@ -598,7 +592,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Planets", (string)null);
+                    b.ToTable("Planets");
                 });
 
             modelBuilder.Entity("HoroScope.Models.PlanetZodiac", b =>
@@ -621,7 +615,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ZodiacId");
 
-                    b.ToTable("PlanetZodiacs", (string)null);
+                    b.ToTable("PlanetZodiacs");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Product", b =>
@@ -680,7 +674,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductCategoryId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductCategory", b =>
@@ -703,7 +697,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductCategories", (string)null);
+                    b.ToTable("ProductCategories");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductFeatureValue", b =>
@@ -726,7 +720,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductFeatureValues", (string)null);
+                    b.ToTable("ProductFeatureValues");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductImages", b =>
@@ -757,7 +751,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages", (string)null);
+                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductReview", b =>
@@ -791,7 +785,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductReviews", (string)null);
+                    b.ToTable("ProductReviews");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Service", b =>
@@ -833,7 +827,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ServiceCategoryId");
 
-                    b.ToTable("Services", (string)null);
+                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ServiceCategory", b =>
@@ -856,7 +850,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ServiceCategories", (string)null);
+                    b.ToTable("ServiceCategories");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Setting", b =>
@@ -877,7 +871,79 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings", (string)null);
+                    b.ToTable("Settings");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.SubscriptionPlan", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DurationInDays")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SubscriptionPlans");
+                });
+
+            modelBuilder.Entity("HoroScope.Models.UserSubscription", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SubscriptionPlanId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("SubscriptionPlanId");
+
+                    b.ToTable("UserSubscriptions");
                 });
 
             modelBuilder.Entity("HoroScope.Models.WishlistItem", b =>
@@ -901,7 +967,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("WishlistItems", (string)null);
+                    b.ToTable("WishlistItems");
                 });
 
             modelBuilder.Entity("HoroScope.Models.Zodiac", b =>
@@ -939,7 +1005,7 @@ namespace HoroScope.Migrations
 
                     b.HasIndex("ZodiacElementId");
 
-                    b.ToTable("Zodiacs", (string)null);
+                    b.ToTable("Zodiacs");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ZodiacElement", b =>
@@ -962,7 +1028,7 @@ namespace HoroScope.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ZodiacElements", (string)null);
+                    b.ToTable("ZodiacElements");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1304,6 +1370,25 @@ namespace HoroScope.Migrations
                     b.Navigation("ServiceCategory");
                 });
 
+            modelBuilder.Entity("HoroScope.Models.UserSubscription", b =>
+                {
+                    b.HasOne("HoroScope.Models.AppUser", "AppUser")
+                        .WithMany("UserSubscriptions")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HoroScope.Models.SubscriptionPlan", "SubscriptionPlan")
+                        .WithMany()
+                        .HasForeignKey("SubscriptionPlanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("SubscriptionPlan");
+                });
+
             modelBuilder.Entity("HoroScope.Models.WishlistItem", b =>
                 {
                     b.HasOne("HoroScope.Models.AppUser", "AppUser")
@@ -1396,6 +1481,8 @@ namespace HoroScope.Migrations
                     b.Navigation("Likes");
 
                     b.Navigation("Orders");
+
+                    b.Navigation("UserSubscriptions");
 
                     b.Navigation("WishlistItems");
                 });

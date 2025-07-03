@@ -22,6 +22,7 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Account\" />
+    <Folder Include="Middlewares\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,124 @@
+﻿@model List<SubscriptionPlan>
+
+@{
+    Layout = null;
+}
+
+@{
+    ViewData["Title"] = "Subscription Plans";
+}
+
+<style>
+    body {
+        background-color: #331847;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: #ffffff;
+        margin: 0;
+        padding: 40px 20px;
+    }
+
+    .plan-section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .plan-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+        .plan-header h2 {
+            font-size: 32px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+    .plans-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .plan-card {
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 16px;
+        padding: 30px 20px;
+        width: 300px;
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+        .plan-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .plan-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .plan-card p {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+    .plan-price {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+
+    .plan-duration {
+        font-size: 14px;
+        color: #ccc;
+        margin-bottom: 20px;
+    }
+
+    .subscribe-btn {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+        .subscribe-btn:hover {
+            background-color: #fff;
+            color: #331847;
+        }
+
+</style>
+
+<div class="plan-section">
+    <div class="plan-header">
+        <h2>Choose Your Plan</h2>
+    </div>
+
+    <div class="plans-container">
+        @foreach (var plan in Model)
+        {
+            <div class="plan-card">
+                <h3>@plan.Name</h3>
+                <p>@plan.Description</p>
+                <div class="plan-price">@plan.Price ₼</div>
+                <div class="plan-duration">@plan.DurationInDays days</div>
+
+                <form asp-action="Subscribe" method="post">
+                    <input type="hidden" name="planId" value="@plan.Id" />
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        }
+    </div>
+</div>

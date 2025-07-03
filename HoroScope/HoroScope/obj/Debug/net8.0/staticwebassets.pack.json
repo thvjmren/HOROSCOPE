@@ -401,8 +401,8 @@
       "PackagePath": "staticwebassets\\assets\\images\\05b3f56a-05d5-4279-b382-67cf9057fd2b.jpg"
     },
     {
-      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\b4285acc-6ccf-4feb-895c-4a771a4c6c3b.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\b4285acc-6ccf-4feb-895c-4a771a4c6c3b.jpg"
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\7b0030d9-f634-421e-a0e6-b16492534238.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\7b0030d9-f634-421e-a0e6-b16492534238.jpg"
     },
     {
       "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\about.jpeg",
@@ -967,6 +967,10 @@
     {
       "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\content\\vastu\\v4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\content\\vastu\\v4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\da832931-5850-402e-9b13-053353158565.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\da832931-5850-402e-9b13-053353158565.jpg"
     },
     {
       "Id": "C:\\Users\\Rana\\Desktop\\HOROSCOPE\\HoroScope\\HoroScope\\wwwroot\\assets\\images\\defaulticon.jpg",
