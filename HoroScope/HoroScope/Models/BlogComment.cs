@@ -1,4 +1,5 @@
-﻿using HoroScope.Models.Base;
+﻿
+using HoroScope.Models.Base;
 using System.ComponentModel.DataAnnotations;
 
 namespace HoroScope.Models

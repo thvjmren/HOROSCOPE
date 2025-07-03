@@ -3,6 +3,7 @@ using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Pronia.Utilities.Enums;
 using Pronia.Utilities.Extensions;
 
@@ -29,10 +30,13 @@ public class ProfileController : Controller
             Name = user.Name,
             Surname = user.Surname,
             Username = user.UserName,
+            Email = user.Email,
             BirthDate = user.BirthDate,
             BirthTime = user.BirthTime,
             BirthPlace = user.BirthPlace,
-            ProfileImageUrl = user.ProfileImageUrl,
+            ProfileImageUrl = string.IsNullOrEmpty(user.ProfileImageUrl)
+                ? "/assets/images/defaulticon.jpg"
+                : user.ProfileImageUrl,
             SunSign = user.SunSign,
             RisingSign = user.RisingSign,
             MoonSign = user.MoonSign,
@@ -50,6 +54,29 @@ public class ProfileController : Controller
         var user = await _userManager.GetUserAsync(User);
         if (user == null) return NotFound();
 
+        if (!string.Equals(user.UserName, model.Username, StringComparison.OrdinalIgnoreCase))
+        {
+            var usernameExists = await _userManager.Users.AnyAsync(u => u.UserName == model.Username);
+            if (usernameExists)
+            {
+                ModelState.AddModelError(nameof(model.Username), "This username is already taken.");
+                return View(model);
+            }
+            user.UserName = model.Username;
+        }
+
+        if (!string.IsNullOrEmpty(model.Email) && !string.Equals(user.Email, model.Email, StringComparison.OrdinalIgnoreCase))
+        {
+            var emailExists = await _userManager.Users.AnyAsync(u => u.Email == model.Email);
+            if (emailExists)
+            {
+                ModelState.AddModelError(nameof(model.Email), "This email is already registered.");
+                return View(model);
+            }
+            user.Email = model.Email;
+            user.NormalizedEmail = model.Email.ToUpper();
+        }
+
         user.Name = model.Name;
         user.Surname = model.Surname;
         user.BirthDate = model.BirthDate;
@@ -58,38 +85,38 @@ public class ProfileController : Controller
 
         if (model.ProfilePhoto != null && model.ProfilePhoto.Length > 0)
         {
-            if (!model.ProfilePhoto.ValidateType("image"))
+            if (!model.ProfilePhoto.ValidateType("image/"))
             {
-                ModelState.AddModelError("ProfilePhoto", "Only image files are allowed.");
+                ModelState.AddModelError(nameof(model.ProfilePhoto), "Only image files are allowed.");
                 return View(model);
             }
 
             if (!model.ProfilePhoto.ValidateSize(FileSize.MB, 2))
             {
-                ModelState.AddModelError("ProfilePhoto", "Image size must be less than 2MB.");
+                ModelState.AddModelError(nameof(model.ProfilePhoto), "Image size must be less than 2MB.");
                 return View(model);
             }
 
-            if (!string.IsNullOrEmpty(user.ProfileImageUrl))
+
+            if (!string.IsNullOrEmpty(user.ProfileImageUrl) && user.ProfileImageUrl != "defaulticon.jpg")
             {
-                var oldFileName = Path.GetFileName(user.ProfileImageUrl);
-                oldFileName.DeleteFile(_env.WebRootPath, "assets", "images");
+                user.ProfileImageUrl.DeleteFile(_env.WebRootPath, "assets", "images");
             }
 
-            var newFileName = await model.ProfilePhoto.CreateFileAsync(_env.WebRootPath, "assets", "images");
-            user.ProfileImageUrl = $"/assets/images/{newFileName}";
+            string newPhotoPath = await model.ProfilePhoto.CreateFileAsync(_env.WebRootPath, "assets", "images");
+            user.ProfileImageUrl = newPhotoPath;
         }
 
         user.SunSign = CalculateSunSign(user.BirthDate);
 
         var result = await _userManager.UpdateAsync(user);
-
         if (!result.Succeeded)
         {
             foreach (var error in result.Errors)
                 ModelState.AddModelError("", error.Description);
             return View(model);
         }
+
 
         TempData["Success"] = "Profile has been updated.";
         return RedirectToAction(nameof(Index));
@@ -117,4 +144,44 @@ public class ProfileController : Controller
 
         return "Unknown";
     }
+
+    [HttpGet]
+    public IActionResult ChangePassword()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ChangePassword(ChangePasswordVM model)
+    {
+        if (!ModelState.IsValid)
+            return View(model);
+
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null)
+            return NotFound();
+
+        var changePasswordResult = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+
+        if (!changePasswordResult.Succeeded)
+        {
+            foreach (var error in changePasswordResult.Errors)
+            {
+                if (error.Code == "PasswordMismatch")
+                {
+                    ModelState.AddModelError(nameof(model.OldPassword), "Old password is incorrect.");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+            return View(model);
+        }
+
+        TempData["Success"] = "Password has been changed successfully.";
+        return RedirectToAction(nameof(Index));
+    }
+
+
 }

@@ -10,7 +10,7 @@
 
 @section Scripts {
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+              document.addEventListener("DOMContentLoaded", function () {
             const likeBtn = document.getElementById("likeBtn");
 
             if (likeBtn) {
@@ -18,25 +18,26 @@
                     const blogId = @Model.Blog.Id;
                     const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
 
+                    const formData = new URLSearchParams();
+                    formData.append('blogId', blogId);
+                    formData.append('__RequestVerificationToken', token);
+
                     fetch('/Blog/ToggleLike', {
                         method: 'POST',
                         headers: {
-                            'Content-Type': 'application/json',
-                            'RequestVerificationToken': token
+                            'Content-Type': 'application/x-www-form-urlencoded',
                         },
-                        body: JSON.stringify({ blogId: blogId })
+                        body: formData.toString()
                     })
                         .then(response => {
                             if (!response.ok) throw new Error("Network response was not ok.");
                             return response.json();
                         })
                         .then(data => {
-                                                    const likesCountText = document.getElementById("likesCountText");
-                            const likesCountNumber = document.getElementById("likesCountNumber");
+                            const likesCountText = document.getElementById("likesCountText");
                             if (likesCountText) likesCountText.textContent = data.likesCount + " Likes";
-                            if (likesCountNumber) likesCountNumber.textContent = data.likesCount;
 
-                                                    const icon = document.getElementById("likeIcon");
+                            const icon = document.getElementById("likeIcon");
                             if (icon) {
                                 if (data.userHasLiked) {
                                     icon.classList.remove("fa-heart-o");
@@ -53,6 +54,7 @@
                 });
             }
         });
+
     </script>
 }
 

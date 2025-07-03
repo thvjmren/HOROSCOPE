@@ -96,6 +96,8 @@ wwwroot\assets\fonts\sign_fonts\Flaticon.ttf
 wwwroot\assets\fonts\sign_fonts\Flaticon.woff
 wwwroot\assets\fonts\sign_fonts\Flaticon.woff2
 wwwroot\assets\fonts\sign_fonts\Flaticond41d.eot
+wwwroot\assets\images\05b3f56a-05d5-4279-b382-67cf9057fd2b.jpg
+wwwroot\assets\images\b4285acc-6ccf-4feb-895c-4a771a4c6c3b.jpg
 wwwroot\assets\images\content\about.jpeg
 wwwroot\assets\images\content\about\astro_img1.jpg
 wwwroot\assets\images\content\about\astro_img2.jpg
@@ -237,7 +239,7 @@ wwwroot\assets\images\content\vastu\v1.jpg
 wwwroot\assets\images\content\vastu\v2.jpg
 wwwroot\assets\images\content\vastu\v3.jpg
 wwwroot\assets\images\content\vastu\v4.jpg
-wwwroot\assets\images\default-avatar.png
+wwwroot\assets\images\defaulticon.jpg
 wwwroot\assets\images\header\favicon.ico
 wwwroot\assets\images\header\horoscope.gif
 wwwroot\assets\images\header\slide.jpg

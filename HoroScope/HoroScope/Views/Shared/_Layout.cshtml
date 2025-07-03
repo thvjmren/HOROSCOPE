@@ -132,7 +132,7 @@ Purchase:
                                                 }
                                                 else if (User.Identity.IsAuthenticated)
                                                 {
-                                                    <a class="menu-button">@User.Identity.Name</a>
+                                                    <a class="menu-button" asp-controller="Profile" asp-action="Index">@User.Identity.Name</a>
                                                     <a class="menu-button2" asp-controller="Account" asp-action="Logout">Log Out</a>
                                                 }
                                                 else
@@ -554,10 +554,10 @@ Purchase:
                     data: { id: productId },
                     success: function(response) {
                         if (response.success) {
-                       
+
                             $('#basketCount').text(response.count);
                         } else {
-               
+
                             console.error("Error: " + response.message);
                         }
                     },
@@ -576,5 +576,4 @@ Purchase:
 
 <!-- Mirrored from www.webstrot.com/html/horoscope/dark_version/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jun 2025 08:16:46 GMT -->
 </html>
-
 

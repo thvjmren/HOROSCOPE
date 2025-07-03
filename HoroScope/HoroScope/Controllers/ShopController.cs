@@ -17,7 +17,7 @@ namespace HoroScope.Controllers
         }
         public async Task<IActionResult> Index(string? search, int? categoryId, int key = 1, int page = 1)
         {
-            int pageSize = 3;
+            int pageSize = 5;
 
             IQueryable<Product> query = _context.Products
                 .Where(p => !p.IsDeleted);
@@ -231,7 +231,7 @@ namespace HoroScope.Controllers
 
             var isValidFormat = System.Text.RegularExpressions.Regex.IsMatch(
                 normalizedCode,
-                @"^(AZ\d{4}|\d{5,6})$"
+                @"^(\d{4}|\d{5,6})$"
             );
 
             if (!isValidFormat)
@@ -240,7 +240,7 @@ namespace HoroScope.Controllers
                 {
                     isDeliverable = false,
                     isFormatError = true,
-                    message = "❌ Please enter a valid zip code format (for ex. AZ1000 / 90210)"
+                    message = "❌ Please enter a valid zip code format (for ex. 1000 / 210)"
                 });
             }
 

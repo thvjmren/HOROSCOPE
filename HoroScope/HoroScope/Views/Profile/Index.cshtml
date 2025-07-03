@@ -1,77 +1,112 @@
-﻿@model HoroScope.ViewModels.UserProfileVM
+﻿@model UserProfileVM
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 @{
     Layout = null;
 }
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 <style>
     body {
         background-color: #331847;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         color: #f0e6ff;
-        min-height: 100vh;
         margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
+        padding: 40px;
     }
 
-    .profile-container {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 40px 40px;
+    .container {
+        display: flex;
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        width: 400px;
-        box-sizing: border-box;
-        text-align: center;
+        overflow: hidden;
     }
 
-    h2 {
-        margin-bottom: 30px;
-        color: #f0e6ff;
-        font-weight: 600;
-        font-size: 28px;
+    .sidebar {
+        width: 250px;
+        background-color: #4b3265;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid #7D3C98;
     }
+
+        .sidebar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(155, 89, 182, 0.8);
+        }
+
+        .sidebar a {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #dcd0ff;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+            .sidebar a.active,
+            .sidebar a:hover {
+                background-color: #7D3C98;
+                color: white;
+            }
+
+    .content {
+        flex: 1;
+        padding: 40px;
+    }
+
+        .content h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #dcd0ff;
+        }
 
     form {
-        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     label {
-        display: block;
-        margin-bottom: 6px;
         font-weight: 600;
+        margin-bottom: 6px;
         color: #dcd0ff;
     }
 
-    input.form-control, select.form-control {
-        width: 100%;
+    input.form-control,
+    input[readonly] {
         padding: 10px 12px;
-        margin-bottom: 20px;
         border-radius: 4px;
         border: none;
-        outline: none;
-        box-sizing: border-box;
         font-size: 15px;
+        box-sizing: border-box;
         background-color: rgba(255, 255, 255, 0.15);
-        color: #fff;
+        color: #f0e6ff;
+        outline: none;
+        width: 100%;
     }
 
-    input.form-control:focus, select.form-control:focus {
-        box-shadow: 0 0 6px 2px rgba(155, 89, 182, 0.6);
-        background-color: rgba(255, 255, 255, 0.2);
-    }
+        input.form-control:focus {
+            box-shadow: 0 0 6px 2px rgba(155, 89, 182, 0.7);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
 
-    .profile-image {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: 0 auto 20px auto;
-        border: 2px solid #9b59b6;
+    input[readonly] {
+        opacity: 0.7;
+        cursor: default;
     }
 
     .text-danger {
@@ -82,78 +117,120 @@
         display: block;
     }
 
-    button.btn-outline-dark {
-        width: 100%;
+    .btn-save {
         padding: 12px;
         background-color: rgba(173, 128, 191, 0.47);
-        border: none;
         color: white;
         font-weight: 700;
         font-size: 16px;
+        border: none;
         border-radius: 4px;
         cursor: pointer;
         box-shadow: 0 4px 8px rgba(155, 89, 182, 0.4);
         transition: background-color 0.3s ease;
+        width: 150px;
+        align-self: flex-start;
     }
 
-    button.btn-outline-dark:hover {
-        background-color: #7D3C98;
-    }
+        .btn-save:hover {
+            background-color: #7D3C98;
+        }
 
     .success-message {
-        color: #82ff82;
-        margin-bottom: 15px;
-        text-align: center;
+        color: #16a34a;
         font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
     }
 </style>
 
-<div class="profile-container">
-    <h2>My Profile</h2>
+<div class="container">
+    <div class="sidebar">
+        <img src="~/assets/images/@Model.ProfileImageUrl" alt="Profile Image" />
+        <a class="active" href="#"><i class="fa fa-user"></i> My Account </a>
+        <a asp-controller="Profile" asp-action="ChangePassword"><i class="fa fa-key"></i> Change Password</a>
+        <a asp-controller="Account" asp-action="Logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+        <a asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> Home</a>
+    </div>
 
-    @if (TempData["Success"] != null)
-    {
-        <div class="success-message">@TempData["Success"]</div>
-    }
+    <div class="content">
+        <h2>Account Settings</h2>
 
-    <form method="post" enctype="multipart/form-data">
-        <img src="@(!string.IsNullOrEmpty(Model.ProfileImageUrl) ? Model.ProfileImageUrl : "/images/default-avatar.png")" alt="Profile Image" class="profile-image" />
+        @if (TempData["Success"] != null)
+        {
+            <div class="success-message">@TempData["Success"]</div>
+        }
 
-        <label asp-for="ProfilePhoto">Change Profile Photo</label>
-        <input asp-for="ProfilePhoto" type="file" class="form-control" />
-        <span asp-validation-for="ProfilePhoto" class="text-danger"></span>
+        <form asp-action="Index" method="post" enctype="multipart/form-data">
 
-        <label asp-for="Name">Name</label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+            <div>
+                <label asp-for="ProfilePhoto">Change Profile Photo</label>
+                <input asp-for="ProfilePhoto" type="file" class="form-control" />
+                <span asp-validation-for="ProfilePhoto" class="text-danger"></span>
+            </div>
 
-        <label asp-for="Surname">Surname</label>
-        <input asp-for="Surname" class="form-control" />
-        <span asp-validation-for="Surname" class="text-danger"></span>
+            <div>
+                <label asp-for="Username">Username</label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
 
-        <label asp-for="BirthDate">Birth Date</label>
-        <input asp-for="BirthDate" type="date" class="form-control" />
-        <span asp-validation-for="BirthDate" class="text-danger"></span>
+            <div>
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" type="email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
 
-        <label asp-for="BirthTime">Birth Time</label>
-        <input asp-for="BirthTime" type="time" class="form-control" />
-        <span asp-validation-for="BirthTime" class="text-danger"></span>
+            <div>
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
 
-        <label asp-for="BirthPlace">Birth Place</label>
-        <input asp-for="BirthPlace" class="form-control" />
-        <span asp-validation-for="BirthPlace" class="text-danger"></span>
+            <div>
+                <label asp-for="Surname">Surname</label>
+                <input asp-for="Surname" class="form-control" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
 
-        <label>Sun Sign</label>
-        <input value="@Model.SunSign" class="form-control" readonly />
+            <div>
+                <label asp-for="BirthDate">Birth Date</label>
+                <input asp-for="BirthDate" type="date" class="form-control" />
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
+            </div>
 
-        <label>Rising Sign</label>
-        <input value="@Model.RisingSign" class="form-control" readonly />
+            <div>
+                <label asp-for="BirthTime">Birth Time</label>
+                <input asp-for="BirthTime" type="time" class="form-control" />
+                <span asp-validation-for="BirthTime" class="text-danger"></span>
+            </div>
 
-        <label>Moon Sign</label>
-        <input value="@Model.MoonSign" class="form-control" readonly />
+            <div>
+                <label asp-for="BirthPlace">Birth Place</label>
+                <input asp-for="BirthPlace" class="form-control" />
+                <span asp-validation-for="BirthPlace" class="text-danger"></span>
+            </div>
 
-        <button type="submit" class="btn btn-outline-dark">Save Profile</button>
-    </form>
+            <div>
+                <label>Sun Sign</label>
+                <input value="@Model.SunSign" class="form-control" readonly />
+            </div>
+
+            <div>
+                <label>Rising Sign</label>
+                <input value="@Model.RisingSign" class="form-control" readonly />
+            </div>
+
+            <div>
+                <label>Moon Sign</label>
+                <input value="@Model.MoonSign" class="form-control" readonly />
+            </div>
+
+            <div>
+                <button type="submit" class="btn-save">Save Profile</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 @section Scripts {

@@ -25,7 +25,7 @@ namespace HoroScope.Controllers
 
         public async Task<IActionResult> Index(string? search, int? categoryId, int page = 1, int? year = null, int? month = null)
         {
-            int pageSize = 3;
+            int pageSize = 5;
 
             var query = _context.Blogs.Where(b => !b.IsDeleted);
 
@@ -203,12 +203,9 @@ namespace HoroScope.Controllers
             var existingLike = await _context.BlogLikes
                 .FirstOrDefaultAsync(l => l.BlogId == blogId && l.AppUserId == user.Id);
 
-            bool userHasLiked;
-
             if (existingLike != null)
             {
                 _context.BlogLikes.Remove(existingLike);
-                userHasLiked = false;
             }
             else
             {
@@ -218,15 +215,19 @@ namespace HoroScope.Controllers
                     AppUserId = user.Id,
                 };
                 await _context.BlogLikes.AddAsync(like);
-                userHasLiked = true;
             }
 
             await _context.SaveChangesAsync();
 
             int likesCount = await _context.BlogLikes.CountAsync(l => l.BlogId == blogId);
 
-            return Json(new { likesCount, userHasLiked });
+            return Json(new
+            {
+                likesCount = likesCount,
+                userHasLiked = existingLike == null
+            });
         }
+
 
     }
 }

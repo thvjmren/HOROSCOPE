@@ -4,6 +4,7 @@ using HoroScope.Models;
 using HoroScope.Services.Implementations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
 
 namespace HoroScope
 {
@@ -37,6 +38,11 @@ namespace HoroScope
             {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("default"));
             });
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+            builder.Services.ConfigureApplicationCookie(opt =>
+            {
+                opt.AccessDeniedPath = "/Account/AccessDenied";
+            });
 
             builder.Services.AddScoped<ILayoutService, LayoutService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
@@ -49,6 +55,7 @@ namespace HoroScope
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseStaticFiles();
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
             app.MapControllerRoute(
                 "default",
