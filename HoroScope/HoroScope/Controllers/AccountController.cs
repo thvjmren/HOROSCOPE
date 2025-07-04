@@ -1,12 +1,12 @@
 ﻿using HoroScope.Interfaces;
 using HoroScope.Models;
+using HoroScope.Utilities.Enums;
 using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Pronia.Utilities.Enums;
 
-namespace HoroScope.Controllers  // <- Burada "Areas" olmamalıdır, normal controllerdirsə
+namespace HoroScope.Controllers
 {
     public class AccountController : Controller
     {

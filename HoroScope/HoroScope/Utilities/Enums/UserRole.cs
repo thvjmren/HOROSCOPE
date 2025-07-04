@@ -1,4 +1,4 @@
-﻿namespace Pronia.Utilities.Enums
+﻿namespace HoroScope.Utilities.Enums
 {
     public enum UserRole
     {

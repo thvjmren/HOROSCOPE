@@ -25,6 +25,7 @@ namespace HoroScope.Controllers
                 ServiceCategories = await _context.ServiceCategories.Where(s => !s.IsDeleted).ToListAsync(),
                 AboutUs = await _context.AboutUs.Where(s => !s.IsDeleted).ToListAsync(),
                 Partners = await _context.Partners.Where(s => !s.IsDeleted).ToListAsync(),
+                SubscriptionPlans = await _context.SubscriptionPlans.Where(s => !s.IsDeleted).ToListAsync(),
                 Experts = await _context.Experts.Where(e => !e.IsDeleted).ToListAsync(),
                 ContactNumber = _context.Settings.Where(s => s.Key == "Phone")
                                          .Select(s => s.Value)

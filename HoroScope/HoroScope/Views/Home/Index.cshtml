@@ -321,7 +321,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="hs_lest_news_box_wrapper">
                         <div class="hs_lest_news_img_wrapper">
-                            <img src="~/assets/images/content/blog/@blog.Image">
+                            <a asp-controller="blog" asp-action="details" asp-route-id="@blog.Id"><img src="~/assets/images/content/blog/@blog.Image"></a>
                             <div class="hs_lest_news_date_wrapper">
                                 <ul>
                                     <li>@blog.CreatedAt.ToString("dd")</li>
@@ -336,17 +336,17 @@
                                     ? blog.Content.Substring(0, 200) + "..."
                                     : blog.Content)
                             </p>
-                            <h4><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
+                            <h4><a asp-controller="blog" asp-action="details" asp-route-id="@blog.Id">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
                         </div>
                         <div class="hs_lest_news_cont_bottom">
                             <div class="hs_lest_news_cont_bottom_left">
                                 <p><a href="#">by - @blog.AppUser.Name</a></p>
                             </div>
                             <div class="hs_lest_news_cont_bottom_center">
-                                <p><a href="#">@blog.Likes.Count Likes</a></p>
+                                <p><a asp-controller="blog" asp-action="details" asp-route-id="@blog.Id">@blog.Likes.Count Likes</a></p>
                             </div>
                             <div class="hs_lest_news_cont_bottom_right">
-                                <p><a href="#">@blog.Comments.Count Comments</a></p>
+                                <p><a asp-controller="blog" asp-action="details" asp-route-id="@blog.Id">@blog.Comments.Count Comments</a></p>
                             </div>
                         </div>
                     </div>
@@ -356,6 +356,11 @@
     </div>
 </div>
 <!-- hs latest news wrapper End -->
+
+
+<!-- hs subscruption wrapper Start -->
+@await Component.InvokeAsync("Subscription", new { categoryId = (int?)ViewData["SelectedCategoryId"] })
+<!-- hs subscruption wrapper End -->
 
 
 <!-- hs client slider wrapper Start -->

@@ -12,7 +12,7 @@ namespace HoroScope.Services.Implementations
         {
             _configuration = configuration;
         }
-        public async Task SendMailAsync(string emailTo, string subject, string body, bool isHtml = false)
+        public async Task SendMailAsync(string emailTo, string subject, string body, bool isHtml = true)
         {
             SmtpClient smtp = new SmtpClient(_configuration["Email:Host"], Convert.ToInt32(_configuration["Email:Port"]));
 
@@ -25,7 +25,7 @@ namespace HoroScope.Services.Implementations
             MailMessage message = new MailMessage(from, to);
             message.Subject = subject;
             message.Body = body;
-            message.IsBodyHtml = isHtml;
+            message.IsBodyHtml = true;
 
             await smtp.SendMailAsync(message);
         }

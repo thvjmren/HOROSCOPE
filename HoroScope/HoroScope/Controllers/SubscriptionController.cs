@@ -1,9 +1,11 @@
 ﻿using HoroScope.DAL;
 using HoroScope.Interfaces;
 using HoroScope.Models;
+using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Stripe.Checkout;
 
 namespace YourNamespace.Controllers
@@ -109,7 +111,7 @@ namespace YourNamespace.Controllers
                 SubscriptionPlanId = plan.Id,
                 StartDate = DateTime.UtcNow,
                 EndDate = DateTime.UtcNow.AddDays(plan.DurationInDays),
-                IsActive = true
+                IsActive = true,
             };
 
             _context.UserSubscriptions.Add(newSub);
@@ -117,8 +119,13 @@ namespace YourNamespace.Controllers
 
 
             string subject = "Subscription Activated";
-            string message = $"Hello {user.UserName},<br/><br/>Thank you for subscribing to our <b>{plan.Name}</b> plan.<br/>" +
-                             $"Your subscription is now active until <b>{newSub.EndDate.ToShortDateString()}</b>.";
+            string message = $@"
+            <p>Hello <strong>{user.UserName}</strong>,</p>
+            <p>Thank you for subscribing to our <strong>{plan.Name}</strong> plan.</p>
+            <p>Your subscription is now active until <strong>{newSub.EndDate.ToString("dd.MM.yyyy")}</strong>.</p>
+            <p>Enjoy the service!</p>
+            <br/>
+            <p>Best regards,<br/>HoroScope Team</p>";
 
 
             await _emailService.SendMailAsync(user.Email, subject, message);
@@ -129,6 +136,63 @@ namespace YourNamespace.Controllers
         public IActionResult Cancel()
         {
             return View("Cancel");
+        }
+        public async Task<IActionResult> MyPlans()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return Challenge();
+
+            var subscriptions = _context.UserSubscriptions
+                .Where(s => s.AppUserId == user.Id)
+                .OrderByDescending(s => s.StartDate)
+                .Select(s => new UserSubscriptionVM
+                {
+                    PlanName = s.SubscriptionPlan.Name,
+                    StartDate = s.StartDate,
+                    EndDate = s.EndDate,
+                    IsActive = s.IsActive,
+                    SubId = s.Id
+                })
+                .ToList();
+
+            return View(subscriptions);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CancelSubscription(int subscriptionId)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return Challenge();
+
+            var subscription = await _context.UserSubscriptions
+                .Include(s => s.SubscriptionPlan)
+                .FirstOrDefaultAsync(s => s.Id == subscriptionId && s.AppUserId == user.Id && s.IsActive);
+
+            if (subscription == null)
+            {
+                TempData["ErrorMessage"] = "Subscription not found or already cancelled.";
+                return RedirectToAction("MyPlans");
+            }
+
+            subscription.IsActive = false;
+            _context.UserSubscriptions.Update(subscription);
+            await _context.SaveChangesAsync();
+
+            string subject = "Subscription Cancelled";
+            string message = $@"
+            <p>Hello <strong>{user.UserName}</strong>,</p>
+            <p>Your subscription to the <strong>{subscription.SubscriptionPlan.Name}</strong> plan has been successfully cancelled.</p>
+            <p>We're sorry to see you go. If you have any questions, feel free to contact us.</p>
+            <br/>
+            <p>Best regards,<br/>HoroScope Team</p>";
+
+            await _emailService.SendMailAsync(user.Email, subject, message);
+
+            TempData["SuccessMessage"] = "Subscription successfully cancelled.";
+
+            return RedirectToAction("MyPlans");
         }
 
     }

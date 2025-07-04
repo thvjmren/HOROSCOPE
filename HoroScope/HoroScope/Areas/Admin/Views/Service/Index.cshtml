@@ -8,6 +8,7 @@
     <div class="card">
         <div class="card-body">
             <h4 class="card-title">Services</h4>
+                        <a asp-controller="Service" asp-action="DeletedServices" class="btn btn-danger">Show Deleted Services</a>
             <a asp-action="Create" class="btn btn-info">Create</a>
 
             <div class="table-responsive">
@@ -20,7 +21,6 @@
                             <th>Description</th>
                             <th>Category</th>
                             <th>Price</th>
-                            <th>Created Time</th>
                             <th>Setting</th>
                         </tr>
                     </thead>
@@ -35,12 +35,11 @@
                                 <td>@serviceVM.Description</td>
                                 <td>@serviceVM.CategoryName</td>
                                 <td>@(serviceVM.IsFree ? "0" : $"${serviceVM.Price:0.##}")</td>
-                                <td>@serviceVM.CreatedAt.ToString("d MMMM yyyy HH:mm")</td>
                                 <td>
                                     <a asp-action="Update" asp-route-id="@serviceVM.Id" class="btn btn-primary mb-2">
                                         <i class="mdi mdi-pencil-box"></i>
                                     </a>
-                                    <a asp-action="Delete" asp-route-id="@serviceVM.Id" class="btn btn-danger">
+                                    <a asp-action="Delete" asp-route-id="@serviceVM.Id" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this Service?')">
                                         <i class="mdi mdi-delete-forever"></i>
                                     </a>
                                 </td>

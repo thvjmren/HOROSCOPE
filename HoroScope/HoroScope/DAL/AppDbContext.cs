@@ -6,7 +6,6 @@ namespace HoroScope.DAL
 {
     public class AppDbContext : IdentityDbContext<AppUser>
     {
-
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<Service> Services { get; set; }
         public DbSet<ServiceCategory> ServiceCategories { get; set; }
@@ -37,5 +36,16 @@ namespace HoroScope.DAL
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<UserSubscription> UserSubscriptions { get; set; }
         public DbSet<SubscriptionPlan> SubscriptionPlans { get; set; }
+        public DbSet<ProductImages> ProductImages { get; set; }
+        public DbSet<ProductZodiac> ProductZodiacs { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ProductZodiac>()
+                .HasKey(pz => new { pz.ProductId, pz.ZodiacId });
+        }
+
     }
+
 }

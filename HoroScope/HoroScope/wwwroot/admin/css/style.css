@@ -59,8 +59,45 @@
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
 
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #102240 !important;
+    background-clip: border-box;
+    border: 1px solid #e7eaed;
+    border-radius: 0;
+}
+
+.sidebar .nav.sub-menu .nav-item .nav-link {
+    color: #88accc !important;
+    padding: 0.6rem 1rem !important;
+    position: relative !important;
+    font-size: 0.875rem !important;
+    line-height: 1 !important;
+    height: auto !important;
+    border-top: 0 !important;
+}
+
+.mdi:before, .mdi-set {
+    display: inline-block !important;
+    font: normal normal normal 24px / 1 "Material Design Icons" !important;
+    font-size: inherit !important;
+    text-rendering: auto !important;
+    line-height: inherit !important;
+    color: #ffffff !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile .nav-link::after {
+    color: #ffffff !important;
+}
+
 .content-wrapper, .navbar-brand-wrapper, .navbar-menu-wrapper, .sidebar-offcanvas, .card-body, .input-group, .footer {
-    background-color: #212529 !important;
+    background-color: #102240 !important;
 }
 
 .input-group, .sidebar .nav .nav-item .nav-link i.menu-icon, .menu-title, .card-title, .form-control, .footer {
@@ -11751,8 +11788,8 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-primary {
-  color: #4d83ff;
-  border-color: #4d83ff;
+    color: #ac7096;
+    border-color: #ac7096;
 }
 
 .btn-outline-primary:hover {
@@ -12621,13 +12658,14 @@ fieldset:disabled .btn {
 }
 
 .navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #0e2e4e !important;
 }
 
 .navbar > .container,
@@ -13550,16 +13588,12 @@ fieldset:disabled .btn {
 }
 
 .badge {
-  display: inline-block;
-  padding: 0.35em 0.65em;
-  font-size: 0.75em;
-  font-weight: 700;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25rem;
+    border-radius: 0;
+    font-size: 15px !important;
+    line-height: 1;
+    padding: .375rem .5625rem;
+    font-weight: bold !important;
+    margin-top: 1rem !important;
 }
 
 .badge:empty {
@@ -13764,13 +13798,13 @@ fieldset:disabled .btn {
 }
 
 .list-group-item {
-  position: relative;
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #212529;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #88accc;
+    text-decoration: none;
+    background-color: #031431;
+    border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .list-group-item:first-child {
@@ -16461,8 +16495,8 @@ fieldset:disabled .btn {
 
 /* rtl:end:remove */
 .text-primary {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+    --bs-text-opacity: 1;
+    color: rgb(156 183 222) !important;
 }
 
 .text-secondary {
@@ -16517,7 +16551,7 @@ fieldset:disabled .btn {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #686868 !important;
+  color: #fff !important;
 }
 
 .text-black-50 {
@@ -16552,28 +16586,31 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: rgb(172 112 150) !important;
 }
 
 .bg-secondary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: rgb(136 172 204) !important;
+    color: black;
 }
 
 .bg-success {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: rgb(90 163 129) !important;
 }
 
 .bg-info {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: rgb(178 143 231) !important;
+    color: white;
 }
 
 .bg-warning {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: rgb(244 177 255) !important;
+    color: black;
 }
 
 .bg-danger {
@@ -22859,10 +22896,10 @@ dl li {
 }
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile .nav-link .nav-profile-name {
-  margin-left: .5rem;
-  margin-right: .5rem;
-  color: #4a4a4a;
-  font-weight: 500;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    color: #88accc;
+    font-weight: 500;
 }
 
 @media (max-width: 767px) {
@@ -23136,10 +23173,11 @@ dl li {
   .sidebar-icon-only .sidebar .nav.sub-menu {
     padding: 0 0 0 1.5rem;
   }
-  .sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link {
-    text-align: left;
-    padding-left: 20px;
-  }
+    .sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link {
+        text-align: left;
+        padding-left: 20px;
+        color: #88accc !important;
+    }
   .sidebar-icon-only .main-panel {
     width: calc(100% - 70px);
   }

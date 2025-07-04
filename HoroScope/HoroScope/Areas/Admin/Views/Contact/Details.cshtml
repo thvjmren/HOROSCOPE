@@ -23,20 +23,23 @@
             <div class="mb-3">
                 <strong>Message:</strong>
                 <div style="
-                    white-space: pre-wrap;
-                    background: #212529;
-                    padding: 20px;
-                    border-radius: 10px;
-                    color: #f8f9fa;
-                    font-size: 18px;
-                    line-height: 1.6;
-                    border: 1px solid #444;
-                ">
+                white-space: pre-wrap;
+                overflow-wrap: break-word;
+                background: #212529;
+                padding: 20px;
+                border-radius: 10px;
+                color: #f8f9fa;
+                font-size: 18px;
+                line-height: 1.6;
+                border: 1px solid #444;
+            ">
                     @Model.Message
                 </div>
+
+
             </div>
 
             <a asp-action="Index" class="btn btn-secondary mt-3">← Back to Messages</a>
         </div>
     </div>
-</div>
+</div> 

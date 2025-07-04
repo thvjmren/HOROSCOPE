@@ -1,0 +1,62 @@
+﻿
+@model List<GetBlogVM>
+
+@{
+    int count = 0;
+}
+
+<h2>Deleted Blogs</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info text-center">
+        No deleted Blog found.
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Content</th>
+                <th>Category</th>
+                <th>Settings</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var blog in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@blog.Title</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(blog.Image))
+                        {
+                            <img style="width:100px;height:100px;" src="~/assets/images/content/blog/@blog.Image" />
+                        }
+                    </td>
+                    <td>
+                        @(blog.Content.Length > 50 ? blog.Content.Substring(0, 50) + "..." : blog.Content)
+                    </td>
+                    <td>@blog.BlogCategoryName</td>
+                    <td>
+                        <a asp-controller="Blog" asp-action="Restore" asp-route-id="@blog.Id" class="btn btn-success">
+                            <i class="mdi mdi-restore"></i>
+                        </a>
+                        <a asp-controller="Blog" asp-action="HardDelete" asp-route-id="@blog.Id" class="btn btn-danger">
+                            <i class="mdi mdi-delete-forever"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<div style="margin-top: 20px;">
+    <a asp-controller="Blog" asp-action="Index" class="btn btn-secondary">Back to Blogs</a>
+</div>

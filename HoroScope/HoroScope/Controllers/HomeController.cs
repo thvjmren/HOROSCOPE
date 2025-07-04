@@ -51,6 +51,7 @@ public class HomeController : Controller
             Blogs = await _context.Blogs.Where(b => !b.IsDeleted).Include(b => b.Likes).Include(b => b.Comments).Include(b => b.AppUser).ToListAsync(),
             Partners = await _context.Partners.Where(p => !p.IsDeleted).ToListAsync(),
             Experts = await _context.Experts.Where(e => !e.IsDeleted).ToListAsync(),
+            SubscriptionPlans = await _context.SubscriptionPlans.Where(s => !s.IsDeleted).ToListAsync()
         };
 
         return View(vm);

@@ -788,6 +788,21 @@ namespace HoroScope.Migrations
                     b.ToTable("ProductReviews");
                 });
 
+            modelBuilder.Entity("HoroScope.Models.ProductZodiac", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ZodiacId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductId", "ZodiacId");
+
+                    b.HasIndex("ZodiacId");
+
+                    b.ToTable("ProductZodiacs");
+                });
+
             modelBuilder.Entity("HoroScope.Models.Service", b =>
                 {
                     b.Property<int>("Id")
@@ -1359,6 +1374,25 @@ namespace HoroScope.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("HoroScope.Models.ProductZodiac", b =>
+                {
+                    b.HasOne("HoroScope.Models.Product", "Product")
+                        .WithMany("ProductZodiacs")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HoroScope.Models.Zodiac", "Zodiac")
+                        .WithMany("ProductZodiacs")
+                        .HasForeignKey("ZodiacId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Zodiac");
+                });
+
             modelBuilder.Entity("HoroScope.Models.Service", b =>
                 {
                     b.HasOne("HoroScope.Models.ServiceCategory", "ServiceCategory")
@@ -1526,6 +1560,8 @@ namespace HoroScope.Migrations
                     b.Navigation("ProductImages");
 
                     b.Navigation("ProductReviews");
+
+                    b.Navigation("ProductZodiacs");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ProductCategory", b =>
@@ -1543,6 +1579,8 @@ namespace HoroScope.Migrations
             modelBuilder.Entity("HoroScope.Models.Zodiac", b =>
                 {
                     b.Navigation("PlanetZodiacs");
+
+                    b.Navigation("ProductZodiacs");
                 });
 
             modelBuilder.Entity("HoroScope.Models.ZodiacElement", b =>

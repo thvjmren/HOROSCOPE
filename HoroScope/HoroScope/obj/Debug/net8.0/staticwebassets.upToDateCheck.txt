@@ -98,6 +98,7 @@ wwwroot\assets\fonts\sign_fonts\Flaticon.woff2
 wwwroot\assets\fonts\sign_fonts\Flaticond41d.eot
 wwwroot\assets\images\05b3f56a-05d5-4279-b382-67cf9057fd2b.jpg
 wwwroot\assets\images\7b0030d9-f634-421e-a0e6-b16492534238.jpg
+wwwroot\assets\images\adadf85e-5e6b-4b83-b25f-3aa3dc14148c.jpg
 wwwroot\assets\images\content\about.jpeg
 wwwroot\assets\images\content\about\astro_img1.jpg
 wwwroot\assets\images\content\about\astro_img2.jpg
@@ -196,6 +197,10 @@ wwwroot\assets\images\content\online2.jpg
 wwwroot\assets\images\content\online3.jpg
 wwwroot\assets\images\content\online4.jpg
 wwwroot\assets\images\content\pr_play.png
+wwwroot\assets\images\content\shop\257ddbf9-ff15-4151-bda6-49e5131ddae2.jpg
+wwwroot\assets\images\content\shop\3d0af27a-f544-4a19-b610-e9de18e1ee78.jpg
+wwwroot\assets\images\content\shop\55b9778a-3d08-4087-9b05-fda59f07b041.jpg
+wwwroot\assets\images\content\shop\7d937131-1f5d-4f96-8eb0-fb5383a5d93f.jpg
 wwwroot\assets\images\content\shop\Amethyst.jpg
 wwwroot\assets\images\content\shop\AstrologyBook.png
 wwwroot\assets\images\content\shop\Citrine.jpg

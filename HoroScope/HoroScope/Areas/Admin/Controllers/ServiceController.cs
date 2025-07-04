@@ -19,18 +19,19 @@ namespace HoroScope.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<GetServiceVM> serviceVMs = await _context.Services.Select(s => new GetServiceVM
-            {
-                Id = s.Id,
-                Name = s.Name,
-                Icon = s.Icon,
-                Description = s.Description,
-                CategoryName = s.ServiceCategory.Name,
-                CreatedAt = s.CreatedAt,
-                IsDeleted = s.IsDeleted,
-                IsFree = s.IsFree,
-                Price = s.Price
-            }).ToListAsync();
+            List<GetServiceVM> serviceVMs = await _context.Services
+                .Where(s => !s.IsDeleted).Select(s => new GetServiceVM
+                {
+                    Id = s.Id,
+                    Name = s.Name,
+                    Icon = s.Icon,
+                    Description = s.Description,
+                    CategoryName = s.ServiceCategory.Name,
+                    CreatedAt = s.CreatedAt,
+                    IsDeleted = s.IsDeleted,
+                    IsFree = s.IsFree,
+                    Price = s.Price
+                }).ToListAsync();
             return View(serviceVMs);
         }
 
@@ -99,7 +100,25 @@ namespace HoroScope.Areas.Admin.Controllers
         {
             if (id is null) return BadRequest();
 
-            Service? service = await _context.Services.Where(c => c.IsDeleted == false).FirstOrDefaultAsync(s => s.Id == id);
+            var service = await _context.Services
+                .FirstOrDefaultAsync(s => s.Id == id && !s.IsDeleted);
+
+            if (service is null) return NotFound();
+
+            service.IsDeleted = true;
+            _context.Services.Update(service);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> HardDelete(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            var service = await _context.Services
+                .FirstOrDefaultAsync(s => s.Id == id);
+
             if (service is null) return NotFound();
 
             _context.Services.Remove(service);
@@ -107,6 +126,16 @@ namespace HoroScope.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> DeletedServices()
+        {
+            var deletedServices = await _context.Services
+                .Where(s => s.IsDeleted)
+                .ToListAsync();
+
+            return View(deletedServices);
+        }
+
 
         public async Task<IActionResult> Update(int? id)
         {
@@ -189,6 +218,22 @@ namespace HoroScope.Areas.Admin.Controllers
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Restore(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            var service = await _context.Services
+                .FirstOrDefaultAsync(s => s.Id == id && s.IsDeleted);
+
+            if (service is null) return NotFound();
+
+            service.IsDeleted = false;
+            _context.Services.Update(service);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(DeletedServices));
         }
 
     }

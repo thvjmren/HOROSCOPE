@@ -1,11 +1,11 @@
 ﻿using HoroScope.Models;
+using HoroScope.Utilities.Enums;
+using HoroScope.Utilities.Extensions;
 using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Pronia.Utilities.Enums;
-using Pronia.Utilities.Extensions;
 
 [Authorize(Roles = "Member")]
 public class ProfileController : Controller

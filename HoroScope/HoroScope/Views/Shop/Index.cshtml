@@ -242,3 +242,27 @@
     </div>
 </div>
 <!-- hs sidebar End -->
+
+<script>
+    $(document).ready(function () {
+        $('.add-to-basket-btn').click(function (e) {
+            e.preventDefault();  
+            var productId = $(this).data('id');
+
+
+            $.ajax({
+                url: '@Url.Action("AddBasket", "Basket")',
+                type: 'POST',
+                data: { id: productId }, 
+                success: function (response) {
+
+                    alert('Product added to the basket!');
+                },
+                error: function () {
+
+                    alert('An error occurred, please try again.');
+                }
+            });
+        });
+    });
+</script>

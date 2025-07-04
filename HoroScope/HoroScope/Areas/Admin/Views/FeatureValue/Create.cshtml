@@ -1,0 +1,26 @@
+﻿@model CreateFeatureValueVM
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Create Feature Value</h4>
+
+        <form method="post" class="forms-sample">
+            <div class="form-group">
+                <label asp-for="Value">Value</label>
+                <input asp-for="Value" class="form-control" />
+                <span asp-validation-for="Value" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FeatureId">Feature</label>
+                <select asp-for="FeatureId" class="form-control" asp-items="@(new SelectList(Model.Features, "Id", "Name"))">
+                    <option value="">Choose Feature</option>
+                </select>
+                <span asp-validation-for="FeatureId" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a asp-action="Index" class="btn btn-light">Cancel</a>
+        </form>
+    </div>
+</div>

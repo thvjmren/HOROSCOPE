@@ -1,3 +1,5 @@
+using Hangfire;
+using Hangfire.MemoryStorage;
 using HoroScope.DAL;
 using HoroScope.Interfaces;
 using HoroScope.Models;
@@ -54,16 +56,24 @@ namespace HoroScope
             builder.Services.AddScoped<ILayoutService, LayoutService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
             builder.Services.AddScoped<IBasketService, BasketService>();
-
-
-
+            builder.Services.AddScoped<ISubscriptionReminderService, SubscriptionReminderService>();
+            builder.Services.AddHangfire(x => x.UseMemoryStorage());
+            builder.Services.AddHangfireServer();
 
             var app = builder.Build();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseStaticFiles();
+            app.UseHangfireDashboard();
+
+            RecurringJob.AddOrUpdate<ISubscriptionReminderService>(
+                "reminder-job",
+                service => service.SendExpiringRemindersAsync(),
+                Cron.Daily);
+
             StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
 
             app.MapControllerRoute(
                 "default",

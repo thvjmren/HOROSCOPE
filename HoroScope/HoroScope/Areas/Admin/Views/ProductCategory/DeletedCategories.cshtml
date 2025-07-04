@@ -1,0 +1,56 @@
+﻿@model List<ProductCategory>
+
+@{
+    int count = 0;
+}
+
+<h2>Deleted Product Categories</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info text-center">
+        No deleted Product Category found.
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Features</th>
+                <th>Setting</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var productCategory in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@productCategory.Name</td>
+                    <td>
+                        @foreach (var feature in productCategory.Features)
+                        {
+                            <span>@feature.Name</span>
+                            <br />
+                        }
+                    </td>
+                    <td>
+                        <a asp-controller="ProductCategory" asp-action="Restore" asp-route-id="@productCategory.Id" class="btn btn-success">
+                            <i class="mdi mdi-restore"></i>
+                        </a>
+                        <a asp-controller="ProductCategory" asp-action="HardDelete" asp-route-id="@productCategory.Id" class="btn btn-danger">
+                            <i class="mdi mdi-delete-forever"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<div style="margin-top: 20px;" >
+    <a asp-controller="ProductCategory" asp-action="Index" class="btn btn-secondary">Back to Product Categories</a>
+</div>

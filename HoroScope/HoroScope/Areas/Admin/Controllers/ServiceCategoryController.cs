@@ -19,16 +19,20 @@ namespace HoroScope.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<GetServiceCategoryVM> categoryVMs = await _context.ServiceCategories.Select(sc => new GetServiceCategoryVM
-            {
-                Id = sc.Id,
-                Name = sc.Name,
-                CreatedAt = sc.CreatedAt,
-                IsDeleted = sc.IsDeleted,
-            }).ToListAsync();
+
+            List<GetServiceCategoryVM> categoryVMs = await _context.ServiceCategories
+                .Where(sc => !sc.IsDeleted)
+                .Select(sc => new GetServiceCategoryVM
+                {
+                    Id = sc.Id,
+                    Name = sc.Name,
+                    CreatedAt = sc.CreatedAt,
+                    IsDeleted = sc.IsDeleted,
+                }).ToListAsync();
 
             return View(categoryVMs);
         }
+
 
         public IActionResult Create()
         {
@@ -46,7 +50,7 @@ namespace HoroScope.Areas.Admin.Controllers
             bool result = await _context.ServiceCategories.AnyAsync(cs => cs.Name == category.Name);
             if (result)
             {
-                ModelState.AddModelError(nameof(CreateServiceCategoryVM.Name), $"This name: {category.Name} already exists");
+                ModelState.AddModelError(nameof(CreateServiceCategoryVM.Name), $"This Category: {category.Name} already exists");
                 return View(category);
             }
 
@@ -66,7 +70,24 @@ namespace HoroScope.Areas.Admin.Controllers
         {
             if (id is null) return BadRequest();
 
-            ServiceCategory? category = await _context.ServiceCategories.Where(c => c.IsDeleted == false).FirstOrDefaultAsync(sc => sc.Id == id);
+            ServiceCategory? category = await _context.ServiceCategories
+                .FirstOrDefaultAsync(sc => sc.Id == id && sc.IsDeleted == false);
+
+            if (category is null) return NotFound();
+            category.IsDeleted = true;
+            _context.ServiceCategories.Update(category);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> HardDelete(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            ServiceCategory? category = await _context.ServiceCategories
+                .FirstOrDefaultAsync(sc => sc.Id == id);
+
             if (category is null) return NotFound();
 
             _context.ServiceCategories.Remove(category);
@@ -102,7 +123,7 @@ namespace HoroScope.Areas.Admin.Controllers
             bool result = await _context.ServiceCategories.AnyAsync(c => c.Name == categoryVM.Name && c.Id != id);
             if (result)
             {
-                ModelState.AddModelError(nameof(UpdateServiceCategoryVM.Name), $"this name: {categoryVM.Name} is already exists");
+                ModelState.AddModelError(nameof(UpdateServiceCategoryVM.Name), $"This Category: {categoryVM.Name} is already exists");
                 return View(categoryVM);
             }
 
@@ -115,6 +136,30 @@ namespace HoroScope.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Restore(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            ServiceCategory? category = await _context.ServiceCategories
+                .FirstOrDefaultAsync(sc => sc.Id == id && sc.IsDeleted == true);
+
+            if (category is null) return NotFound();
+
+            category.IsDeleted = false;
+            _context.ServiceCategories.Update(category);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(DeletedCategories));
+        }
+        public async Task<IActionResult> DeletedCategories()
+        {
+            var deletedCategories = await _context.ServiceCategories
+                .Where(sc => sc.IsDeleted == true)
+                .ToListAsync();
+
+            return View(deletedCategories);
         }
     }
 }

@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>251g4ehvdy</Fingerprint>
-      <Integrity>OkpqQeNld8PR6qTEUCgbogabx6HbSH3qXGnYGFdWUj8=</Integrity>
+      <Fingerprint>5f4y4x41kg</Fingerprint>
+      <Integrity>H43jutDoZabS6t7UZ65RQAYBn5DrW6sQ7uLco3O+zR0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\admin\css\style.css'))</OriginalItemSpec>
@@ -1800,6 +1800,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\7b0030d9-f634-421e-a0e6-b16492534238.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\adadf85e-5e6b-4b83-b25f-3aa3dc14148c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HoroScope</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HoroScope</BasePath>
+      <RelativePath>assets/images/adadf85e-5e6b-4b83-b25f-3aa3dc14148c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8vvco47t7u</Fingerprint>
+      <Integrity>VIQwPXF6tWkgNZyBSrpuyQwI3hQyyYYlWl174xMLfLI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\adadf85e-5e6b-4b83-b25f-3aa3dc14148c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\about.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>HoroScope</SourceId>
@@ -3563,6 +3581,78 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\pr_play.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\257ddbf9-ff15-4151-bda6-49e5131ddae2.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HoroScope</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HoroScope</BasePath>
+      <RelativePath>assets/images/content/shop/257ddbf9-ff15-4151-bda6-49e5131ddae2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r0ki0itmmq</Fingerprint>
+      <Integrity>JfJGaJl1B26R91WehOLj75Al6us2ISXawcc3AlBQ3aw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\257ddbf9-ff15-4151-bda6-49e5131ddae2.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\3d0af27a-f544-4a19-b610-e9de18e1ee78.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HoroScope</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HoroScope</BasePath>
+      <RelativePath>assets/images/content/shop/3d0af27a-f544-4a19-b610-e9de18e1ee78.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4xh23yuv5q</Fingerprint>
+      <Integrity>OBLjP01BN21dBpM2ZRhKQzNq0syaUt8QPxGRX9xALwE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\3d0af27a-f544-4a19-b610-e9de18e1ee78.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\55b9778a-3d08-4087-9b05-fda59f07b041.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HoroScope</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HoroScope</BasePath>
+      <RelativePath>assets/images/content/shop/55b9778a-3d08-4087-9b05-fda59f07b041.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8vvco47t7u</Fingerprint>
+      <Integrity>VIQwPXF6tWkgNZyBSrpuyQwI3hQyyYYlWl174xMLfLI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\55b9778a-3d08-4087-9b05-fda59f07b041.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\7d937131-1f5d-4f96-8eb0-fb5383a5d93f.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HoroScope</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HoroScope</BasePath>
+      <RelativePath>assets/images/content/shop/7d937131-1f5d-4f96-8eb0-fb5383a5d93f.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8vvco47t7u</Fingerprint>
+      <Integrity>VIQwPXF6tWkgNZyBSrpuyQwI3hQyyYYlWl174xMLfLI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\7d937131-1f5d-4f96-8eb0-fb5383a5d93f.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\content\shop\Amethyst.jpg'))">
       <SourceType>Package</SourceType>

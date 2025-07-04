@@ -1,0 +1,49 @@
+﻿@model List<ServiceCategory>
+
+@{
+    int count = 0;
+}
+
+<h2>Deleted Service Categories</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info text-center">
+        No deleted Service Categories found.
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Setting</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var serviceCategory in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@serviceCategory.Name</td>
+
+                    <td>
+                        <a asp-controller="ServiceCategory" asp-action="Restore" asp-route-id="@serviceCategory.Id" class="btn btn-success">
+                            <i class="mdi mdi-restore"></i>
+                        </a>
+                        <a asp-controller="ServiceCategory" asp-action="HardDelete" asp-route-id="@serviceCategory.Id" class="btn btn-danger">
+                            <i class="mdi mdi-delete-forever"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<div style="margin-top: 20px;" >
+    <a asp-controller="ServiceCategory" asp-action="Index" class="btn btn-secondary">Back to Service Categories</a>
+</div>

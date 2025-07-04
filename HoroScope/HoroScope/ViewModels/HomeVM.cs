@@ -14,5 +14,6 @@ namespace HoroScope.ViewModels
         public List<Blog>? Blogs { get; set; }
         public List<Partner>? Partners { get; set; }
         public List<Expert>? Experts { get; set; }
+        public List<SubscriptionPlan>? SubscriptionPlans { get; set; }
     }
 }

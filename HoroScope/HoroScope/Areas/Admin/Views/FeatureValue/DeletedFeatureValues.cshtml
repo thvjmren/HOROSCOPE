@@ -1,0 +1,53 @@
+﻿@model List<FeatureValue>
+
+@{
+    int count = 0;
+}
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Deleted Feature Values</h4>
+
+        @if (!Model.Any())
+        {
+            <div class="alert alert-info text-center">
+                No deleted Feature Value found.
+            </div>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Value</th>
+                        <th>Feature</th>
+                        <th>Settings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.Value</td>
+                        <td>@item.Feature?.Name</td>
+                        <td>
+                                <a asp-action="Restore" asp-route-id="@item.Id" class="btn btn-success">
+                                    <i class="mdi mdi-restore"></i>
+                                </a>
+                                <a asp-action="HardDelete" asp-route-id="@item.Id" class="btn btn-danger">
+                                    <i class="mdi mdi-delete-forever"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        }
+    </div>
+</div>
+
+<div style="margin-top: 20px;">
+    <a asp-controller="FeatureValue" asp-action="Index" class="btn btn-secondary">Back to Feature Values</a>
+</div>

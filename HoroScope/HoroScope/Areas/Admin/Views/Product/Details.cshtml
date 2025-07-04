@@ -1,0 +1,102 @@
+﻿@model ProductDetailsVM
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-primary text-white text-center rounded-top-4">
+            <h3 class="mb-0">@Model.Name</h3>
+        </div>
+        <div class="card-body">
+            <div class="row mb-4">
+                <div class="col-md-5 text-center">
+                    @if (Model.Images != null && Model.Images.Any())
+                    {
+                        var primaryImage = Model.Images.FirstOrDefault(image => image.IsPrimary == true);
+                        if (primaryImage != null)
+                        {
+                            <img src="~/assets/images/content/shop/@primaryImage.Image" alt="@Model.Name" class="img-fluid rounded-3 border" style="max-height:350px; object-fit:contain;" />
+                        }
+
+                        <div class="mt-3">
+                            <h5 class="text-primary">Additional Images</h5>
+                            <div class="row">
+                                @foreach (var image in Model.Images.Where(i => i != primaryImage))
+                                {
+                                    <div class="col-md-4">
+                                        <img src="~/assets/images/content/shop/@image.Image" alt="@Model.Name" class="img-fluid rounded-3 border" style="max-height:250px; object-fit:contain;" />
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="col-md-7">
+                    <h5 class="text-muted mb-3">Category: <span class="fw-semibold">@Model.CategoryName</span></h5>
+                    <h4>@Model.Price.ToString("C")</h4>
+
+                    <p class="mb-3" style="white-space: pre-wrap; font-size: 1.1rem; color: #c8c8c8db;">@Model.Description</p>
+
+                    <div class="d-flex flex-wrap gap-3 mb-3">
+                        <span class="badge bg-info text-dark">Stock: @Model.Stock</span>
+                        <span class="badge bg-warning text-dark">Sales: @Model.SalesCount</span>
+                        <span class="badge bg-secondary">Views: @Model.ViewsCount</span>
+                        <span class="badge bg-primary">Rating: @Model.Rating / 5 (@Model.ReviewCount reviews)</span>
+                    </div>
+
+                    <div class="mt-4">
+                        @if (Model.FreeShipping)
+                        {
+                            <span class="badge bg-success me-2"><i class="bi bi-truck"></i> Free Shipping</span>
+                        }
+                        @if (Model.CodAvailable)
+                        {
+                            <span class="badge bg-secondary"><i class="bi bi-cash-stack"></i> Cash on Delivery</span>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4" style="border-color: #e0e0e0;">
+
+            <div>
+                <h5 class="mb-3 text-primary">Features</h5>
+                @if (Model.Features != null && Model.Features.Any())
+                {
+                    <ul class="list-group list-group-flush">
+                        @foreach (var feature in Model.Features)
+                        {
+                            <li class="list-group-item">
+                                <strong>@feature.FeatureName:</strong>
+                                <span>@string.Join(", ", feature.Values)</span>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p class="text-muted">No features available.</p>
+                }
+            </div>
+
+            <div class="mt-4">
+                <h5 class="mb-3 text-primary">Zodiac Signs</h5>
+                @if (Model.ZodiacNames != null && Model.ZodiacNames.Any())
+                {
+                    <div class="d-flex flex-wrap gap-2">
+                        @foreach (var zodiac in Model.ZodiacNames)
+                        {
+                            <span class="badge bg-warning text-dark">@zodiac</span>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted">No zodiac signs linked.</p>
+                }
+            </div>
+
+            <a asp-action="Index" class="btn btn-outline-primary mt-4 px-4 py-2 rounded-3">← Back to Products</a>
+        </div>
+    </div>
+</div>
+

@@ -1,4 +1,7 @@
 ﻿using HoroScope.DAL;
+using HoroScope.Models;
+using HoroScope.Utilities.Enums;
+using HoroScope.Utilities.Extensions;
 using HoroScope.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,221 +21,403 @@ namespace HoroScope.Areas.Admin.Controllers
             _context = context;
             _env = env;
         }
+
         public async Task<IActionResult> Index(int page = 1)
         {
             int count = await _context.Products.CountAsync();
-            int pageSize = 9;
-            double total = Math.Ceiling((double)count / pageSize);
+            int pageSize = 3;
+            int totalPage = (int)Math.Ceiling((double)count / pageSize);
 
-            if (page > total) return BadRequest();
+            if (page < 1 || page > totalPage)
+                return BadRequest();
 
-            PaginatedVM<GetProductVM> paginatedVM = new()
+            var products = await _context.Products
+                .Include(p => p.ProductCategory)
+                .Include(p => p.ProductImages)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(p => new GetProductVM
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Description = p.Description,
+                    Price = p.Price,
+                    Discount = p.Discount,
+                    CategoryName = p.ProductCategory.Name,
+                    MainImage = p.ProductImages.FirstOrDefault(pi => pi.IsPrimary == true).Image,
+                    Stock = p.Stock,
+                    SalesCount = p.SalesCount,
+                    ViewsCount = p.ViewsCount,
+                    Rating = p.Rating,
+                    ReviewCount = p.ReviewCount,
+                    FreeShipping = p.FreeShipping,
+                    CodAvailable = p.CodAvailable,
+                    ShippingDays = p.ShippingDays,
+                }).ToListAsync();
+
+            var paginatedVM = new PaginatedVM<GetProductVM>
             {
-                TotalPage = total,
+                TotalPage = totalPage,
                 CurrentPage = page,
-                Items = await _context.Products
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .Include(p => p.ProductCategory)
-            .Include(p => p.ProductImages)
-            .Select(p => new GetProductVM
-            {
-                Id = p.Id,
-                Name = p.Name,
-                Description = p.Description,
-                Price = p.Price,
-                Discount = p.Discount,
-                CategoryName = p.ProductCategory.Name,
-                MainImage = p.ProductImages.FirstOrDefault(p => p.IsPrimary == true).Image,
-                Stock = p.Stock,
-                SalesCount = p.SalesCount,
-                ViewsCount = p.ViewsCount,
-                Rating = p.Rating,
-                ReviewCount = p.ReviewCount,
-                FreeShipping = p.FreeShipping,
-                CodAvailable = p.CodAvailable,
-                ShippingDays = p.ShippingDays
-            }).ToListAsync()
+                Items = products
             };
 
             return View(paginatedVM);
         }
 
-        //    public async Task<IActionResult> Create()
-        //    {
-        //        CreateProductVM productVM = new CreateProductVM
-        //        {
-        //            Categories = ViewBag.Categories = await _context.Categories.ToListAsync()
-        //        };
+        public async Task<IActionResult> Create()
+        {
+            var categories = await _context.ProductCategories.ToListAsync();
+            var zodiacs = await _context.Zodiacs.ToListAsync();
 
-        //        return View(productVM);
-        //    }
+            var features = await _context.Features
+                .Include(f => f.FeatureValues)
+                .ToListAsync();
 
-        //    [HttpPost]
-        //    public async Task<IActionResult> Create(CreateProductVM productVM)
-        //    {
-        //        productVM.Categories = await _context.Categories.ToListAsync();
+            var featureSelections = features.Select(f => new FeatureSelectionVM
+            {
+                FeatureId = f.Id,
+                FeatureName = f.Name,
+                Values = f.FeatureValues,
+                SelectedValueIds = new List<int>()
+            }).ToList();
 
-        //        if (!ModelState.IsValid)
-        //        {
-        //            return View(productVM);
-        //        }
+            CreateProductVM vm = new CreateProductVM
+            {
+                Categories = categories,
+                FeatureSelections = featureSelections,
+                Zodiacs = zodiacs,
+            };
 
-        //        bool result = productVM.Categories.Any(c => c.Id == productVM.CategoryId);
-        //        if (!result)
-        //        {
-        //            ModelState.AddModelError(nameof(CreateProductVM.CategoryId), "category does not exist");
-        //            return View(productVM);
-        //        }
+            return View(vm);
+        }
 
-        //        if (!productVM.MainPhoto.ValidateType("image/"))
-        //        {
-        //            ModelState.AddModelError(nameof(CreateProductVM.MainPhoto), "file type is incorrect");
-        //            return View(productVM);
-        //        }
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateProductVM productVM)
+        {
+            productVM.Categories = await _context.ProductCategories.ToListAsync();
+            productVM.Zodiacs = await _context.Zodiacs.ToListAsync();
 
-        //        if (!productVM.MainPhoto.ValidateSize(FileSize.KB, 500))
-        //        {
-        //            ModelState.AddModelError(nameof(CreateProductVM.MainPhoto), "file size must be less than 500 KB");
-        //            return View(productVM);
-        //        }
+            if (!ModelState.IsValid)
+            {
+                return View(productVM);
+            }
 
-        //        bool nameResult = await _context.Products.AnyAsync(p => p.Name == productVM.Name);
-        //        if (nameResult)
-        //        {
-        //            ModelState.AddModelError(nameof(productVM.Name), $"same name:{productVM.Name} is already used");
-        //            return View(productVM);
-        //        }
+            bool result = productVM.Categories.Any(c => c.Id == productVM.CategoryId);
+            if (!result)
+            {
+                ModelState.AddModelError(nameof(CreateProductVM.CategoryId), "category does not exist");
+                return View(productVM);
+            }
 
-        //        ProductImg mainImage = new ProductImg
-        //        {
-        //            Image = await productVM.MainPhoto.CreateFileAsync(_env.WebRootPath, "assets", "images", "website-images"),
-        //            IsPrimary = true,
-        //            CreatedAT = DateTime.Now
-        //        };
+            if (!productVM.MainPhoto.ValidateType("image/"))
+            {
+                ModelState.AddModelError(nameof(CreateProductVM.MainPhoto), "file type is incorrect");
+                return View(productVM);
+            }
 
-        //        Product product = new Product
-        //        {
-        //            Name = productVM.Name,
-        //            Price = productVM.Price.Value,
-        //            SKU = productVM.SKU,
-        //            Description = productVM.Description,
-        //            CategoryId = productVM.CategoryId.Value,
-        //            ProductImgs = new List<ProductImg> { mainImage }
-        //        };
+            if (!productVM.MainPhoto.ValidateSize(FileSize.KB, 500))
+            {
+                ModelState.AddModelError(nameof(CreateProductVM.MainPhoto), "file size must be less than 500 KB");
+                return View(productVM);
+            }
 
-        //        await _context.Products.AddAsync(product);
-        //        await _context.SaveChangesAsync();
+            bool nameResult = await _context.Products.AnyAsync(p => p.Name == productVM.Name);
+            if (nameResult)
+            {
+                ModelState.AddModelError(nameof(productVM.Name), $"same name:{productVM.Name} is already used");
+                return View(productVM);
+            }
 
-        //        return RedirectToAction(nameof(Index));
-        //    }
+            ProductImages mainImage = new ProductImages
+            {
+                Image = await productVM.MainPhoto.CreateFileAsync(_env.WebRootPath, "assets", "images", "content", "shop"),
+                IsPrimary = true,
+                CreatedAt = DateTime.Now
+            };
 
-        //    public async Task<IActionResult> Update(int? id)
-        //    {
-        //        if (id is null || id <= 0) return BadRequest();
+            Product product = new Product
+            {
+                Name = productVM.Name,
+                Price = productVM.Price.Value,
+                Description = productVM.Description,
+                ProductCategoryId = productVM.CategoryId.Value,
+                ProductImages = new List<ProductImages> { mainImage },
+                CreatedAt = DateTime.UtcNow,
+            };
 
-        //        Product? product = await _context.Products.Include(p => p.ProductImgs).FirstOrDefaultAsync(p => p.Id == id);
+            await _context.Products.AddAsync(product);
+            await _context.SaveChangesAsync();
 
-        //        if (product is null) return NotFound();
+            if (productVM.SelectedZodiacIds != null && productVM.SelectedZodiacIds.Any())
+            {
+                foreach (var zodiacId in productVM.SelectedZodiacIds)
+                {
+                    var productZodiac = new ProductZodiac
+                    {
+                        ProductId = product.Id,
+                        ZodiacId = zodiacId
+                    };
+                    await _context.AddAsync(productZodiac);
+                }
+                await _context.SaveChangesAsync();
+            }
 
-        //        UpdateProductVM productVM = new UpdateProductVM
-        //        {
-        //            Name = product.Name,
-        //            SKU = product.SKU,
-        //            Price = product.Price,
-        //            Description = product.Description,
-        //            CategoryId = product.CategoryId,
-        //            PrimaryImage = product.ProductImgs.FirstOrDefault(p => p.IsPrimary == true).Image,
-        //            Categories = await _context.Categories.ToListAsync()
-        //        };
+            if (productVM.FeatureSelections != null)
+            {
+                foreach (var featureSelection in productVM.FeatureSelections)
+                {
+                    if (featureSelection.SelectedValueIds != null)
+                    {
+                        foreach (var featureValueId in featureSelection.SelectedValueIds)
+                        {
+                            var productFeatureValue = new ProductFeatureValue
+                            {
+                                ProductId = product.Id,
+                                FeatureValueId = featureValueId
+                            };
+                            await _context.ProductFeatureValues.AddAsync(productFeatureValue);
+                        }
+                    }
+                }
+                await _context.SaveChangesAsync();
+            }
 
-        //        return View(productVM);
-        //    }
+            return RedirectToAction(nameof(Index));
+        }
 
-        //    [HttpPost]
-        //    public async Task<IActionResult> Update(int? id, UpdateProductVM productVM)
-        //    {
-        //        productVM.Categories = await _context.Categories.ToListAsync();
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id is null || id <= 0) return BadRequest();
 
-        //        if (!ModelState.IsValid) return View(productVM);
+            Product? product = await _context.Products.Include(p => p.ProductImages).FirstOrDefaultAsync(p => p.Id == id);
 
-        //        if (productVM.MainPhoto is not null)
-        //        {
-        //            if (!productVM.MainPhoto.ValidateType("image/"))
-        //            {
-        //                ModelState.AddModelError(nameof(UpdateProductVM.MainPhoto), "file type is incorrect");
-        //                return View(productVM);
-        //            }
+            if (product is null) return NotFound();
 
-        //            if (!productVM.MainPhoto.ValidateSize(FileSize.KB, 1000))
-        //            {
-        //                ModelState.AddModelError(nameof(UpdateProductVM.MainPhoto), "file size must be less than 500 KB");
-        //                return View(productVM);
-        //            }
-        //        }
+            foreach (ProductImages productImage in product.ProductImages)
+            {
+                _context.ProductImages.Remove(productImage);
+                productImage.Image.DeleteFile(_env.WebRootPath, "assets", "images", "content", "shop");
+            }
 
-        //        bool result = productVM.Categories.Any(c => c.Id == productVM.CategoryId);
-        //        if (!result)
-        //        {
-        //            ModelState.AddModelError(nameof(UpdateProductVM.CategoryId), "CATEGORY DOES NOT EXIST");
-        //            return View(productVM);
-        //        }
+            _context.Products.Remove(product);
 
-        //        bool nameResult = await _context.Products.AnyAsync(p => p.Name == productVM.Name && p.Id != id);
-        //        if (nameResult)
-        //        {
-        //            ModelState.AddModelError(nameof(UpdateProductVM.CategoryId), $"product: {productVM.Name} is already exist...");
-        //            return View(productVM);
-        //        }
+            await _context.SaveChangesAsync();
 
-        //        Product? existed = await _context.Products.Include(p => p.ProductImgs).FirstOrDefaultAsync(p => p.Id == id);
+            return RedirectToAction(nameof(Index));
+        }
 
-        //        if (productVM.MainPhoto is not null)
-        //        {
-        //            ProductImg productImg = new ProductImg()
-        //            {
-        //                Image = await productVM.MainPhoto.CreateFileAsync(_env.WebRootPath, "assets", "images", "website-images"),
-        //                IsPrimary = true,
-        //                CreatedAT = DateTime.Now
-        //            };
+        public async Task<IActionResult> Update(int? id)
+        {
+            if (id is null || id <= 0) return BadRequest();
 
-        //            ProductImg existedMain = existed.ProductImgs.FirstOrDefault(pi => pi.IsPrimary == true);
-        //            existedMain.Image.DeleteFile(_env.WebRootPath, "assets", "images", "website-images");
-        //            existed.ProductImgs.Remove(existedMain);
-        //            existed.ProductImgs.Add(productImg);
-        //        }
+            Product? product = await _context.Products
+                .Include(p => p.ProductImages)
+                .Include(p => p.ProductFeatureValues)
+                .ThenInclude(pfv => pfv.FeatureValue)
+                .FirstOrDefaultAsync(p => p.Id == id);
 
-        //        existed.Name = productVM.Name;
-        //        existed.Price = productVM.Price.Value;
-        //        existed.SKU = productVM.SKU;
-        //        existed.CategoryId = productVM.CategoryId.Value;
-        //        existed.Description = productVM.Description;
+            if (product is null) return NotFound();
 
-        //        await _context.SaveChangesAsync();
-        //        return RedirectToAction(nameof(Index));
-        //    }
+            var features = await _context.Features
+                .Include(f => f.FeatureValues)
+                .ToListAsync();
 
-        //    public async Task<IActionResult> Delete(int? id)
-        //    {
-        //        if (id is null || id <= 0) return BadRequest();
+            var featureSelections = features.Select(f =>
+            {
+                var selectedValues = product.ProductFeatureValues
+                    .Where(pfv => pfv.FeatureValue.FeatureId == f.Id)
+                    .Select(pfv => pfv.FeatureValueId)
+                    .ToList();
 
-        //        Product? product = await _context.Products.Include(p => p.ProductImgs).FirstOrDefaultAsync(p => p.Id == id);
+                return new FeatureSelectionVM
+                {
+                    FeatureId = f.Id,
+                    FeatureName = f.Name,
+                    Values = f.FeatureValues,
+                    SelectedValueIds = selectedValues
+                };
+            }).ToList();
 
-        //        if (product is null) return NotFound();
+            UpdateProductVM productVM = new UpdateProductVM
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Price = product.Price,
+                Description = product.Description,
+                CategoryId = product.ProductCategoryId,
+                PrimaryImage = product.ProductImages.FirstOrDefault(p => p.IsPrimary == true)?.Image,
+                Categories = await _context.ProductCategories.ToListAsync(),
+                Zodiacs = await _context.Zodiacs.ToListAsync(),
+                FeatureSelections = featureSelections
+            };
 
-        //        foreach (ProductImg productImage in product.ProductImgs)
-        //        {
+            return View(productVM);
+        }
 
-        //            _context.ProductImgs.Remove(productImage);
-        //            productImage.Image.DeleteFile(_env.WebRootPath, "assets", "images", "website_images");
-        //        }
+        [HttpPost]
+        public async Task<IActionResult> Update(int? id, UpdateProductVM productVM)
+        {
+            productVM.Categories = await _context.ProductCategories.ToListAsync();
+            productVM.Zodiacs = await _context.Zodiacs.ToListAsync();
 
-        //        _context.Products.Remove(product);
+            if (!ModelState.IsValid) return View(productVM);
 
-        //        await _context.SaveChangesAsync();
+            if (productVM.MainPhoto is not null)
+            {
+                if (!productVM.MainPhoto.ValidateType("image/"))
+                {
+                    ModelState.AddModelError(nameof(UpdateProductVM.MainPhoto), "file type is incorrect");
+                    return View(productVM);
+                }
 
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //}
+                if (!productVM.MainPhoto.ValidateSize(FileSize.KB, 1000))
+                {
+                    ModelState.AddModelError(nameof(UpdateProductVM.MainPhoto), "file size must be less than 1000 KB");
+                    return View(productVM);
+                }
+            }
+
+            bool result = productVM.Categories.Any(c => c.Id == productVM.CategoryId);
+            if (!result)
+            {
+                ModelState.AddModelError(nameof(UpdateProductVM.CategoryId), "Category does not exist!");
+                return View(productVM);
+            }
+
+            bool nameResult = await _context.Products.AnyAsync(p => p.Name == productVM.Name && p.Id != id);
+            if (nameResult)
+            {
+                ModelState.AddModelError(nameof(UpdateProductVM.Name), $"product: {productVM.Name} is already exist...");
+                return View(productVM);
+            }
+
+            Product? existed = await _context.Products
+                .Include(p => p.ProductImages)
+                .Include(p => p.ProductFeatureValues)
+                .Include(p => p.ProductZodiacs)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (existed is null) return NotFound();
+
+            if (productVM.MainPhoto is not null)
+            {
+                ProductImages productImg = new ProductImages()
+                {
+                    Image = await productVM.MainPhoto.CreateFileAsync(_env.WebRootPath, "assets", "images", "content", "shop"),
+                    IsPrimary = true,
+                    CreatedAt = DateTime.Now
+                };
+
+                ProductImages existedMain = existed.ProductImages.FirstOrDefault(pi => pi.IsPrimary == true);
+                if (existedMain != null)
+                {
+                    existedMain.Image.DeleteFile(_env.WebRootPath, "assets", "images", "content", "shop");
+                    existed.ProductImages.Remove(existedMain);
+                }
+                existed.ProductImages.Add(productImg);
+            }
+
+            existed.Name = productVM.Name;
+            existed.Price = productVM.Price.Value;
+            existed.ProductCategoryId = productVM.CategoryId.Value;
+            existed.Description = productVM.Description;
+
+            _context.ProductZodiacs.RemoveRange(existed.ProductZodiacs);
+
+            if (productVM.SelectedZodiacIds != null && productVM.SelectedZodiacIds.Any())
+            {
+                foreach (var zodiacId in productVM.SelectedZodiacIds)
+                {
+                    var productZodiac = new ProductZodiac
+                    {
+                        ProductId = existed.Id,
+                        ZodiacId = zodiacId
+                    };
+                    await _context.ProductZodiacs.AddAsync(productZodiac);
+                }
+            }
+            _context.ProductFeatureValues.RemoveRange(existed.ProductFeatureValues);
+
+            if (productVM.FeatureSelections != null)
+            {
+                foreach (var featureSelection in productVM.FeatureSelections)
+                {
+                    if (featureSelection.SelectedValueIds != null)
+                    {
+                        foreach (var featureValueId in featureSelection.SelectedValueIds)
+                        {
+                            var newRelation = new ProductFeatureValue
+                            {
+                                ProductId = existed.Id,
+                                FeatureValueId = featureValueId
+                            };
+                            await _context.ProductFeatureValues.AddAsync(newRelation);
+                        }
+                    }
+                }
+            }
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null || id <= 0) return BadRequest();
+
+            var product = await _context.Products
+                .Include(p => p.ProductCategory)
+                .Include(p => p.ProductImages)
+                .Include(p => p.ProductFeatureValues)
+                    .ThenInclude(pfv => pfv.FeatureValue)
+                        .ThenInclude(fv => fv.Feature)
+                .Include(p => p.ProductZodiacs)
+                    .ThenInclude(pz => pz.Zodiac)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (product == null) return NotFound();
+
+            var features = product.ProductFeatureValues
+                .GroupBy(pfv => pfv.FeatureValue.Feature)
+                .Select(g => new
+                {
+                    FeatureName = g.Key.Name,
+                    Values = g.Select(pfv => pfv.FeatureValue.Value).ToList()
+                })
+                .ToList();
+
+            var zodiacs = product.ProductZodiacs.Select(pz => pz.Zodiac).ToList();
+            var images = product.ProductImages.ToList();
+
+            var model = new ProductDetailsVM
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                Price = product.Price,
+                Discount = product.Discount,
+                CategoryName = product.ProductCategory.Name,
+                Images = images,
+                Features = features.Select(f => new FeatureDisplayVM
+                {
+                    FeatureName = f.FeatureName,
+                    Values = f.Values
+                }).ToList(),
+                ZodiacNames = zodiacs,
+                Stock = product.Stock,
+                SalesCount = product.SalesCount,
+                ViewsCount = product.ViewsCount,
+                Rating = product.Rating,
+                ReviewCount = product.ReviewCount,
+                FreeShipping = product.FreeShipping,
+                CodAvailable = product.CodAvailable,
+                ShippingDays = product.ShippingDays
+            };
+
+            return View(model);
+        }
+
+
     }
 }

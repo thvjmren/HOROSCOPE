@@ -1,6 +1,6 @@
-﻿using Pronia.Utilities.Enums;
+﻿using HoroScope.Utilities.Enums;
 
-namespace Pronia.Utilities.Extensions
+namespace HoroScope.Utilities.Extensions
 {
     public static class FileValidator
     {

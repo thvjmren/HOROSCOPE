@@ -1,0 +1,49 @@
+﻿    @model UpdateBlogVM
+
+<div class="row">
+
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Update Blog</h4>
+
+                <form method="post" enctype="multipart/form-data" class="forms-sample">
+
+                    <div class="form-group">
+                        <img style="width:200px;height:200px;" src="~/assets/images/content/blog/@Model.Image" />
+                        <input type="hidden" value="@Model.Image" asp-for="Image" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Photo">Photo</label>
+                        <input asp-for="Photo" accept="image/*" class="form-control">
+                        <span class="text-danger" asp-validation-for="Photo"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Title">Title</label>
+                        <input asp-for="Title" class="form-control" placeholder="Title">
+                        <span class="text-danger" asp-validation-for="Title"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Content">Content</label>
+                        <textarea rows="8" asp-for="Content" class="form-control" placeholder="Content"></textarea>
+                        <span class="text-danger" asp-validation-for="Content"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="CategoryId">Category</label>
+                        <select asp-for="CategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories,nameof(BlogCategory.Id),nameof(BlogCategory.Name)))">
+                        </select>
+                        <span class="text-danger" asp-validation-for="CategoryId"></span>
+                    </div>
+
+                    <input type="submit" class="btn btn-primary me-2" value="Update" />
+                    <a asp-action="Index" class="btn btn-light">Cancel</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

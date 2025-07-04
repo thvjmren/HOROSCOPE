@@ -1,0 +1,169 @@
+﻿@model List<UserSubscriptionVM>
+
+@{
+    ViewData["Title"] = "My Subscription Plans";
+    Layout = null;
+}
+
+<style>
+    body {
+        background-color: #331847;
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        padding: 40px 20px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .plans-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .plan-card {
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 16px;
+        padding: 30px 25px;
+        width: 320px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+
+        .plan-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .plan-card p {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+    .status-badge {
+        font-weight: bold;
+        margin-top: 10px;
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .active-badge {
+        color: #00ff90;
+    }
+
+    .expired-badge {
+        color: #ff6565;
+    }
+
+    .no-subscription {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 18px;
+        color: #ccc;
+    }
+
+    .message-box {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0 0 15px;
+    }
+
+    .success-message {
+        color: #00ff90;
+        background-color: rgba(0, 255, 144, 0.15);
+        box-shadow: 0 0 15px #00ff90aa;
+    }
+
+    .error-message {
+        color: #ff6565;
+        background-color: rgba(255, 101, 101, 0.15);
+        box-shadow: 0 0 15px #ff6565aa;
+    }
+
+    .subscribe-btn {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+        .subscribe-btn:hover {
+            background-color: white;
+            color: #331847;
+        }
+
+    .choose-plan-wrapper {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+</style>
+
+<h2>My Subscriptions</h2>
+
+<div class="choose-plan-wrapper">
+    <a href="@Url.Action("Index", "Subscription")" class="subscribe-btn">
+        Choose a New Plan
+    </a>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="message-box success-message">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="message-box error-message">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+@if (Model == null || !Model.Any())
+{
+    <div class="no-subscription">
+        You don't have any subscriptions yet.
+    </div>
+}
+else
+{
+    <div class="plans-container">
+        @foreach (var sub in Model)
+        {
+            <div class="plan-card">
+                <h3>@sub.PlanName</h3>
+                <p>Start: @sub.StartDate.ToShortDateString()</p>
+                <p>End: @sub.EndDate.ToShortDateString()</p>
+                <span class="status-badge @(sub.IsActive ? "active-badge" : "expired-badge")">
+                    @(sub.IsActive ? "Active" : "Expired")
+                </span>
+
+                @if (sub.IsActive)
+                {
+                    <form asp-action="CancelSubscription" method="post" style="margin-top:10px;">
+                        <input type="hidden" name="subscriptionId" value="@sub.SubId" />
+                        <button type="submit" class="subscribe-btn">Cancel Subscription</button>
+                    </form>
+                }
+            </div>
+        }
+    </div>
+}

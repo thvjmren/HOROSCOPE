@@ -1,0 +1,45 @@
+﻿@model GetProductCategoryVM
+
+<div class="col-lg-8 offset-lg-2 mt-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h4 class="card-title text-center mb-4 text-primary">Product Category Details</h4>
+
+            <div class="mb-3">
+                <strong class="mt-4 text-primary">Category Name:</strong>
+                <h3 class="lead text-muted">@Model.Name</h3>
+            </div>
+
+            <div class="mb-3">
+                <strong class="mt-4 text-primary">Created At:</strong>
+                <p class="lead text-muted">@Model.CreatedAt.ToString("d MMMM yyyy HH:mm")</p>
+            </div>
+
+            <div class="mb-3">
+                <strong class="mt-4 text-primary">Status:</strong>
+                <p class="lead text-muted">@((Model.IsDeleted ? "Deleted" : "Active"))</p>
+            </div>
+
+            <h5 class="mt-4 text-primary">Features:</h5>
+            @if (Model.Features != null && Model.Features.Any())
+            {
+                <ul class="list-group">
+                    @foreach (var feature in Model.Features)
+                    {
+                        <li class="list-group-item">@feature.FeatureName</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p class="text-muted">No features available for this category.</p>
+            }
+
+            <div style="margin-top: 20px;">
+                <a asp-controller="ProductCategory" asp-action="Index" class="btn btn-secondary mt-4 d-block mx-auto">
+                    ← Back to Product Categories
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

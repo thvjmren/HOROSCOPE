@@ -1,0 +1,52 @@
+﻿@model List<Service>
+
+@{
+    int count = 0;
+}
+
+<h2>Deleted Services</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info text-center">
+        No deleted Service found.
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Icon</th>
+                <th>Description</th>
+                <th>Setting</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var service in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@service.Name</td>
+                    <td>@service.Icon</td>
+                    <td>@service.Description</td>
+                    <td>
+                        <a asp-controller="Service" asp-action="Restore" asp-route-id="@service.Id" class="btn btn-success">
+                            <i class="mdi mdi-restore"></i>
+                        </a>
+                        <a asp-controller="Service" asp-action="HardDelete" asp-route-id="@service.Id" class="btn btn-danger">
+                            <i class="mdi mdi-delete-forever"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<div style="margin-top: 20px;" >
+    <a asp-controller="Service" asp-action="Index" class="btn btn-secondary">Back to Services</a>
+</div>

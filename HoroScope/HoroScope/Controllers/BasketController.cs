@@ -30,8 +30,13 @@ namespace HoroScope.Controllers
         public async Task<IActionResult> Index()
         {
             var basket = await _basketService.GetBasketAsync();
+            if (basket == null || !basket.Any())
+            {
+                basket = new List<BasketItemVM>();
+            }
             return View(basket);
         }
+
 
         [HttpPost]
         public async Task<JsonResult> AddBasket(int? id)

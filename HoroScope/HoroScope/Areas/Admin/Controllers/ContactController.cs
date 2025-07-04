@@ -50,5 +50,18 @@ namespace HoroScope.Areas.Admin.Controllers
 
             return View(contactVM);
         }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            Contact? contact = await _context.Contacts.Where(c => c.IsDeleted == false).FirstOrDefaultAsync(s => s.Id == id);
+            if (contact is null) return NotFound();
+
+            _context.Contacts.Remove(contact);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

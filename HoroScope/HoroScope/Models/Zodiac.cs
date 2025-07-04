@@ -11,6 +11,6 @@ namespace HoroScope.Models
         public int ZodiacElementId { get; set; }
         public ZodiacElement ZodiacElement { get; set; }
         public List<PlanetZodiac> PlanetZodiacs { get; set; }
-
+        public ICollection<ProductZodiac> ProductZodiacs { get; set; }
     }
 }

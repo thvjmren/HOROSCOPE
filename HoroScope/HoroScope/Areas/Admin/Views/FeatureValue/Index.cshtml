@@ -1,0 +1,35 @@
+﻿@model List<FeatureValue>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Feature Values</h4>
+        <a asp-controller="FeatureValue" asp-action="DeletedFeatureValues" class="btn btn-danger">Show Deleted Feature Values</a>
+        <a asp-action="Create" class="btn btn-primary">Create</a>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Value</th>
+                    <th>Feature</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var featureValue in Model)
+                {
+                    <tr>
+                        <td>@featureValue.Id</td>
+                        <td>@featureValue.Value</td>
+                        <td>@featureValue.Feature.Name</td>
+                        <td>
+                            <a asp-action="Update" asp-route-id="@featureValue.Id" class="btn btn-primary"><i class="mdi mdi-pencil-box"></i></a>
+                            <a asp-action="Delete" asp-route-id="@featureValue.Id" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this Feataure Value?')">
+                                <i class="mdi mdi-delete-forever"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

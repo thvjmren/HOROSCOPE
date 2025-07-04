@@ -1,0 +1,60 @@
+﻿@model List<GetFeatureVM>
+
+@{
+    int count = 0;
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Features</h4>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Created Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var feature in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td>@count</td>
+                                <td>@feature.Name</td>
+                                <td>@(feature.ProductCategory?.Name ?? "For All")</td>
+                                <td>@feature.CreatedAt.ToString("yyyy-MM-dd")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+        .pagination .page-item {
+            margin: 0 5px;
+        }
+
+        .pagination .page-link {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+    .card-body {
+        margin-top: 20px;
+    }
+</style>
